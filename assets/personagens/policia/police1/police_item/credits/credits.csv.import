@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://jl5aousvfadh"
+
+[deps]
+
+files=["res://assets/personagens/policia/police1/police_item/credits/credits.notes.translation", "res://assets/personagens/policia/police1/police_item/credits/credits.authors.translation", "res://assets/personagens/policia/police1/police_item/credits/credits.licenses.translation", "res://assets/personagens/policia/police1/police_item/credits/credits.urls.translation"]
+
+source_file="res://assets/personagens/policia/police1/police_item/credits/credits.csv"
+dest_files=["res://assets/personagens/policia/police1/police_item/credits/credits.notes.translation", "res://assets/personagens/policia/police1/police_item/credits/credits.authors.translation", "res://assets/personagens/policia/police1/police_item/credits/credits.licenses.translation", "res://assets/personagens/policia/police1/police_item/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

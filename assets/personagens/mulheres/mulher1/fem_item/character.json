@@ -1,0 +1,161 @@
+{
+  "bodyTypeName": "female",
+  "url": "https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/#?sex=female&clothes=TShirt_Scoop_navy&legs=Pantaloons_yellow&hair=Long_center_part_redhead&body=Body_color_light&shadow=Shadow_shadow&head=Human_female_light&nose=Straight_nose_light&eyebrows=Thin_Eyebrows_blonde&bandana=none_Bandana&headcover=none_Kerchief&sleeves=none_Original_Shortsleeves_Overlay&vest=none_Bodice&sash=none_Sash&shoes=Sandals_black&dress=none_Kimono",
+  "spritesheets": "https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/spritesheets/",
+  "version": 1,
+  "datetime": "22/08/2025, 14:01:44",
+  "credits": [
+    {
+      "fileName": "shadow/adult/shadow.png",
+      "licenses": "CC0",
+      "authors": "drjamgo@hotmail.com",
+      "urls": "https://opengameart.org/content/shadow-for-lpc-sprite",
+      "notes": ""
+    },
+    {
+      "fileName": "body/bodies/female/light.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "Benjamin K. Smith (BenCreating),bluecarrot16,TheraHedwig,Evert,MuffinElZangano,Durrani,Pierre Vigier (pvigier),ElizaWy,Matthew Krohn (makrohn),Johannes Sjölund (wulax),Stephen Challener (Redshrike)",
+      "urls": "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles,https://opengameart.org/content/lpc-medieval-fantasy-character-sprites,https://opengameart.org/content/lpc-ladies,https://opengameart.org/content/lpc-7-womens-shirts,https://opengameart.org/content/lpc-jump-expanded,https://opengameart.org/content/lpc-be-seated,https://opengameart.org/content/lpc-revised-character-basics,https://gitlab.com/vagabondgame/lpc-characters,https://opengameart.org/content/lpc-male-jumping-animation-by-durrani,https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+      "notes": "see details at https://opengameart.org/content/lpc-character-bases"
+    },
+    {
+      "fileName": "head/heads/human/female/light.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "bluecarrot16,Benjamin K. Smith (BenCreating),Stephen Challener (Redshrike)",
+      "urls": "https://opengameart.org/content/,https://opengameart.org/content/lpc-character-bases",
+      "notes": "original head by Redshrike, tweaks by BenCreating, modular version by bluecarrot16"
+    },
+    {
+      "fileName": "head/nose/straight/adult/light.png",
+      "licenses": "GPL 3.0,CC-BY-SA 3.0",
+      "authors": "Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)",
+      "urls": "https://opengameart.org/content/lpc-base-character-expressions",
+      "notes": ""
+    },
+    {
+      "fileName": "eyes/eyebrows/thin/adult/blonde.png",
+      "licenses": "OGA-BY 3.0",
+      "authors": "ElizaWy",
+      "urls": "https://github.com/ElizaWy/LPC/tree/main/Characters/Hair,https://opengameart.org/content/lpc-expanded-sit-run-jump-more",
+      "notes": ""
+    },
+    {
+      "fileName": "hair/long_center_part/adult/fg/redhead.png",
+      "licenses": "CC0",
+      "authors": "thecilekli,bluecarrot16",
+      "urls": "https://opengameart.org/content/lpc-long-straight-hair-with-12-colors,https://opengameart.org/content/lpc-hair",
+      "notes": ""
+    },
+    {
+      "fileName": "hair/long_center_part/adult/bg/redhead.png",
+      "licenses": "CC0",
+      "authors": "thecilekli,bluecarrot16",
+      "urls": "https://opengameart.org/content/lpc-long-straight-hair-with-12-colors,https://opengameart.org/content/lpc-hair",
+      "notes": ""
+    },
+    {
+      "fileName": "torso/clothes/shortsleeve/tshirt_scoop/female/navy.png",
+      "licenses": "OGA-BY 3.0",
+      "authors": "ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)",
+      "urls": "http://opengameart.org/content/lpc-revised-character-basics,https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing,https://opengameart.org/content/lpc-expanded-sit-run-jump-more,https://opengameart.org/content/lpc-expanded-simple-shirts",
+      "notes": "original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman"
+    },
+    {
+      "fileName": "legs/pantaloons/thin/yellow.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0",
+      "authors": "Nila122,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)",
+      "urls": "https://opengameart.org/content/lpc-pirates,https://opengameart.org/content/more-lpc-clothes-and-hair,https://opengameart.org/content/lpc-expanded-pants",
+      "notes": "Original bases by Redshrike, thrust/shoot bases by Wulax, Original Pantaloons by Nila122, Female/Teen version by JaidynReiman"
+    },
+    {
+      "fileName": "feet/sandals/thin/black.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0",
+      "authors": "Nila122,JaidynReiman,Matthew Krohn (makrohn),Johannes Sjölund (wulax)",
+      "urls": "https://opengameart.org/content/lpc-roman-armor,http://opengameart.org/content/lpc-clothing-updates,https://opengameart.org/content/lpc-expanded-socks-shoes",
+      "notes": "edited for v3 bases by bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman"
+    }
+  ],
+  "layers": [
+    {
+      "fileName": "shadow/adult/shadow.png",
+      "zPos": 0,
+      "parentName": "shadow",
+      "name": "Shadow",
+      "variant": "shadow",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering"
+    },
+    {
+      "fileName": "hair/long_center_part/adult/bg/redhead.png",
+      "zPos": 9,
+      "parentName": "hair",
+      "name": "Long_center_part",
+      "variant": "redhead",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "body/bodies/female/light.png",
+      "zPos": 10,
+      "parentName": "body",
+      "name": "Body_color",
+      "variant": "light",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "feet/sandals/thin/black.png",
+      "zPos": 15,
+      "parentName": "shoes",
+      "name": "Sandals",
+      "variant": "black",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "legs/pantaloons/thin/yellow.png",
+      "zPos": 20,
+      "parentName": "legs",
+      "name": "Pantaloons",
+      "variant": "yellow",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "torso/clothes/shortsleeve/tshirt_scoop/female/navy.png",
+      "zPos": 35,
+      "parentName": "clothes",
+      "name": "TShirt_Scoop",
+      "variant": "navy",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "head/heads/human/female/light.png",
+      "zPos": 100,
+      "parentName": "head",
+      "name": "Human_female",
+      "variant": "light",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "head/nose/straight/adult/light.png",
+      "zPos": 105,
+      "parentName": "nose",
+      "name": "Straight_nose",
+      "variant": "light",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "eyes/eyebrows/thin/adult/blonde.png",
+      "zPos": 106,
+      "parentName": "eyebrows",
+      "name": "Thin_Eyebrows",
+      "variant": "blonde",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "hair/long_center_part/adult/fg/redhead.png",
+      "zPos": 120,
+      "parentName": "hair",
+      "name": "Long_center_part",
+      "variant": "redhead",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    }
+  ]
+}

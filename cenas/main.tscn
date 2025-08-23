@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcg648ygimrmk"]
+
+[ext_resource type="PackedScene" uid="uid://b5ndxkwxs6vqk" path="res://cenas/personagens/mulher_um.tscn" id="1_mtgg2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mtgg2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MulherUm" parent="." instance=ExtResource("1_mtgg2")]
+position = Vector2(63, 90)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(117, 76)
+zoom = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(63, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_mtgg2")

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dmr0r0u06u0ac"
+
+[deps]
+
+files=["res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.notes.translation", "res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.authors.translation", "res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.licenses.translation", "res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.urls.translation"]
+
+source_file="res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.csv"
+dest_files=["res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.notes.translation", "res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.authors.translation", "res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.licenses.translation", "res://assets/personagens/mulheres/mulher1/fem_anim/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0
