@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://8gi4117ctdu6"]
+
+[ext_resource type="Texture2D" uid="uid://beqkxhr73ngmm" path="res://cc498ff8-f58e-4c45-9c87-969903721568/shaded.png" id="1_dclif"]
+[ext_resource type="ArrayMesh" uid="uid://cqs13la5encjt" path="res://cc498ff8-f58e-4c45-9c87-969903721568/base.obj" id="2_wxt12"]
+[ext_resource type="Texture2D" uid="uid://c48fxkbycquqs" path="res://1eda0e01-8bc3-48fb-bfc5-3ad05da8d77c/shaded.png" id="3_mrwcl"]
+[ext_resource type="ArrayMesh" uid="uid://031msxalj3gg" path="res://1eda0e01-8bc3-48fb-bfc5-3ad05da8d77c/base.obj" id="4_khq6f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gycr2"]
+albedo_texture = ExtResource("1_dclif")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lj5nu"]
+albedo_texture = ExtResource("3_mrwcl")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="calçada" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100807, 0, 0.0660529)
+material_override = SubResource("StandardMaterial3D_gycr2")
+mesh = ExtResource("2_wxt12")
+
+[node name="bar_fora" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000802831, 0, -1, 0, 1, 0, 1, 0, 0.000802831, 1.65647, 0, 0.204982)
+material_override = SubResource("StandardMaterial3D_lj5nu")
+mesh = ExtResource("4_khq6f")

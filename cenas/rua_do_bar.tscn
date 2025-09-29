@@ -1,0 +1,204 @@
+[gd_scene load_steps=20 format=3 uid="uid://lmjfophaeqsw"]
+
+[ext_resource type="Script" uid="uid://bk3fqdysxuimx" path="res://scripts/rua_do_bar.gd" id="1_gigd7"]
+[ext_resource type="Texture2D" uid="uid://dccgih6lq5vb3" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_highway.png" id="2_e8d1u"]
+[ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="3_bl6wr"]
+[ext_resource type="Texture2D" uid="uid://bdf2pfr21gs0b" path="res://assets/personagens/mulheres/mulher1/fem_anim/standard/walk.png" id="4_glnpj"]
+[ext_resource type="Script" uid="uid://cqr01ooyr0w8p" path="res://scripts/mulher_andando.gd" id="5_trnar"]
+[ext_resource type="Texture2D" uid="uid://clgheoll11t0" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Beetle.png" id="6_bl6wr"]
+[ext_resource type="Texture2D" uid="uid://hrucvj2oknix" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Classic.png" id="7_glnpj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p55t0"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77onm"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f1jn"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7k8e"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(256, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j0m1"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(320, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpcs1"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(384, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n2c7"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(448, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc6d7"]
+atlas = ExtResource("4_glnpj")
+region = Rect2(512, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2glgv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p55t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77onm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f1jn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7k8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j0m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpcs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n2c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc6d7")
+}],
+"loop": true,
+"name": &"andando",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_77onm"]
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mulher_andando:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(25, 526)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("carroazul:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1038, 516)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("carrovermelho:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(59.0001, 521)]
+}
+
+[sub_resource type="Animation" id="Animation_p55t0"]
+resource_name = "scene_andando"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mulher_andando:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(25, 526), Vector2(1172, 526)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("carroazul:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1038, 500), Vector2(946.95, 505), Vector2(855.9, 500), Vector2(764.85, 505), Vector2(673.8, 500), Vector2(582.75, 505), Vector2(491.7, 500), Vector2(400.65, 505), Vector2(309.6, 500), Vector2(218.55, 505), Vector2(127.5, 500), Vector2(36.45, 505), Vector2(-54.6, 500), Vector2(-176, 500)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("carrovermelho:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(59, 520), Vector2(160.179, 515), Vector2(261.359, 520), Vector2(362.538, 515), Vector2(463.717, 520), Vector2(564.896, 515), Vector2(666.076, 520), Vector2(767.255, 515), Vector2(868.434, 520), Vector2(969.613, 515), Vector2(1070.79, 520), Vector2(1171.97, 515), Vector2(1273.15, 520), Vector2(1489, 521)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_77onm"]
+_data = {
+&"RESET": SubResource("Animation_77onm"),
+&"scene_andando": SubResource("Animation_p55t0")
+}
+
+[node name="rua_do_bar" type="Node2D"]
+script = ExtResource("1_gigd7")
+
+[node name="cenario_um" type="Sprite2D" parent="."]
+position = Vector2(494, 323)
+scale = Vector2(0.512329, 0.443848)
+texture = ExtResource("2_e8d1u")
+
+[node name="cenario_dois" type="Sprite2D" parent="."]
+position = Vector2(1543, 323)
+scale = Vector2(0.512329, 0.443848)
+texture = ExtResource("2_e8d1u")
+flip_h = true
+
+[node name="bar" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2592, 323)
+scale = Vector2(0.512329, 0.443848)
+texture = ExtResource("3_bl6wr")
+
+[node name="mulher_andando" type="AnimatedSprite2D" parent="."]
+position = Vector2(25, 526)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_2glgv")
+animation = &"andando"
+frame = 4
+frame_progress = 0.304408
+speed_scale = 1.5
+script = ExtResource("5_trnar")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_77onm")
+}
+
+[node name="carroazul" type="Sprite2D" parent="."]
+position = Vector2(1038, 516)
+scale = Vector2(5, 5)
+texture = ExtResource("6_bl6wr")
+flip_h = true
+
+[node name="carrovermelho" type="Sprite2D" parent="."]
+position = Vector2(59.0001, 521)
+scale = Vector2(5, 5)
+texture = ExtResource("7_glnpj")

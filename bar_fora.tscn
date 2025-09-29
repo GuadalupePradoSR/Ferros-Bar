@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdvge7i7jl75o"]
+
+[ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="1_f2kju"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bar_fora" type="Sprite2D" parent="."]
+position = Vector2(575.063, 288.75)
+scale = Vector2(0.564514, 0.467122)
+texture = ExtResource("1_f2kju")

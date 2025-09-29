@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhdvo5dd3xl3u"]
+
+[ext_resource type="Script" uid="uid://dmlr6m0eg80e1" path="res://scripts/scene_ceu_dia.gd" id="1_dmq5m"]
+[ext_resource type="Texture2D" uid="uid://coe1nv2gp0f7o" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 7/7.png" id="2_gt2aq"]
+
+[sub_resource type="Animation" id="Animation_43su5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ceurosa:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(596.25, 338)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ceurosa2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1796.25, 338)]
+}
+
+[sub_resource type="Animation" id="Animation_shwn2"]
+resource_name = "rosa"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ceurosa:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(596.25, 338), Vector2(-646.75, 338)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ceurosa2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1796.25, 338), Vector2(553.25, 338)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43su5"]
+_data = {
+&"RESET": SubResource("Animation_43su5"),
+&"rosa": SubResource("Animation_shwn2")
+}
+
+[node name="scene_ceu_dia" type="Node2D"]
+script = ExtResource("1_dmq5m")
+
+[node name="ceurosa" type="Sprite2D" parent="."]
+position = Vector2(596.25, 338)
+scale = Vector2(0.52105, 0.521605)
+texture = ExtResource("2_gt2aq")
+
+[node name="ceurosa2" type="Sprite2D" parent="."]
+position = Vector2(1796.25, 338)
+scale = Vector2(0.52105, 0.521605)
+texture = ExtResource("2_gt2aq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_43su5")
+}
