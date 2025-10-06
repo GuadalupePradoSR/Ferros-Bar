@@ -1,24 +1,40 @@
-#mulher_um.gd
+# mulher_um.gd
 extends CharacterBody2D
 
-const speed = 130
-const jump_velocity = -300
-
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const SPEED = 130
+@onready var anim = $AnimatedSprite2D   # nó de animação do personagem
 
 func _physics_process(delta):
-	# add de gravidade
-	if not is_on_floor():
-		velocity.y += gravity * delta
-		
-	#segurar o pulo
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = jump_velocity
-		
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * speed
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		
+	var input_vector = Vector2.ZERO
+	
+	# Captura direções
+	if Input.is_action_pressed("ui_right"):
+		input_vector.x += 1
+	if Input.is_action_pressed("ui_left"):
+		input_vector.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		input_vector.y += 1
+	if Input.is_action_pressed("ui_up"):
+		input_vector.y -= 1
+	
+	# Normaliza para não andar mais rápido na diagonal
+	input_vector = input_vector.normalized()
+	
+	# Aplica movimento
+	velocity = input_vector * SPEED
 	move_and_slide()
+	
+	# Escolhe animação
+	if input_vector != Vector2.ZERO:
+		if abs(input_vector.x) > abs(input_vector.y):
+			if input_vector.x > 0:
+				anim.play("walk_right")
+			else:
+				anim.play("walk_left")
+		else:
+			if input_vector.y > 0:
+				anim.play("walk_down")
+			else:
+				anim.play("walk_up")
+	else:
+		anim.stop()
