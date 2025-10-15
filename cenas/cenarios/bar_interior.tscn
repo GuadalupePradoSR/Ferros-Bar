@@ -715,6 +715,10 @@ layer_0/tile_data = PackedInt32Array(65525, 0, 9, 131061, 0, 10, 196597, 0, 11, 
 [node name="MulherUm" parent="." instance=ExtResource("2_nbfmm")]
 position = Vector2(409, 330)
 
+[node name="Camera2D" type="Camera2D" parent="MulherUm"]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
 [node name="armario" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rvtc3")
 format = 2

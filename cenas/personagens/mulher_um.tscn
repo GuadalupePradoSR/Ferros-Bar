@@ -211,5 +211,3 @@ autoplay = "walk_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -23)
 shape = SubResource("CapsuleShape2D_tdqe2")
-
-[node name="Camera2D" type="Camera2D" parent="."]
