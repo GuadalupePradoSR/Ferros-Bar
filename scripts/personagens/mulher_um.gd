@@ -18,7 +18,7 @@ func _physics_process(delta):
 		input_vector.y -= 1
 	
 	# Normaliza para não andar mais rápido na diagonal
-	input_vector = input_vector.normalized()
+	input_vector = input_vector.normalized() 
 	
 	# Aplica movimento
 	velocity = input_vector * SPEED

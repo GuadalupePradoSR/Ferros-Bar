@@ -182,8 +182,7 @@ position = Vector2(25, 526)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_2glgv")
 animation = &"andando"
-frame = 2
-frame_progress = 0.893562
+frame_progress = 0.523607
 speed_scale = 1.5
 script = ExtResource("5_trnar")
 
