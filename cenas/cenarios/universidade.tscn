@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 [gd_scene load_steps=25 format=4 uid="uid://bguuw5sewgplm"]
 
 [ext_resource type="Texture2D" uid="uid://mf7tj1uslv8d" path="res://assets/universidade/japanese-school_8x8-final.tileset (1).png" id="1_n3sjo"]
 [ext_resource type="PackedScene" uid="uid://b5ndxkwxs6vqk" path="res://cenas/personagens/mulher_um.tscn" id="2_60ecn"]
+=======
+[gd_scene load_steps=26 format=4 uid="uid://bguuw5sewgplm"]
+
+[ext_resource type="Texture2D" uid="uid://mf7tj1uslv8d" path="res://assets/universidade/japanese-school_8x8-final.tileset (1).png" id="1_n3sjo"]
+[ext_resource type="PackedScene" uid="uid://b5ndxkwxs6vqk" path="res://cenas/personagens/roro/roroamarela.tscn" id="2_60ecn"]
+[ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/donamarta/donamartapreto.tscn" id="3_60ecn"]
+>>>>>>> 30ec4df (add dos assets dos personagens)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pofmm"]
 texture = ExtResource("1_n3sjo")
@@ -2512,5 +2520,13 @@ scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAjABoAAAAJABIAAAAjABsAAAAJABMAAAAjABwAAAAJABQAAAAkABoAAAAKABIAAAAkABsAAAAKABMAAAAkABwAAAAKABQAAAA+ABoAAAAJABIAAAA+ABsAAAAJABMAAAA+ABwAAAAJABQAAAA/ABoAAAAKABIAAAA/ABsAAAAKABMAAAA/ABwAAAAKABQAAAA=")
 tile_set = SubResource("TileSet_w6s0l")
 
+<<<<<<< HEAD
 [node name="MulherUm" parent="." instance=ExtResource("2_60ecn")]
 position = Vector2(312, 398)
+=======
+[node name="roropreto" parent="." instance=ExtResource("2_60ecn")]
+position = Vector2(312, 398)
+
+[node name="donamartapreto" parent="." instance=ExtResource("3_60ecn")]
+position = Vector2(659, 132)
+>>>>>>> 30ec4df (add dos assets dos personagens)

@@ -10,11 +10,6 @@ config_version=5
 
 [application]
 
-config/name="ferros-bar"
-run/main_scene="uid://dcg648ygimrmk"
+config/name="uhdiuqwghefd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[rendering]
-
-textures/canvas_textures/default_texture_filter=0
