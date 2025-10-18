@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://bhphs0eq3ca30"]
+[gd_scene load_steps=29 format=3 uid="uid://bhphs0eq3ca30"]
 
 [ext_resource type="Texture2D" uid="uid://hkcuqwbkb2n8" path="res://assets/assets alanis/personagens alanis/RÔ/ro_sprite_walking3.png" id="1_gmppk"]
+[ext_resource type="Script" uid="uid://dxfksulver2va" path="res://scripts/personagens/roro.gd" id="1_s34hj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5k8ug"]
 atlas = ExtResource("1_gmppk")
@@ -119,7 +120,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ipohf")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -198,15 +199,13 @@ radius = 8.0
 height = 44.0
 
 [node name="roropreto" type="CharacterBody2D"]
+script = ExtResource("1_s34hj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -30)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_hqth5")
-animation = &"walk_up"
-autoplay = "walk_down"
-frame = 1
-frame_progress = 0.0329603
+animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -23)

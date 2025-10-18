@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://mf7tj1uslv8d" path="res://assets/universidade/japanese-school_8x8-final.tileset (1).png" id="1_n3sjo"]
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="3_8urfi"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/donamarta/donamartapreto.tscn" id="3_60ecn"]
-[ext_resource type="PackedScene" uid="uid://vu6glp5hgnhu" path="res://dialogo_universidade/balloon.tscn" id="5_3c7xm"]
+[ext_resource type="PackedScene" uid="uid://vu6glp5hgnhu" path="res://dialogo universidade/balloon.tscn" id="5_3c7xm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pofmm"]
 texture = ExtResource("1_n3sjo")
@@ -2525,12 +2525,14 @@ tile_set = SubResource("TileSet_a5fv3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta/Area2D"]
 position = Vector2(324.6, 183.6)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_60ecn")
 
 [node name="Area2D2" type="Area2D" parent="porta"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta/Area2D2"]
 position = Vector2(324.8, 159.6)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8urfi")
 
 [node name="janela" type="TileMapLayer" parent="."]
@@ -2550,7 +2552,7 @@ shape = SubResource("CapsuleShape2D_8urfi")
 [node name="roropreto" parent="." instance=ExtResource("3_8urfi")]
 position = Vector2(242, 237)
 
-[node name="dialogo_uni" parent="." instance=ExtResource("5_3c7xm")]
+[node name="ExampleBalloon" parent="." instance=ExtResource("5_3c7xm")]
 visible = false
 
 [connection signal="body_entered" from="porta/Area2D" to="." method="_on_porta_entrada_body_entered"]

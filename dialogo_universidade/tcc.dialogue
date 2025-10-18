@@ -1,0 +1,28 @@
+~ tcc
+Dona Marta: [mood:feliz] Olá Ro, bem vinda de volta a universidade!
+Ro: [mood:feliz] Olá professora Marta, obrigada pela recepção.
+Dona Marta: [mood:feliz] O que você trás de novidade?[wait=1] Já sabe o seu tema de TCC do curso de jornalismo?
+- Sim, já tenho um tema
+	Ro: [mood:feliz] Sim, já tenho um tema.
+	Dona Marta: [mood:feliz] Que maravilha! me fale mais sobre o tema...
+	Ro: [mood:feliz] É sobre a discriminação com a comunidade LGBT. 
+	Dona Marta: [mood:feliz]  Que tema importante,[wait=1] principalmente neste período em que estamos vivendo.
+	Dona Marta: [mood:feliz] A ditadura tem sido fortemente opressora com a comunidade.
+	Dona Marta: [mood:feliz] Pense em fazer um jornal sobre isso,[wait=1] este público precisa de mais visibilidade na sociedade.
+	Ro: [mood:feliz] Obrigada pela ajuda, professora.[wait=1] Vou começar a pesquisar.
+	Dona Marta: [mood:feliz]  Boa sorte minha querida, e...[wait=1]cuidado com as pessoas preconceituosas.
+	Dona Marta:[mood:feliz]  Tem gente que se incomoda com a vida alheia dos outros.
+	Ro:[mood:feliz]  Nunca vou entender esse ódio que as pessoas sentem.
+	Dona Marta:[mood:feliz]  É algo que não faz sentido, mas um dia a sociedade vai progredir e a comunidade LGBT vai ter seu direito de existir no mundo.
+	Dona Marta: [mood:feliz] Mas, enquanto isso não acontecer,[wait=1] a comunidade deve continuar sendo resistência!
+	Ro: [mood:feliz] Obrigada pelas palavras, professora.[wait=1] Ter você acreditando em mim e na comunidade na qual faço parte é muito importante.
+- Não tenho um tema ainda
+	Ro: [mood:feliz] Não tenho um tema ainda.
+	Dona Marta: [mood:feliz] Compreendo,[wait=1] realmente não é facil escolher um tema de estudo.
+	Dona Marta: [mood:feliz] Para seu tema de TCC,[wait=1] pense em algo importante e interessante para você e para a sociedade.
+	Dona Marta: [mood:feliz] Acabamos de sair de um sistema opressor,[wait=1] mas ele continua enraizado na nossa cultura.
+	Dona Marta: [mood:feliz] Pense em um tema que possa revolucionar!
+	Ro: [mood:feliz] Tá certo professora, vou pensar em algo único.
+Dona Marta: [mood:feliz] Você consegue querida, sempre vi um potencial em você. [wait=1] Se precisar de ajuda, sabe onde me encontrar.
+Ro:[mood:feliz]  Obrigada professora!
+=> END

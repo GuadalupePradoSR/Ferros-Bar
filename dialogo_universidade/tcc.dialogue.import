@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dej46tnoy5po5"
+path="res://.godot/imported/tcc.dialogue-c56da7d1fbd0493351be49c8721caa16.tres"
+
+[deps]
+
+source_file="res://dialogo_universidade/tcc.dialogue"
+dest_files=["res://.godot/imported/tcc.dialogue-c56da7d1fbd0493351be49c8721caa16.tres"]
+
+[params]
+
+defaults=true

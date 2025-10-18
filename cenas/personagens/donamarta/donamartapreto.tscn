@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://ingydclkd55s" path="res://assets/assets alanis/personagens alanis/DONA MARTA/sprite_walking_marta.png" id="2_5oc8d"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxpmi"]
+atlas = ExtResource("2_5oc8d")
+region = Rect2(256, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvqqc"]
 atlas = ExtResource("2_5oc8d")
 region = Rect2(0, 0, 64, 64)
@@ -17,10 +21,6 @@ region = Rect2(128, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ai3cg"]
 atlas = ExtResource("2_5oc8d")
 region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fxpmi"]
-atlas = ExtResource("2_5oc8d")
-region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mpmsx"]
 atlas = ExtResource("2_5oc8d")
@@ -102,6 +102,9 @@ region = Rect2(320, 192, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fxpmi")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_nvqqc")
 }, {
 "duration": 1.0,
@@ -114,12 +117,9 @@ animations = [{
 "texture": SubResource("AtlasTexture_ai3cg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fxpmi")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_mpmsx")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -204,8 +204,7 @@ position = Vector2(0, -30)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_hqth5")
 animation = &"walk_down"
-autoplay = "walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -23)
+position = Vector2(1, -27)
 shape = SubResource("CapsuleShape2D_tdqe2")
