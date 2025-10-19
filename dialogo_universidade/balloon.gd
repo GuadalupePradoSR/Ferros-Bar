@@ -142,24 +142,19 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	#resource = dialogue_resource
 	#self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
-## Apply any changes to the balloon given a new [DialogueLine].
-func apply_dialogue_line() -> void:
-	mutation_cooldown.stop()
+# Adicione esta função em qualquer lugar no seu script balloon.gd
+func set_mood(new_mood: String):
+	# 1. ATUALIZA O MOOD
+	current_mood = new_mood
+	
+	# 2. FORÇA A APLICAÇÃO DO NOVO SPRITE E FOCO
+	_update_portraits_for_mood_change()
 
-	is_waiting_for_input = false
-	balloon.focus_mode = Control.FOCUS_ALL
-	balloon.grab_focus()
+func _update_portraits_for_mood_change():
+	# Esta é uma versão simplificada do apply_dialogue_line (seção 3 e 4)
+	# que é executada fora do fluxo normal do diálogo.
 	
 	var character_name = dialogue_line.character
-
-	# 1. LÊ AS TAGS DA LINHA PARA MUDAR A EMOÇÃO (MOOD)
-	current_mood = "neutro" # Padrão para neutro
-	for tag in dialogue_line.tags:
-		if tag.begins_with("mood:"):
-			current_mood = tag.split(":")[1]
-			break
-
-	# 2. ENCONTRA O PERSONAGEM FALANTE E SUA POSIÇÃO
 	var speaker_data: Dictionary = scene_characters_data.get(character_name, {})
 	var speaker_position = speaker_data.get("position", "")
 	var speaker_moods: Dictionary = speaker_data.get("moods", {})
@@ -175,19 +170,73 @@ func apply_dialogue_line() -> void:
 		target_portrait = portrait_right
 		
 	if target_portrait != null:
-		# Pega a textura do mood atual, usando 'neutro' como fallback caso o mood não exista
 		var new_texture = speaker_moods.get(current_mood, speaker_moods.get("neutro"))
 		if new_texture != null:
 			target_portrait.texture = new_texture
 			target_portrait.show()
-	
-	# 4. APLICA O EFEITO DE FOCO (Dimming)
+
+	# 4. APLICA O FOCO (DIMMING)
 	if is_left_speaker:
 		portrait_left.modulate = FULL_COLOR
 		portrait_right.modulate = DIM_COLOR
 	elif is_right_speaker:
 		portrait_right.modulate = FULL_COLOR
 		portrait_left.modulate = DIM_COLOR
+	else:
+		# Narrador ou personagem fora de foco
+		portrait_left.modulate = DIM_COLOR
+		portrait_right.modulate = DIM_COLOR
+
+## Apply any changes to the balloon given a new [DialogueLine].
+func apply_dialogue_line() -> void:
+	mutation_cooldown.stop()
+
+	is_waiting_for_input = false
+	balloon.focus_mode = Control.FOCUS_ALL
+	balloon.grab_focus()
+	
+	var character_name = dialogue_line.character
+
+	# 1. LÊ AS TAGS DA LINHA PARA MUDAR A EMOÇÃO (MOOD)
+	#current_mood = "neutro" # Padrão para neutro
+	#for tag in dialogue_line.tags:
+		#if tag.begins_with("mood:"):
+			#current_mood = tag.split(":")[1]
+			#break
+
+	# 2. ENCONTRA O PERSONAGEM FALANTE E SUA POSIÇÃO
+	var speaker_data: Dictionary = scene_characters_data.get(character_name, {})
+	var speaker_position = speaker_data.get("position", "")
+	var speaker_moods: Dictionary = speaker_data.get("moods", {})
+	
+	var is_left_speaker = speaker_position == "left"
+	var is_right_speaker = speaker_position == "right"
+	
+	if is_left_speaker or is_right_speaker:
+		# Se o falante mudou (ou a linha é a primeira),
+		# garantimos o sprite e o foco baseados no mood atual.
+		
+		# O mood aqui será o do último [do set_mood] OU "neutro" se não houver um [do].
+		
+		var target_portrait = null
+		if is_left_speaker:
+			target_portrait = portrait_left
+		elif is_right_speaker:
+			target_portrait = portrait_right
+			
+		if target_portrait != null:
+			var new_texture = speaker_moods.get(current_mood, speaker_moods.get("neutro"))
+			if new_texture != null:
+				target_portrait.texture = new_texture
+				target_portrait.show()
+
+		# 4. APLICA O EFEITO DE FOCO (Dimming)
+		if is_left_speaker:
+			portrait_left.modulate = FULL_COLOR
+			portrait_right.modulate = DIM_COLOR
+		elif is_right_speaker:
+			portrait_right.modulate = FULL_COLOR
+			portrait_left.modulate = DIM_COLOR
 	else:
 		# Narrador ou personagem fora de foco
 		portrait_left.modulate = DIM_COLOR

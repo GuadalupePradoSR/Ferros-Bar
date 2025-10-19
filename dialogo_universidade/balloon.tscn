@@ -70,14 +70,14 @@ script = ExtResource("1_36de5")
 [node name="persona_left" type="TextureRect" parent="."]
 offset_left = 45.0
 offset_top = 237.0
-offset_right = 216.0
+offset_right = 243.0
 offset_bottom = 475.0
 
 [node name="persona_right" type="TextureRect" parent="."]
-offset_left = 935.0
-offset_top = 248.0
+offset_left = 917.0
+offset_top = 257.0
 offset_right = 1106.0
-offset_bottom = 486.0
+offset_bottom = 495.0
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true

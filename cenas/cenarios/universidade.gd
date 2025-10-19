@@ -39,6 +39,7 @@ func _on_donamarta_area_body_entered(body: Node2D) -> void:
 		var marta_textures = {
 			"feliz": preload("res://assets/assets alanis/personagens alanis/DONA MARTA/dialogo_marta_feliz2.png"),
 			"triste": preload("res://assets/assets alanis/personagens alanis/DONA MARTA/dialogo_marta_triste2.png"),
+			"raiva": preload("res://assets/assets alanis/personagens alanis/DONA MARTA/dialogo_marta_raiva2.png"),
 			"neutro": preload("res://assets/assets alanis/personagens alanis/DONA MARTA/dialogo_marta_neutro2.png")
 		}
 		
