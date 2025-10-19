@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://slof5yeblpcn"
+path="res://.godot/imported/rua.dialogue-26bb3a8b726ab9f9a27759de6865a761.tres"
+
+[deps]
+
+source_file="res://dialogos/dialogo_rua/rua.dialogue"
+dest_files=["res://.godot/imported/rua.dialogue-26bb3a8b726ab9f9a27759de6865a761.tres"]
+
+[params]
+
+defaults=true

@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://vu6glp5hgnhu"]
+[gd_scene load_steps=9 format=3 uid="uid://cftlor0frxa8r"]
 
-[ext_resource type="Script" uid="uid://c0rkh0b50lpbh" path="res://dialogo_universidade/balloon.gd" id="1_36de5"]
+[ext_resource type="Script" uid="uid://byjouhrmwb7ce" path="res://dialogos/dialogo_rua/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
@@ -74,10 +74,10 @@ offset_right = 243.0
 offset_bottom = 475.0
 
 [node name="persona_right" type="TextureRect" parent="."]
-offset_left = 917.0
-offset_top = 257.0
+offset_left = 910.0
+offset_top = 245.0
 offset_right = 1106.0
-offset_bottom = 495.0
+offset_bottom = 483.0
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
