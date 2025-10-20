@@ -1,4 +1,5 @@
+#lila
 extends AnimatedSprite2D
 
 func _ready():
-	play("rodrigo")
+	play("lila")

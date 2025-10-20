@@ -1,3 +1,4 @@
+#rua_do_bar.gd
 extends Node2D
 
 @onready var animation_player = $AnimationPlayer

@@ -1,9 +1,8 @@
 ~ rua
-Ro: [do set_mood("feliz")] Hi, this is some dialogue.
-Lila: [do set_mood("feliz")] Here are some choices.
-- First one
-	Ro: [do set_mood("feliz")] Lets Go
-- Second one
-	Lila: [do set_mood("feliz")] Lets Go
-Ro: [do set_mood("feliz")] For more information see the online documentation.
+Ro: [do set_mood("feliz")] Oi Lila, que surpresa encontrar você!
+Lila: [do set_mood("feliz")] Oi Rô, que bom te ver!
+Lila: [do set_mood("feliz")] O que faz por aqui?
+Ro: [do set_mood("feliz")] Eu estou a caminho do Ferro´s Bar, quer ir comigo?
+Lila: [do set_mood("feliz")] Quero! Acho que a Karina e a Gal estão lá hoje.
+Ro: [do set_mood("feliz")] Então vamos!
 => END
