@@ -1,6 +1,6 @@
 [gd_scene load_steps=60 format=4 uid="uid://bguuw5sewgplm"]
 
-[ext_resource type="Script" uid="uid://ccsi32l0q5qk5" path="res://cenas/cenarios/universidade.gd" id="1_8urfi"]
+[ext_resource type="Script" uid="uid://ccsi32l0q5qk5" path="res://scripts/cenarios/universidade.gd" id="1_8urfi"]
 [ext_resource type="Texture2D" uid="uid://mf7tj1uslv8d" path="res://assets/universidade/japanese-school_8x8-final.tileset (1).png" id="1_n3sjo"]
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="3_8urfi"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/raquel/raquelvermelho.tscn" id="3_60ecn"]

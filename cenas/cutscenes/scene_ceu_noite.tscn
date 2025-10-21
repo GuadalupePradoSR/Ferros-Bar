@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8dvnl5tnb53e"]
 
-[ext_resource type="Script" uid="uid://cd4yehf1skeus" path="res://scripts/scene_ceu_noite.gd" id="1_cpj0n"]
+[ext_resource type="Script" uid="uid://cd4yehf1skeus" path="res://scripts/cutscenes/fundos_de_transicao/scene_ceu_noite.gd" id="1_cpj0n"]
 [ext_resource type="Texture2D" uid="uid://detv6xs41ioqb" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/10.png" id="2_12e1o"]
 
 [sub_resource type="Animation" id="Animation_x7nd7"]
