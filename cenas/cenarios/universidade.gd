@@ -63,7 +63,7 @@ func _on_raquel_area_body_entered(body: Node2D) -> void:
 		}
 
 		# 2. Inicia o diálogo
-		var dialogue_resource: DialogueResource = load("res://dialogo_universidade/tcc.dialogue")
+		var dialogue_resource: DialogueResource = load("res://dialogos/dialogo_universidade/tcc.dialogue")
 		var dialogue_title: String = "tcc"
 		
 		# 3. Cria uma nova instância da cena do balão
