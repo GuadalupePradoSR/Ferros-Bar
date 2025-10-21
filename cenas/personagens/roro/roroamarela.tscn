@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://b5ndxkwxs6vqk"]
+[gd_scene load_steps=29 format=3 uid="uid://b5ndxkwxs6vqk"]
 
+[ext_resource type="Script" uid="uid://dxfksulver2va" path="res://scripts/personagens/roro.gd" id="1_n5jlk"]
 [ext_resource type="Texture2D" uid="uid://fq7cc77ftcl1" path="res://assets/assets alanis/personagens alanis/RÔ/ro_sprite_walking2.png" id="2_tqtgo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1ejd"]
@@ -198,6 +199,7 @@ radius = 8.0
 height = 44.0
 
 [node name="roroamarela" type="CharacterBody2D"]
+script = ExtResource("1_n5jlk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -30)

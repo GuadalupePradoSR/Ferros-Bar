@@ -1,0 +1,9 @@
+~ start
+Ro: [do set_mood("feliz")] hi, this is some dialogue.
+Raquel: [do set_mood("feliz")] Here are some choices.
+- First one
+	Ro: [do set_mood("feliz")] You picked the first one.
+- Second one
+	Raquel: [do set_mood("feliz")] You picked the second one.
+Ro: [do set_mood("feliz")] For more information see the online documentation.
+=> END
