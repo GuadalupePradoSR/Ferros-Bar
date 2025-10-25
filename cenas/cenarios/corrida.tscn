@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://ccltgrlbc1cqr"]
+[gd_scene load_steps=34 format=4 uid="uid://ccltgrlbc1cqr"]
 
 [ext_resource type="Texture2D" uid="uid://bk7gqjnoswfdb" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_gas_station (128 x 304).png" id="1_gf3jj"]
 [ext_resource type="Script" uid="uid://bpwmvtxa3h7ej" path="res://cenas/cenarios/corrida.gd" id="1_iv2af"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://rpgdyrmi6jln" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Cars/Police (16 x 16).png" id="4_5ci0s"]
 [ext_resource type="Texture2D" uid="uid://grjhogps5axf" path="res://assets/Mini Pixel Pack 2/Props/Misc_props (16 x 16).png" id="4_kljfn"]
 [ext_resource type="Script" uid="uid://bkd1b684lmtk4" path="res://cenas/cenarios/carrofuga.gd" id="5_pmpgn"]
+[ext_resource type="Script" uid="uid://ba62ev6s8poic" path="res://cenas/cenarios/carropolicia.gd" id="8_kljfn"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_qlqwy"]
 tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 2, 196608, 0, 3, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 2, 196609, 65536, 3, 2, 131072, 0, 65538, 131072, 1, 131074, 131072, 2, 196610, 131072, 3, 3, 196608, 0, 65539, 196608, 1, 131075, 196608, 2, 196611, 196608, 3)
@@ -229,6 +230,9 @@ pattern_2 = SubResource("TileMapPattern_sc6xx")
 atlas = ExtResource("3_1j6rp")
 region = Rect2(0, 48.2981, 16.5792, 15.7019)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kljfn"]
+size = Vector2(8, 11)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmpgn"]
 atlas = ExtResource("4_5ci0s")
 region = Rect2(0, 0, 16.3978, 16)
@@ -278,25 +282,39 @@ position = Vector2(-4, 0)
 tile_map_data = PackedByteArray("AAAeACYAAAAFAAAAAAAgABgAAAAEAAAAAAAeAAcAAAADAAAAAAA=")
 tile_set = SubResource("TileSet_j8d0h")
 
-[node name="carrofuga" type="Node2D" parent="."]
+[node name="carrofuga" type="Area2D" parent="." groups=["player"]]
 position = Vector2(483, 475)
 script = ExtResource("5_pmpgn")
+lateral_speed = 6.0
 lane_x_positions = PackedFloat32Array(483, 508)
 start_lane = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="carrofuga"]
 texture = SubResource("AtlasTexture_gf3jj")
 
-[node name="carropolicia" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carrofuga"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_kljfn")
+
+[node name="carropolicia" type="Area2D" parent="." node_paths=PackedStringArray("player_to_follow")]
+position = Vector2(483, 534)
+script = ExtResource("8_kljfn")
+player_to_follow = NodePath("../carrofuga")
+lateral_speed = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="carropolicia"]
-position = Vector2(507, 298)
 texture = SubResource("AtlasTexture_pmpgn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="carropolicia"]
-position = Vector2(507, 298)
 shape = SubResource("RectangleShape2D_gf3jj")
+
+[node name="Timer" type="Timer" parent="carropolicia"]
+wait_time = 4.0
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(504, 478)
 zoom = Vector2(2.5, 2.5)
+
+[connection signal="area_entered" from="carropolicia" to="carropolicia" method="_on_area_entered"]
+[connection signal="timeout" from="carropolicia/Timer" to="carropolicia" method="_on_timer_timeout"]
