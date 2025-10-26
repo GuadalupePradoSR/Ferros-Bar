@@ -1,14 +1,14 @@
-[gd_scene load_steps=34 format=4 uid="uid://ccltgrlbc1cqr"]
+[gd_scene load_steps=42 format=4 uid="uid://ccltgrlbc1cqr"]
 
 [ext_resource type="Texture2D" uid="uid://bk7gqjnoswfdb" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_gas_station (128 x 304).png" id="1_gf3jj"]
 [ext_resource type="Script" uid="uid://bpwmvtxa3h7ej" path="res://cenas/cenarios/corrida.gd" id="1_iv2af"]
 [ext_resource type="Texture2D" uid="uid://hsa62xgh4gf3" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_road (64 x 64).png" id="2_pmpgn"]
 [ext_resource type="Texture2D" uid="uid://be6qvwt67c3mk" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Cars/NPC_cars (16 x 16).png" id="3_1j6rp"]
 [ext_resource type="Texture2D" uid="uid://bq63dsym8btgj" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_details (16 x 16).png" id="3_iv2af"]
-[ext_resource type="Texture2D" uid="uid://rpgdyrmi6jln" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Cars/Police (16 x 16).png" id="4_5ci0s"]
 [ext_resource type="Texture2D" uid="uid://grjhogps5axf" path="res://assets/Mini Pixel Pack 2/Props/Misc_props (16 x 16).png" id="4_kljfn"]
 [ext_resource type="Script" uid="uid://bkd1b684lmtk4" path="res://cenas/cenarios/carrofuga.gd" id="5_pmpgn"]
-[ext_resource type="Script" uid="uid://ba62ev6s8poic" path="res://cenas/cenarios/carropolicia.gd" id="8_kljfn"]
+[ext_resource type="Texture2D" uid="uid://bgvpypi1n5ye2" path="res://assets/efeitos/explosion/explosion (1).png" id="8_sc6xx"]
+[ext_resource type="PackedScene" uid="uid://b2qj4mqcqa5cd" path="res://cenas/componentes/vidaUI.tscn" id="12_dqufb"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_qlqwy"]
 tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 2, 196608, 0, 3, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 2, 196609, 65536, 3, 2, 131072, 0, 65538, 131072, 1, 131074, 131072, 2, 196610, 131072, 3, 3, 196608, 0, 65539, 196608, 1, 131075, 196608, 2, 196611, 196608, 3)
@@ -233,12 +233,76 @@ region = Rect2(0, 48.2981, 16.5792, 15.7019)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kljfn"]
 size = Vector2(8, 11)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pmpgn"]
-atlas = ExtResource("4_5ci0s")
-region = Rect2(0, 0, 16.3978, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dunha"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf3jj"]
-size = Vector2(9, 13)
+[sub_resource type="AtlasTexture" id="AtlasTexture_scodc"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5ni2"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dr7h"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8d0h"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4lmw"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to2mk"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jirho"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp1os"]
+atlas = ExtResource("8_sc6xx")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kthvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dunha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scodc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5ni2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dr7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8d0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4lmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to2mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jirho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp1os")
+}],
+"loop": false,
+"name": &"fim",
+"speed": 5.0
+}]
 
 [node name="corrida" type="Node2D"]
 script = ExtResource("1_iv2af")
@@ -296,25 +360,58 @@ texture = SubResource("AtlasTexture_gf3jj")
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_kljfn")
 
-[node name="carropolicia" type="Area2D" parent="." node_paths=PackedStringArray("player_to_follow")]
-position = Vector2(483, 534)
-script = ExtResource("8_kljfn")
-player_to_follow = NodePath("../carrofuga")
-lateral_speed = 3.0
-
-[node name="Sprite2D" type="Sprite2D" parent="carropolicia"]
-texture = SubResource("AtlasTexture_pmpgn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="carropolicia"]
-shape = SubResource("RectangleShape2D_gf3jj")
-
-[node name="Timer" type="Timer" parent="carropolicia"]
-wait_time = 4.0
-autostart = true
+[node name="playerexplosao" type="AnimatedSprite2D" parent="carrofuga"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_kthvf")
+animation = &"fim"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(504, 478)
 zoom = Vector2(2.5, 2.5)
 
-[connection signal="area_entered" from="carropolicia" to="carropolicia" method="_on_area_entered"]
-[connection signal="timeout" from="carropolicia/Timer" to="carropolicia" method="_on_timer_timeout"]
+[node name="GameOverUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI"]
+offset_left = -1.0
+offset_top = -15.0
+offset_right = 1161.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 0.588235)
+
+[node name="Label" type="Label" parent="GameOverUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -11.5
+offset_right = 49.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "FIM DE JOGO"
+
+[node name="Button" type="Button" parent="GameOverUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = 34.0
+offset_right = 98.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "JOGAR DE NOVO"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource("12_dqufb")]
+
+[connection signal="health_changed" from="carrofuga" to="CanvasLayer/HealthUI" method="update_health"]
+[connection signal="player_died" from="carrofuga" to="." method="_on_player_died"]
+[connection signal="animation_finished" from="carrofuga/playerexplosao" to="carrofuga" method="_on_playerexplosao_animation_finished"]
+[connection signal="pressed" from="GameOverUI/Button" to="." method="again_on_button_pressed"]

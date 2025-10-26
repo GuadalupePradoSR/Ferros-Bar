@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0rnmbk2dt3as"]
+
+[ext_resource type="Script" uid="uid://bw80crjnigfsn" path="res://cenas/componentes/tiro.gd" id="1_v3pdh"]
+[ext_resource type="Texture2D" uid="uid://0h3etof3mpku" path="res://assets/efeitos/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_07.png" id="2_11x85"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpyvl"]
+atlas = ExtResource("2_11x85")
+region = Rect2(353.876, 54.8859, 10.2547, 3.20257)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4k6e"]
+size = Vector2(10, 4)
+
+[node name="tiro" type="Area2D"]
+script = ExtResource("1_v3pdh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_gpyvl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a4k6e")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(0.5, 0.2)
