@@ -5,8 +5,8 @@ extends Area2D
 @export var player_to_follow: Node2D
 @export var lane_x_positions: PackedFloat32Array = PackedFloat32Array([484.0, 508.0])
 @export var lateral_speed: float = 5.0
-var health: int = 15
-@export var follow_y_position: float = 534.0 # <-- ADICIONE ISSO. Coloque o Y que o carro fica
+var health: int = 10
+@export var follow_y_position: float = 534.0 # Coloque o Y que o carro fica
 
 # --- Novas Variáveis para o Ataque ---
 @export var vertical_speed: float = 150.0   # Velocidade que ele sobe/desce no eixo Y

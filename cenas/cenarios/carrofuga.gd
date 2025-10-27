@@ -150,3 +150,10 @@ func player_explode():
 func _on_playerexplosao_animation_finished() -> void:
 	# Avisa a cena principal (corrida.gd) que o jogador morreu
 	player_died.emit()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	# Verifica se o que batemos tem a etiqueta "obstacles"
+	if body.is_in_group("obstaculos"):
+		# Se sim, chama sua função de dano (que já treme e tira 1HP)
+		take_damage(1)
