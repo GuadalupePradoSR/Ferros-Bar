@@ -17,14 +17,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			# Opcional: Para garantir que o frame pare no "idle"
 			# Você pode forçar o AnimatedSprite2D para um frame estático aqui
 			# Ex: anim_sprite.set_frame_and_progress(0)
-
-
-		# TEXTURAS DA RAQUEL
-		var raquel_textures = {
-			"feliz": preload("res://assets/assets alanis/personagens alanis/RAQUEL/dialogo_raquel_feliz.png"),
-			"triste": preload("res://assets/assets alanis/personagens alanis/RAQUEL/dialogo_raquel_triste.png"),
-			"raiva": preload("res://assets/assets alanis/personagens alanis/RAQUEL/dialogo_raquel_raiva.png"),
-			"neutro": preload("res://assets/assets alanis/personagens alanis/RAQUEL/dialogo_raquel_neutro.png")
+			
+		var lila_textures = {
+			"feliz": preload("res://assets/assets alanis/personagens alanis/LILA/dialogo_lila_feliz.png"),
+			"triste": preload("res://assets/assets alanis/personagens alanis/LILA/dialogo_lila_triste.png"),
+			"neutro": preload("res://assets/assets alanis/personagens alanis/LILA/dialogo_lila_neutro.png"),
+			"raiva": preload("res://assets/assets alanis/personagens alanis/LILA/dialogo_lila_raiva.png"),
+			
 		}
 		
 		# TEXTURAS DA RORO (Assumindo uma estrutura de Roro, ou usando o nome do personagem)
@@ -37,9 +36,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 		var scene_portraits = {
 			# Mapeia o NOME DO PERSONAGEM (do arquivo .dialogue) para as texturas carregadas
-			"Raquel": {
+			"Lila": {
 				"position": "right", 
-				"moods": raquel_textures
+				"moods": lila_textures
 			},
 			"Ro": {
 				"position": "left",
@@ -48,7 +47,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		}
 
 		# 2. Inicia o diálogo
-		var dialogue_resource: DialogueResource = load("res://dialogos/dialogo_apartamento/untitled.dialogue")
+		var dialogue_resource: DialogueResource = load("res://dialogos/dialogo_apartamento/jornal.dialogue")
 		var dialogue_title: String = "start"
 		
 		# 3. Cria uma nova instância da cena do balão
@@ -68,6 +67,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 		# 6. Reativa a área de colisão da Dona Marta após um pequeno delay 
 		# para evitar que o diálogo seja acionado imediatamente de novo
-		$raquelvermelho/Area2D.set_deferred("monitoring", false)
+		$lilaUm/Area2D.set_deferred("monitoring", false)
 		await get_tree().create_timer(4.0).timeout
-		$raquelvermelho/Area2D.set_deferred("monitoring", true)
+		$lilaUm/Area2D.set_deferred("monitoring", true)

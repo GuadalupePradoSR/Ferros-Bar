@@ -1,0 +1,61 @@
+~ start
+
+Ro: [do set_mood("feliz")] Lila, acabei de sair da faculdade, você não vai acreditar na ideia que a professora Raquel me deu!
+
+Lila: [do set_mood("neutro")] Lá vem... O que aquela sua professora inventou dessa vez? Algum trabalho maluco?
+
+Ro: [do set_mood("feliz")] O melhor de todos! É pro meu TCC! Ela me desafiou a criar algo... revolucionário! E eu acho que tive uma ideia.
+
+Lila: [do set_mood("neutro")] Uma ideia revolucionária? Rô, toma cuidado com essas coisas...
+
+Ro: [do set_mood("feliz")] Pensei em criar um jornal. Sabe? Feito por nós, pra nós. Sobre a nossa comunidade, dar uma voz pra quem não tem. Falar das nossas coisas, dos nossos lugares...
+
+# A expressão da Lila muda de neutra para preocupada/triste.
+Lila: [do set_mood("triste")] Um jornal... sobre... a gente? Rô, isso é muito perigoso. As pessoas já nos olham torto na rua. Imagina publicar um jornal sobre isso?
+
+Ro: [do set_mood("neutro")] Mas é exatamente por isso que a gente precisa fazer! Pra lutar pelos nossos direitos, pra mostrar que a gente existe! Se a gente ficar quieta, nada muda.
+
+Lila: [do set_mood("triste")] Mudar? Rô, eu posso ser demitida. Meus pais podem me expulsar de casa se descobrirem... Eu não sou como você, que todo mundo já sabe. Eu não posso me dar ao luxo de "lutar".
+
+Ro: [do set_mood("triste")] Eu sei que você tem medo, Lila. Não estou dizendo que é fácil. Mas se esconder pra sempre não é a solução. O que a gente vai fazer, viver com medo a vida toda?
+
+Lila: [do set_mood("triste")] Eu só... não quero arriscar tudo.
+
+Ro: [do set_mood("neutro")] Eu entendo. Mas eu preciso fazer isso. Pelo TCC, por mim, por todas nós. E eu queria muito ter minha melhor amiga do meu lado. O que você me diz?
+
+- Eu não consigo, Rô. É perigoso demais para mim. => lila_recusa
+- Eu... não sei. Preciso de um tempo pra pensar sobre isso. => lila_hesita
+- Você tem razão. O medo não pode nos parar. Eu te ajudo. => lila_aceita
+
+
+~ lila_recusa
+
+Lila: [do set_mood("triste")] Desculpa, Rô. Eu te apoio como amiga, mas não posso me envolver. Eu não tenho a sua coragem.
+
+Ro: [do set_mood("triste")] Tudo bem, Lila. Eu entendo. Vou ter que fazer isso sozinha, então.
+=> fim_dialogo
+
+
+~ lila_hesita
+
+Lila: [do set_mood("triste")] É muita coisa pra absorver... A ideia é boa, mas as consequências me assustam. Posso pensar um pouco?
+
+Ro: [do set_mood("neutro")] Claro. Pense. Mas eu vou começar a desenvolver a ideia de qualquer jeito. A história não espera, Lila.
+
+Lila: Eu sei...
+=> fim_dialogo
+
+
+~ lila_aceita
+
+Lila: [do set_mood("triste")] Ok... Eu estou morrendo de medo, de verdade. Mas você tá certa. Alguém tem que fazer alguma coisa.
+
+Ro: [do set_mood("feliz")] É disso que eu tô falando! Sabia que podia contar com você! A gente vai fazer isso juntas e vai ser histórico!
+
+Lila: [do set_mood("neutro")] Vamos com calma... Um passo de cada vez, por favor.
+=> fim_dialogo
+
+
+~ fim_dialogo
+
+=> END
