@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://lmjfophaeqsw"]
+[gd_scene load_steps=38 format=3 uid="uid://lmjfophaeqsw"]
 
 [ext_resource type="Script" uid="uid://bk3fqdysxuimx" path="res://scripts/rua_do_bar.gd" id="1_gigd7"]
 [ext_resource type="Texture2D" uid="uid://dccgih6lq5vb3" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_highway.png" id="2_e8d1u"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://clgheoll11t0" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Beetle.png" id="6_bl6wr"]
 [ext_resource type="Texture2D" uid="uid://hrucvj2oknix" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Classic.png" id="7_glnpj"]
 [ext_resource type="Script" uid="uid://bt0ctet2jvbe5" path="res://scripts/mulher_andando_dois.gd" id="7_o27rt"]
+[ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="10_0tdrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuf8s"]
 atlas = ExtResource("4_fpkkj")
@@ -475,5 +476,7 @@ texture = ExtResource("7_glnpj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="encontro"]
 position = Vector2(567, 560)
 shape = SubResource("RectangleShape2D_o27rt")
+
+[node name="paused_screen" parent="." instance=ExtResource("10_0tdrk")]
 
 [connection signal="area_entered" from="encontro" to="." method="_on_encontro_area_entered"]
