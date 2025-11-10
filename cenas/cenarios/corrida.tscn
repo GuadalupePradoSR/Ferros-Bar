@@ -1,12 +1,12 @@
 [gd_scene load_steps=42 format=4 uid="uid://ccltgrlbc1cqr"]
 
 [ext_resource type="Texture2D" uid="uid://bk7gqjnoswfdb" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_gas_station (128 x 304).png" id="1_gf3jj"]
-[ext_resource type="Script" uid="uid://bpwmvtxa3h7ej" path="res://cenas/cenarios/corrida.gd" id="1_iv2af"]
+[ext_resource type="Script" uid="uid://bpwmvtxa3h7ej" path="res://scripts/cena_corrida/corrida.gd" id="1_iv2af"]
 [ext_resource type="Texture2D" uid="uid://hsa62xgh4gf3" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_road (64 x 64).png" id="2_pmpgn"]
 [ext_resource type="Texture2D" uid="uid://be6qvwt67c3mk" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Cars/NPC_cars (16 x 16).png" id="3_1j6rp"]
 [ext_resource type="Texture2D" uid="uid://bq63dsym8btgj" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_details (16 x 16).png" id="3_iv2af"]
 [ext_resource type="Texture2D" uid="uid://grjhogps5axf" path="res://assets/Mini Pixel Pack 2/Props/Misc_props (16 x 16).png" id="4_kljfn"]
-[ext_resource type="Script" uid="uid://bkd1b684lmtk4" path="res://cenas/cenarios/carrofuga.gd" id="5_pmpgn"]
+[ext_resource type="Script" uid="uid://bkd1b684lmtk4" path="res://scripts/cena_corrida/carrofuga.gd" id="5_pmpgn"]
 [ext_resource type="Texture2D" uid="uid://bgvpypi1n5ye2" path="res://assets/efeitos/explosion/explosion (1).png" id="8_sc6xx"]
 [ext_resource type="PackedScene" uid="uid://b2qj4mqcqa5cd" path="res://cenas/componentes/vidaUI.tscn" id="12_dqufb"]
 
