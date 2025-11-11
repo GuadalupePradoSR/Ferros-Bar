@@ -387,6 +387,66 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../ro:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ro_esquerda"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../lila:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lila_esquerda"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../karina:animation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"karina_esquerda"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(568, 474)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_4bj5b"]
 resource_name = "andar"
@@ -398,10 +458,10 @@ tracks/0/path = NodePath("../ro:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.896667, 0.966667, 1.62667, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(812, 226), Vector2(600, 226)]
+"values": [Vector2(812, 226), Vector2(600, 226), Vector2(600, 226), Vector2(600, 447), Vector2(600, 447), Vector2(-173, 447)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -410,10 +470,10 @@ tracks/1/path = NodePath("../ro:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.896667, 0.966667, 1.62667, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0]
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -422,10 +482,10 @@ tracks/2/path = NodePath("../lila:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1.11333, 3.13333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.61333, 1.43333, 1.47, 2.3, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(814, 226), Vector2(600, 226)]
+"values": [Vector2(814, 226), Vector2(600, 226), Vector2(600, 226), Vector2(600, 435), Vector2(600, 435), Vector2(-173, 435)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -434,10 +494,10 @@ tracks/3/path = NodePath("../lila:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.11333, 3.13333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.61333, 1.43333, 1.47, 2.3, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0]
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -446,10 +506,10 @@ tracks/4/path = NodePath("../karina:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(2.03667, 4.06667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.07, 1.94334, 1.96667, 2.8, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(815, 226), Vector2(600, 226)]
+"values": [Vector2(815, 226), Vector2(600, 226), Vector2(600, 226), Vector2(600, 435), Vector2(600, 435), Vector2(-173, 435)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -458,10 +518,10 @@ tracks/5/path = NodePath("../karina:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(2.03667, 4.06667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.07, 1.94334, 1.96667, 2.8, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0]
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -470,10 +530,10 @@ tracks/6/path = NodePath("../gal:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 1.53333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.53333, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(250, 569), Vector2(499, 569)]
+"values": [Vector2(250, 569), Vector2(499, 569), Vector2(499, 569), Vector2(-173, 569)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -482,10 +542,70 @@ tracks/7/path = NodePath("../gal:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1.53333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1.53333, 3.0667, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0]
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../ro:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.896667, 0.966667, 1.62667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"ro_esquerda", &"ro_esquerda", &"ro_frente", &"ro_frente"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../lila:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.4333, 1.47, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"lila_esquerda", &"lila_esquerda", &"lila_frente", &"lila_frente"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../karina:animation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.94337, 1.96667, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"karina_esquerda", &"karina_esquerda", &"karina_frente", &"karina_frente"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 3.06667, 3.26667, 3.46667, 3.66667, 3.86667, 4.06667, 4.3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(568, 474), Vector2(568, 474), Vector2(478.391, 480), Vector2(385.335, 474), Vector2(276.77, 480), Vector2(173.374, 474), Vector2(64.809, 480), Vector2(-38.5859, 474), Vector2(-173, 474)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 3.06667, 3.26667, 3.46667, 3.66667, 3.86667, 4.06667, 4.3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6pk58"]
@@ -509,17 +629,12 @@ sprite_frames = SubResource("SpriteFrames_2wo2d")
 animation = &"gal_andar"
 script = ExtResource("10_os7m0")
 
-[node name="caminhao" parent="." instance=ExtResource("2_adlpd")]
-position = Vector2(568, 474)
-
 [node name="ro" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(812, 217)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_2jht2")
 animation = &"ro_esquerda"
-frame = 4
-frame_progress = 0.378579
 script = ExtResource("4_smqss")
 
 [node name="lila" type="AnimatedSprite2D" parent="."]
@@ -538,8 +653,12 @@ sprite_frames = SubResource("SpriteFrames_bsfur")
 animation = &"karina_esquerda"
 script = ExtResource("8_6v48n")
 
+[node name="caminhao" parent="." instance=ExtResource("2_adlpd")]
+position = Vector2(568, 474)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../caminhao")
 libraries = {
 &"": SubResource("AnimationLibrary_6pk58")
 }
+autoplay = "andar"
