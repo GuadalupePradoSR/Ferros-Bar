@@ -1,14 +1,14 @@
 ~ start
 
-Karina: [do set_mood("raiva")] Eu não acredito! Aquele Jurandir nos expulsou! Nosso próprio bar!
+Karina: [do set_mood("raiva")] Eu não acredito! Aquele Jurandir nos expulsou! Daquele bar!
 Ro: [do set_mood("raiva")] "Proibido vender jornal"! Desde quando isso é regra? Ele só não queria a gente lá.
-Lila: [do set_mood("triste")] Eu avisei, Ro... Eu disse que isso era perigoso. Agora fomos expulsas. E se formos demitidas?
+Lila: [do set_mood("triste")] Eu avisei, Ro... Isso era perigoso. Agora fomos expulsas. O que vem depois? Vão nos prender?
 Gal: [do set_mood("neutro")] Calma, meninas. Raiva não vai resolver. Mas... eu tenho um plano.
 Ro: [do set_mood("neutro")] Um plano? Que plano?
 Gal: [do set_mood("feliz")] Aquele Jurandir é um troglodita, mas ele ainda precisa da minha cerveja. Eu entrego mercadoria pra ele toda semana.
 Karina: [do set_mood("neutro")] E daí? Você vai pedir pra ele nos deixar entrar?
-Gal: [do set_mood("feliz")] Melhor. Eu vou *colocar* a gente pra dentro. Com o caminhão.
-Lila: [do set_mood("triste")] Você quer dizer... um Cavalo de Troia? Gal, isso é loucura!
+Gal: [do set_mood("feliz")] Melhor. Eu vou colocar a gente pra dentro. Com o caminhão.
+Lila: [do set_mood("triste")] Você quer dizer tipo um Cavalo de Troia? Gal, isso é loucura!
 Gal: [do set_mood("neutro")] É a única forma. A gente entra pelo depósito, com o caminhão, e toma o bar de volta.
 Ro: [do set_mood("feliz")] Gal... isso é genial! Mas é arriscado. A gente precisa decidir como fazer.
 

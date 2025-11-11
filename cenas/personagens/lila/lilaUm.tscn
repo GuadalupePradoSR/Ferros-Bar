@@ -142,7 +142,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g0sag")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_left",
 "speed": 5.0
 }, {
@@ -188,7 +188,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wxnau")
 }],
-"loop": false,
+"loop": true,
 "name": &"walk_up",
 "speed": 5.0
 }]

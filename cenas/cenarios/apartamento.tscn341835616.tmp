@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://dxa2wpoykjktq"]
+[gd_scene load_steps=73 format=3 uid="uid://dxa2wpoykjktq"]
 
 [ext_resource type="Texture2D" uid="uid://dk8e158lemgai" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="1_gbb62"]
 [ext_resource type="Script" uid="uid://dj0el41kpsf1b" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
@@ -1230,169 +1230,6 @@ height = 49.2308
 radius = 37.6923
 height = 89.2307
 
-[sub_resource type="Animation" id="Animation_jepde"]
-length = 5.0
-
-[sub_resource type="Animation" id="Animation_hjip0"]
-resource_name = "SaidaDoGrupo"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("lilaUm:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(456.923, 400), Vector2(450, 210), Vector2(780, 180)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("lilaUm:motion_mode")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("lilaUm/AnimatedSprite2D:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.1, 2.5, 4.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"walk_up", &"walk_right", &"walk_up"]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("lilaUm/AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"stop"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("galUm:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(431.538, 430), Vector2(430, 220), Vector2(750, 180)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("galUm:motion_mode")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("galUm/AnimatedSprite2D:animation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.1, 2.5, 4.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"walk_up", &"walk_right", &"walk_up"]
-}
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("galUm/AnimatedSprite2D")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"stop"
-}]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("karinaUm:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 2.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(148.462, 243.846), Vector2(170, 50), Vector2(490, 30)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("karinaUm:motion_mode")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.1, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("karinaUm/AnimatedSprite2D:animation")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0.1, 2.5, 4.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"walk_up", &"walk_right", &"walk_up"]
-}
-tracks/11/type = "method"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("karinaUm/AnimatedSprite2D")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"stop"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jepde"]
-_data = {
-&"RESET": SubResource("Animation_jepde"),
-&"SaidaDoGrupo": SubResource("Animation_hjip0")
-}
-
 [node name="apartamento" type="Node2D"]
 script = ExtResource("1_o01wi")
 
@@ -1635,9 +1472,6 @@ z_index = 1
 position = Vector2(607.86, 259.373)
 shape = SubResource("RectangleShape2D_go2vy")
 
-[node name="dialogo_apt" parent="." instance=ExtResource("6_4xqf5")]
-visible = false
-
 [node name="lilaUm" parent="." instance=ExtResource("7_g2xtx")]
 z_index = 1
 position = Vector2(572, 319)
@@ -1651,7 +1485,7 @@ shape = SubResource("CapsuleShape2D_86x7s")
 
 [node name="roroamarela" parent="." instance=ExtResource("5_gx8kv")]
 z_index = 1
-position = Vector2(773, 263)
+position = Vector2(937, 233)
 scale = Vector2(1.3, 1.3)
 
 [node name="Camera2D" type="Camera2D" parent="roroamarela"]
@@ -1663,32 +1497,20 @@ limit_bottom = 650
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="dialogo_apt" parent="." instance=ExtResource("6_4xqf5")]
+visible = false
+
 [node name="GrupoInvasao" type="Node2D" parent="."]
 scale = Vector2(1.3, 1.3)
 
 [node name="lilaUm" parent="GrupoInvasao" instance=ExtResource("7_g2xtx")]
-z_index = 4
 position = Vector2(456.923, 400)
 
-[node name="AnimatedSprite2D" parent="GrupoInvasao/lilaUm" index="0"]
-position = Vector2(4.57764e-05, -23.4615)
-animation = &"walk_up"
-autoplay = "walk_up"
-
 [node name="galUm" parent="GrupoInvasao" instance=ExtResource("11_jepde")]
-z_index = 4
 position = Vector2(431.538, 430)
 
-[node name="AnimatedSprite2D" parent="GrupoInvasao/galUm" index="0"]
-autoplay = "walk_up"
-
 [node name="karinaUm" parent="GrupoInvasao" instance=ExtResource("11_hjip0")]
-z_index = 3
 position = Vector2(148.462, 243.846)
-
-[node name="AnimatedSprite2D" parent="GrupoInvasao/karinaUm" index="0"]
-animation = &"walk_up"
-autoplay = "walk_up"
 
 [node name="Area2D" type="Area2D" parent="GrupoInvasao"]
 
@@ -1696,16 +1518,6 @@ autoplay = "walk_up"
 position = Vector2(435.385, 383.077)
 shape = SubResource("CapsuleShape2D_g2xtx")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="GrupoInvasao"]
-callback_mode_process = 0
-libraries = {
-&"": SubResource("AnimationLibrary_jepde")
-}
-
 [connection signal="body_entered" from="lilaUm/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="lilaUm/Area2D" to="." method="_on_lila_area_body_entered"]
 [connection signal="body_entered" from="GrupoInvasao/Area2D" to="." method="_on_invasao_area_body_entered"]
-
-[editable path="GrupoInvasao/lilaUm"]
-[editable path="GrupoInvasao/galUm"]
-[editable path="GrupoInvasao/karinaUm"]
