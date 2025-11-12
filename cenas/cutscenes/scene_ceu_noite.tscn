@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b8dvnl5tnb53e"]
 
-[ext_resource type="Script" uid="uid://cd4yehf1skeus" path="res://scripts/scene_ceu_noite.gd" id="1_cpj0n"]
+[ext_resource type="Script" uid="uid://dmlr6m0eg80e1" path="res://scripts/scene_ceu_dia.gd" id="1_cpj0n"]
 [ext_resource type="Texture2D" uid="uid://b5eeqf1i1vg5v" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/1.png" id="2_xcuwk"]
 [ext_resource type="Texture2D" uid="uid://bax8t88srxpdk" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/2.png" id="3_m4wya"]
 [ext_resource type="Texture2D" uid="uid://dro1cn5kwpf4g" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/3.png" id="4_33r1e"]
@@ -219,7 +219,7 @@ tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, 320, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, 192, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/5/type = "bezier"
@@ -241,7 +241,7 @@ tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1472, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1344, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/7/type = "bezier"
@@ -263,7 +263,7 @@ tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1344, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1216, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/9/type = "bezier"
@@ -285,7 +285,7 @@ tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, 192, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, 64, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/11/type = "bezier"
@@ -307,7 +307,7 @@ tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -320, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -192, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/13/type = "bezier"
@@ -329,7 +329,7 @@ tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 832, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 960, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/15/type = "bezier"
@@ -351,7 +351,7 @@ tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 704, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 832, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/17/type = "bezier"
@@ -373,7 +373,7 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -448, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -320, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/19/type = "bezier"
@@ -443,7 +443,7 @@ tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, 320, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, 64, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/5/type = "bezier"
@@ -465,7 +465,7 @@ tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1472, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1344, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/7/type = "bezier"
@@ -487,7 +487,7 @@ tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1344, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 1216, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/9/type = "bezier"
@@ -531,7 +531,7 @@ tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -320, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -192, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/13/type = "bezier"
@@ -553,7 +553,7 @@ tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 832, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 960, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/15/type = "bezier"
@@ -575,7 +575,7 @@ tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 704, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(1728, -0.25, 0, 1, 0, 832, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/17/type = "bezier"
@@ -597,7 +597,7 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -448, -1, 0, 0.25, 0),
+"points": PackedFloat32Array(576, -0.25, 0, 1, 0, -320, -1, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 10)
 }
 tracks/19/type = "bezier"
@@ -612,7 +612,7 @@ tracks/19/keys = {
 "times": PackedFloat32Array(0, 7)
 }
 
-[sub_resource type="Animation" id="Animation_pvcgt"]
+[sub_resource type="Animation" id="Animation_m4wya"]
 resource_name = "roxo"
 length = 10.0
 tracks/0/type = "bezier"
@@ -677,9 +677,9 @@ tracks/5/path = NodePath("2:position:y")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(350, -0.25, 0, 0.25, 0, 350, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 10)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(7)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -699,9 +699,9 @@ tracks/7/path = NodePath("7:position:y")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(350, -0.25, 0, 0.25, 0, 350, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 10)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(7)
 }
 tracks/8/type = "bezier"
 tracks/8/imported = false
@@ -721,9 +721,9 @@ tracks/9/path = NodePath("8:position:y")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(300, -0.25, 0, 0.25, 0, 300, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 10)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -743,9 +743,9 @@ tracks/11/path = NodePath("3:position:y")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(300, -0.25, 0, 0.25, 0, 300, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 10)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/12/type = "bezier"
 tracks/12/imported = false
@@ -841,7 +841,7 @@ _data = {
 &"RESET": SubResource("Animation_43su5"),
 &"azul": SubResource("Animation_xcuwk"),
 &"rosa": SubResource("Animation_shwn2"),
-&"roxo": SubResource("Animation_pvcgt")
+&"roxo": SubResource("Animation_m4wya")
 }
 
 [node name="scene_ceu_noite" type="Node2D"]
