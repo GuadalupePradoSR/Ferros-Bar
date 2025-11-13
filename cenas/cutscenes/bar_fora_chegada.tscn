@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0rs1k2e0r8l6"]
+
+[ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="1_dduup"]
+[ext_resource type="PackedScene" uid="uid://df4v5u3l8n37g" path="res://cenas/componentes/caminhao.tscn" id="2_xkqge"]
+
+[node name="bar_fora_chegada" type="Node2D"]
+
+[node name="bar_fora" type="Sprite2D" parent="."]
+position = Vector2(575.063, 288.75)
+scale = Vector2(0.564514, 0.467122)
+texture = ExtResource("1_dduup")
+
+[node name="caminhao" parent="." instance=ExtResource("2_xkqge")]
+position = Vector2(568, 474)
