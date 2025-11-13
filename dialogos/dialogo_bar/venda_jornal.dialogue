@@ -1,0 +1,51 @@
+# ARQUIVO: res://dialogos/bar/eventos_bar.dialogue
+
+# ==========================================
+# PARTE 1: A VENDA (Esperança e Movimento)
+# ==========================================
+~ venda_jornal
+
+Ro: [do set_mood("feliz")] Olha o Xana com Xana! Jornal feito por mulheres, para mulheres!
+Raquel: [do set_mood("neutro")] Xana com Xana? Que nome diferente. Sobre o que é?
+Lila: [do set_mood("feliz")] É sobre nós, sobre nossos direitos, cultura e notícias que não saem na grande imprensa.
+Raquel: [do set_mood("feliz")] Gostei da coragem. Me vê um exemplar?
+Ro: [do set_mood("feliz")] Claro! Muito obrigada pelo apoio!
+do GlobalState.jornais_vendidos += 1
+=> END
+
+# ==========================================
+# PARTE 2: O ASSÉDIO (Tensão Crescente)
+# ==========================================
+~ inicio_conflito
+
+# Fabio e Rodrigo se aproximam
+Fabio: [do set_mood("raiva")] Ei, psiu. O que vocês pensam que estão fazendo rodando bolsinha aqui?
+Karina: [do set_mood("raiva")] Olha o respeito! Estamos vendendo nosso jornal. Quer comprar ou vai só atrapalhar?
+Rodrigo: [do set_mood("neutro")] "Xana com Xana"? Que pouca vergonha é essa, Fabio?
+Fabio: [do set_mood("neutro")] Isso aqui é um bar de família, não é lugar pra sapatão ficar fazendo propaganda.
+Ro: [do set_mood("neutro")] O bar é público. Estamos consumindo e vendendo nossa arte. Não estamos incomodando ninguém.
+Rodrigo: [do set_mood("raiva")] Estão incomodando a gente. Ninguém quer ver isso aqui não. Vão caçar o que fazer.
+Gal: [do set_mood("raiva")] A gente tem o que fazer. Vocês é que parecem desocupados cuidando da vida alheia.
+Fabio: [do set_mood("raiva")] Olha como fala, machorra. Vou chamar o dono.
+=> END
+
+# ==========================================
+# PARTE 3: A EXPULSÃO (O Clímax)
+# ==========================================
+~ expulsao_jurandir
+
+# Jurandir chega irritado
+Jurandir: [do set_mood("raiva")] Que algazarra é essa no meu bar? Fabio, Rodrigo, o que tá pegando?
+Fabio: [do set_mood("neutro")] Essas mulheres, Jurandir. Estão vendendo indecência nas mesas. Incomodando os clientes de bem.
+Jurandir: [do set_mood("neutro")] Eu já disse que não quero camelô aqui dentro. Ainda mais com esse tipo de... material.
+Lila: [do set_mood("triste")] Seu Jurandir, por favor. Nós somos clientes antigas. A gente sempre vem aqui.
+Jurandir: [do set_mood("raiva")] Cliente consome e fica quieto. Vocês tão fazendo política. E política da pior espécie.
+Ro: [do set_mood("raiva")] Nós temos o direito de estar aqui! Isso é preconceito!
+Jurandir: [do set_mood("raiva")] O bar é meu e eu dito as regras. "Proibido vender jornal". É a nova regra.
+Karina: [do set_mood("raiva")] Você acabou de inventar isso!
+Jurandir: [do set_mood("raiva")] Inventei agora e tá valendo. Saiam. As quatro. Agora!
+Gal: [do set_mood("neutro")] Jurandir, você vai se arrepender disso. A gente traz dinheiro pra essa casa.
+Jurandir: [do set_mood("raiva")] Não preciso do dinheiro de gente como vocês. Rua! Antes que eu chame a polícia por vadiagem!
+
+# Aqui o diálogo termina e você dispara a animação delas saindo tristes/bravas
+=> END
