@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cfv2afvbefvvw"
+path="res://.godot/imported/invasao_bar.dialogue-bcdf609dff513f9dd110c26167f363bb.tres"
+
+[deps]
+
+source_file="res://dialogos/dialogo_apartamento/invasao_bar.dialogue"
+dest_files=["res://.godot/imported/invasao_bar.dialogue-bcdf609dff513f9dd110c26167f363bb.tres"]
+
+[params]
+
+defaults=true

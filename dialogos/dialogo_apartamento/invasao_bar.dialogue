@@ -1,0 +1,37 @@
+~ start
+
+Karina: [do set_mood("raiva")] Eu não acredito! Aquele Jurandir nos expulsou! Daquele bar!
+Ro: [do set_mood("raiva")] "Proibido vender jornal"! Desde quando isso é regra? Ele só não queria a gente lá.
+Lila: [do set_mood("triste")] Eu avisei, Ro... Isso era perigoso. Agora fomos expulsas. O que vem depois? Vão nos prender?
+Gal: [do set_mood("neutro")] Calma, meninas. Raiva não vai resolver. Mas... eu tenho um plano.
+Ro: [do set_mood("neutro")] Um plano? Que plano?
+Gal: [do set_mood("feliz")] Aquele Jurandir é um troglodita, mas ele ainda precisa da minha cerveja. Eu entrego mercadoria pra ele toda semana.
+Karina: [do set_mood("neutro")] E daí? Você vai pedir pra ele nos deixar entrar?
+Gal: [do set_mood("feliz")] Melhor. Eu vou colocar a gente pra dentro. Com o caminhão.
+Lila: [do set_mood("triste")] Você quer dizer tipo um Cavalo de Troia? Gal, isso é loucura!
+Gal: [do set_mood("neutro")] É a única forma. A gente entra pelo depósito, com o caminhão, e toma o bar de volta.
+Ro: [do set_mood("feliz")] Gal... isso é genial! Mas é arriscado. A gente precisa decidir como fazer.
+
+- (Plano A) Vamos com tudo. Entramos, fazemos barulho e lemos o jornal em voz alta. => plano_barulho
+- (Plano B) Melhor sermos discretas. Entramos pelos fundos e distribuímos o jornal antes que percebam. => plano_discreto
+
+
+~ plano_barulho
+
+Karina: [do set_mood("feliz")] Isso! Temos que mostrar nossa força! Chega de sermos silenciadas!
+Gal: [do set_mood("neutro")] Certo. Barulho então. Estejam prontas na quinta, é minha próxima entrega.
+Lila: [do set_mood("triste")] Meu Deus... tudo bem. Pela causa.
+=> fim_dialogo
+
+
+~ plano_discreto
+
+Lila: [do set_mood("neutro")] Concordo. Se fizermos muito barulho, a polícia pode aparecer. Discreto é mais seguro.
+Ro: [do set_mood("neutro")] Certo. A gente entra quieta, espalha o jornal. A mensagem vai ser dada do mesmo jeito.
+Gal: [do set_mood("neutro")] Combinado. Quinta-feira. Estejam prontas.
+=> fim_dialogo
+
+
+~ fim_dialogo
+
+=> END
