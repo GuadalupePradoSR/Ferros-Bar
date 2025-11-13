@@ -1,7 +1,7 @@
 [gd_scene load_steps=76 format=3 uid="uid://dxa2wpoykjktq"]
 
 [ext_resource type="Texture2D" uid="uid://dk8e158lemgai" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="1_gbb62"]
-[ext_resource type="Script" uid="uid://dj0el41kpsf1b" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
+[ext_resource type="Script" uid="uid://v6am5l6syqqq" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
 [ext_resource type="Texture2D" uid="uid://bd2c3xicxhqi6" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="2_72kie"]
 [ext_resource type="Texture2D" uid="uid://c03c8gqgpvixf" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="3_gx8kv"]
 [ext_resource type="Texture2D" uid="uid://dgfxgf31me21e" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_o6amd"]
