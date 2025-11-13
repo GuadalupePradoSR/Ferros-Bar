@@ -1,14 +1,14 @@
 [gd_scene load_steps=37 format=3 uid="uid://lmjfophaeqsw"]
 
-[ext_resource type="Script" uid="uid://bk3fqdysxuimx" path="res://scripts/cutscenes/rua/rua_do_bar.gd" id="1_gigd7"]
+[ext_resource type="Script" uid="uid://bk3fqdysxuimx" path="res://scripts/rua_do_bar.gd" id="1_gigd7"]
 [ext_resource type="Texture2D" uid="uid://dccgih6lq5vb3" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_highway.png" id="2_e8d1u"]
 [ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="3_bl6wr"]
 [ext_resource type="Texture2D" uid="uid://fq7cc77ftcl1" path="res://assets/assets alanis/personagens alanis/RÔ/ro_sprite_walking2.png" id="4_fpkkj"]
-[ext_resource type="Script" uid="uid://cqr01ooyr0w8p" path="res://scripts/cutscenes/rua/mulher_andando.gd" id="5_trnar"]
+[ext_resource type="Script" uid="uid://cqr01ooyr0w8p" path="res://scripts/mulher_andando.gd" id="5_trnar"]
 [ext_resource type="Texture2D" uid="uid://of3kjpfhieuw" path="res://assets/assets alanis/personagens alanis/LILA/sprite_walking_lila2.png" id="6_8ihym"]
 [ext_resource type="Texture2D" uid="uid://clgheoll11t0" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Beetle.png" id="6_bl6wr"]
 [ext_resource type="Texture2D" uid="uid://hrucvj2oknix" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Classic.png" id="7_glnpj"]
-[ext_resource type="Script" uid="uid://bt0ctet2jvbe5" path="res://scripts/cutscenes/rua/mulher_andando_dois.gd" id="7_o27rt"]
+[ext_resource type="Script" uid="uid://bt0ctet2jvbe5" path="res://scripts/mulher_andando_dois.gd" id="7_o27rt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuf8s"]
 atlas = ExtResource("4_fpkkj")
@@ -427,7 +427,6 @@ scale = Vector2(0.512329, 0.443848)
 texture = ExtResource("3_bl6wr")
 
 [node name="ro" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
 position = Vector2(506, 565)
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_2glgv")
@@ -443,7 +442,6 @@ script = ExtResource("5_trnar")
 shape = SubResource("CapsuleShape2D_o27rt")
 
 [node name="lila" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
 position = Vector2(628, 562)
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_jr40f")
@@ -462,14 +460,12 @@ libraries = {
 }
 
 [node name="carroazul" type="Sprite2D" parent="."]
-texture_filter = 1
 position = Vector2(1038, 500)
 scale = Vector2(5, 5)
 texture = ExtResource("6_bl6wr")
 flip_h = true
 
 [node name="carrovermelho" type="Sprite2D" parent="."]
-texture_filter = 1
 position = Vector2(59, 520)
 scale = Vector2(5, 5)
 texture = ExtResource("7_glnpj")
