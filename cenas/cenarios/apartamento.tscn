@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dgfxgf31me21e" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_o6amd"]
 [ext_resource type="Texture2D" uid="uid://ctp0ij62h3vl8" path="res://assets/Top-Down_Retro_Interior/HouseInteriorA.png" id="5_4xqf5"]
 [ext_resource type="PackedScene" uid="uid://b5ndxkwxs6vqk" path="res://cenas/personagens/roro/roroamarela.tscn" id="5_gx8kv"]
-[ext_resource type="PackedScene" path="res://dialogos/dialogo_apartamento/balloon.tscn" id="6_4xqf5"]
+[ext_resource type="PackedScene" uid="uid://dyr7pw6vbathf" path="res://dialogos/dialogo_apartamento/balloon.tscn" id="6_4xqf5"]
 [ext_resource type="PackedScene" uid="uid://duoxoaqwmm275" path="res://cenas/personagens/lila/lilaUm.tscn" id="7_g2xtx"]
 [ext_resource type="PackedScene" uid="uid://061hkshbeb0k" path="res://cenas/personagens/karina/karinaUm.tscn" id="11_hjip0"]
 [ext_resource type="PackedScene" uid="uid://dkuhtvk75cpti" path="res://cenas/personagens/gal/galUm.tscn" id="11_jepde"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2qj4mqcqa5cd"]
+
+[ext_resource type="Script" uid="uid://ukcq51vxj1jp" path="res://cenas/componentes/vida_ui.gd" id="1_nx3n5"]
+
+[node name="HealthUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 54.0
+offset_bottom = 40.0
+script = ExtResource("1_nx3n5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 44.0
+offset_bottom = 14.0
+scale = Vector2(2.5, 2.5)
+
+[node name="heart_one" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+stretch_mode = 2
+
+[node name="heart_two" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+stretch_mode = 2
+
+[node name="heart_three" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+stretch_mode = 2

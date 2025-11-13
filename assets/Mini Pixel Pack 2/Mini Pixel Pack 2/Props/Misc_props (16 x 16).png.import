@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqxxfu0qkhcci"
-path="res://.godot/imported/Ranger Open.png-d45a2b297a446345830be16737ac5ca4.ctex"
+uid="uid://grjhogps5axf"
+path="res://.godot/imported/Misc_props (16 x 16).png-fe0470976a9b57534af229fb5f32011c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/veiculos/Pixel Cars/Pixel Cars/Ranger Open.png"
-dest_files=["res://.godot/imported/Ranger Open.png-d45a2b297a446345830be16737ac5ca4.ctex"]
+source_file="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Props/Misc_props (16 x 16).png"
+dest_files=["res://.godot/imported/Misc_props (16 x 16).png-fe0470976a9b57534af229fb5f32011c.ctex"]
 
 [params]
 
