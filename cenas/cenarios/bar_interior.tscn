@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cqf4m6dsjucav"]
+[gd_scene load_steps=42 format=3 uid="uid://cqf4m6dsjucav"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_502ar"]
 [ext_resource type="Script" uid="uid://cxmnrryb55qsm" path="res://cenas/cenarios/bar_dialogo.gd" id="1_eeabm"]
@@ -1622,101 +1622,12 @@ texture = ExtResource("6_pumfm")
 [sub_resource type="TileSet" id="TileSet_l8hci"]
 sources/1 = SubResource("TileSetAtlasSource_s7tsh")
 
-[sub_resource type="Animation" id="Animation_0t4hk"]
-resource_name = "chegada_compradoras"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("chegada_compradoras/raquelvermelho:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(700, 170), Vector2(580, 220), Vector2(600, 500)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("chegada_compradoras/donamartavermelho:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(720, 170), Vector2(600, 220), Vector2(600, 480)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("chegada_compradoras/raquelvermelho/AnimatedSprite2D:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"walk_left", &"walk_down", &"walk_right"]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("chegada_compradoras/raquelvermelho/AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"values": [{
-"args": [&"walk_left", 1.0, false],
-"method": &"play"
-}, {
-"args": [&"walk_down", 1.0, false],
-"method": &"play"
-}, {
-"args": [],
-"method": &"stop"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("chegada_compradoras/donamartavermelho/AnimatedSprite2D:animation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.5, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"walk_left", &"walk_down", &"walk_right"]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("chegada_compradoras/donamartavermelho/AnimatedSprite2D")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [&"walk_left", 1.0, false],
-"method": &"play"
-}, {
-"args": [],
-"method": &"stop"
-}]
-}
-
 [sub_resource type="Animation" id="Animation_b54a4"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("chegada_compradoras/raquelvermelho/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("AnimationPlayer3/raquelvermelho/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1728,7 +1639,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("chegada_compradoras/donamartavermelho/AnimatedSprite2D:animation")
+tracks/1/path = NodePath("AnimationPlayer3/donamartavermelho/AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1738,84 +1649,79 @@ tracks/1/keys = {
 "values": [&"walk_down"]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_b54a4"]
-_data = {
-&"RESET": SubResource("Animation_b54a4"),
-&"chegada_compradoras": SubResource("Animation_0t4hk")
-}
-
-[sub_resource type="Animation" id="Animation_srtaf"]
-resource_name = "aproximacao_homofobicos"
-length = 6.0
+[sub_resource type="Animation" id="Animation_0t4hk"]
+resource_name = "chegada_compradoras"
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("aproximacao_homofobicos/raquelvermelho:position")
+tracks/0/path = NodePath("AnimationPlayer3/raquelvermelho:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.5, 5.16667, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(600, 500), Vector2(600, 200), Vector2(510, 200), Vector2(510, 150)]
+"values": [Vector2(700, 170), Vector2(580, 220), Vector2(600, 500)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("aproximacao_homofobicos/donamartavermelho:position")
+tracks/1/path = NodePath("AnimationPlayer3/donamartavermelho:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3.5, 5.1667, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(600, 480), Vector2(600, 180), Vector2(510, 180), Vector2(510, 150)]
+"values": [Vector2(720, 170), Vector2(600, 220), Vector2(600, 480)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("aproximacao_homofobicos/raquelvermelho/AnimatedSprite2D:animation")
+tracks/2/path = NodePath("AnimationPlayer3/raquelvermelho/AnimatedSprite2D:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 1.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": []
+"values": [&"walk_left", &"walk_down", &"walk_right"]
 }
-tracks/3/type = "method"
+tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("aproximacao_homofobicos/raquelvermelho/AnimatedSprite2D")
+tracks/3/path = NodePath("AnimationPlayer3/donamartavermelho/AnimatedSprite2D:animation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
+"times": PackedFloat32Array(0, 1.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"walk_left", &"walk_down", &"walk_right"]
 }
-tracks/4/type = "value"
+tracks/4/type = "method"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("aproximacao_homofobicos/donamartavermelho/AnimatedSprite2D:animation")
+tracks/4/path = NodePath("AnimationPlayer3/donamartavermelho/AnimatedSprite2D")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
 }
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("aproximacao_homofobicos/donamartavermelho/AnimatedSprite2D")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b54a4"]
+_data = {
+&"RESET": SubResource("Animation_b54a4"),
+&"chegada_compradoras": SubResource("Animation_0t4hk")
 }
 
 [sub_resource type="Animation" id="Animation_j36qi"]
@@ -1823,7 +1729,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("aproximacao_homofobicos/raquelvermelho:position")
+tracks/0/path = NodePath("AnimationPlayer/raquelvermelho:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1835,7 +1741,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("aproximacao_homofobicos/donamartavermelho:position")
+tracks/1/path = NodePath("AnimationPlayer/donamartavermelho:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1844,11 +1750,360 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(720, 170)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/raquelvermelho/AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk_left"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/donamartavermelho/AnimatedSprite2D:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk_left"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/npc_rodrigo:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(326, 182)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/npc_rodrigo/AnimatedSprite2D:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/npc_fabio:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(299, 180)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/npc_fabio/AnimatedSprite2D:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_srtaf"]
+resource_name = "aproximacao_homofobicos"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/raquelvermelho:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5, 5.16667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(600, 500), Vector2(600, 200), Vector2(510, 200), Vector2(510, 150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/donamartavermelho:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 5.1667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(600, 480), Vector2(600, 180), Vector2(510, 180), Vector2(510, 150)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/raquelvermelho/AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5, 5.16667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"walk_up", &"walk_left", &"walk_up"]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/raquelvermelho/AnimatedSprite2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/donamartavermelho/AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.5, 5.16667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"walk_up", &"walk_left", &"walk_up"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/npc_rodrigo:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(326, 182), Vector2(400, 182), Vector2(400, 470), Vector2(600, 470)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/npc_rodrigo/AnimatedSprite2D:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"direita", &"frente", &"direita"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/npc_fabio:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(299, 180), Vector2(380, 180), Vector2(380, 460), Vector2(600, 460)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/npc_fabio/AnimatedSprite2D:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"direita", &"frente", &"direita"]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer/npc_fabio/AnimatedSprite2D")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationPlayer/npc_rodrigo/AnimatedSprite2D")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_23631"]
 _data = {
 &"RESET": SubResource("Animation_j36qi"),
 &"aproximacao_homofobicos": SubResource("Animation_srtaf")
+}
+
+[sub_resource type="Animation" id="Animation_23631"]
+resource_name = "intervencao_jurandir"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intervencao_jurandir/jurandirDois:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 3.5, 8.2, 8.6, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(91, 182), Vector2(0, 182), Vector2(0, 490), Vector2(575, 490), Vector2(575, 450), Vector2(600, 450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("intervencao_jurandir/jurandirDois/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 3.5, 8.2, 8.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"walk_left", &"walk_down", &"walk_right", &"walk_up", &"walk_right"]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("intervencao_jurandir/jurandirDois/AnimatedSprite2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/npc_rodrigo:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 470)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/npc_fabio:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 460)]
+}
+
+[sub_resource type="Animation" id="Animation_0jlpy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intervencao_jurandir/jurandirDois:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(91, 182)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("intervencao_jurandir/jurandirDois/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/npc_rodrigo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(326, 182)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/npc_fabio:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(299, 180)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ga1e0"]
+_data = {
+&"RESET": SubResource("Animation_0jlpy"),
+&"intervencao_jurandir": SubResource("Animation_23631")
 }
 
 [node name="bar_interior" type="Node2D"]
@@ -1899,61 +2154,66 @@ position = Vector2(659, 481)
 [node name="lilaDois" parent="." instance=ExtResource("10_ewgbm")]
 position = Vector2(656, 443)
 
-[node name="chegada_compradoras" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_b54a4")
 }
 
-[node name="raquelvermelho" parent="chegada_compradoras" instance=ExtResource("11_s7tsh")]
+[node name="raquelvermelho" parent="AnimationPlayer3" instance=ExtResource("11_s7tsh")]
 z_index = 2
 position = Vector2(700, 170)
 
-[node name="AnimatedSprite2D" parent="chegada_compradoras/raquelvermelho" index="0"]
+[node name="AnimatedSprite2D" parent="AnimationPlayer3/raquelvermelho" index="0"]
 animation = &"walk_left"
+autoplay = "walk_down"
 
-[node name="Camera2D" type="Camera2D" parent="chegada_compradoras/raquelvermelho"]
+[node name="Camera2D" type="Camera2D" parent="AnimationPlayer3/raquelvermelho"]
 position = Vector2(87, -5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="donamartavermelho" parent="chegada_compradoras" instance=ExtResource("12_l8hci")]
+[node name="donamartavermelho" parent="AnimationPlayer3" instance=ExtResource("12_l8hci")]
 z_index = 1
 position = Vector2(720, 170)
 
-[node name="aproximacao_homofobicos" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_23631")
 }
 
-[node name="npc_fabio" parent="aproximacao_homofobicos" instance=ExtResource("8_nhnrq")]
+[node name="npc_fabio" parent="AnimationPlayer" instance=ExtResource("8_nhnrq")]
 position = Vector2(299, 180)
 script = null
 
-[node name="npc_rodrigo" parent="aproximacao_homofobicos" instance=ExtResource("9_346fm")]
+[node name="npc_rodrigo" parent="AnimationPlayer" instance=ExtResource("9_346fm")]
 position = Vector2(326, 182)
-scale = Vector2(1.3, 1.3)
+scale = Vector2(1.5, 1.5)
 script = null
 
-[node name="raquelvermelho" parent="aproximacao_homofobicos" instance=ExtResource("11_s7tsh")]
+[node name="raquelvermelho" parent="AnimationPlayer" instance=ExtResource("11_s7tsh")]
 z_index = 2
 position = Vector2(700, 170)
 
-[node name="AnimatedSprite2D" parent="aproximacao_homofobicos/raquelvermelho" index="0"]
+[node name="AnimatedSprite2D" parent="AnimationPlayer/raquelvermelho" index="0"]
 animation = &"walk_left"
+autoplay = "walk_down"
 
-[node name="Camera2D" type="Camera2D" parent="aproximacao_homofobicos/raquelvermelho"]
+[node name="Camera2D" type="Camera2D" parent="AnimationPlayer/raquelvermelho"]
 position = Vector2(87, -5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="donamartavermelho" parent="aproximacao_homofobicos" instance=ExtResource("12_l8hci")]
+[node name="donamartavermelho" parent="AnimationPlayer" instance=ExtResource("12_l8hci")]
 z_index = 1
 position = Vector2(720, 170)
 
-[node name="AnimatedSprite2D" parent="aproximacao_homofobicos/donamartavermelho" index="0"]
+[node name="AnimatedSprite2D" parent="AnimationPlayer/donamartavermelho" index="0"]
 animation = &"walk_left"
 
 [node name="intervencao_jurandir" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ga1e0")
+}
 
 [node name="jurandirDois" parent="intervencao_jurandir" instance=ExtResource("16_j36qi")]
 position = Vector2(91, 182)
@@ -1966,8 +2226,10 @@ position = Vector2(-2, -27)
 
 [node name="saida_bar" type="AnimationPlayer" parent="."]
 
-[editable path="chegada_compradoras/raquelvermelho"]
-[editable path="chegada_compradoras/donamartavermelho"]
-[editable path="aproximacao_homofobicos/raquelvermelho"]
-[editable path="aproximacao_homofobicos/donamartavermelho"]
+[editable path="AnimationPlayer3/raquelvermelho"]
+[editable path="AnimationPlayer3/donamartavermelho"]
+[editable path="AnimationPlayer/npc_fabio"]
+[editable path="AnimationPlayer/npc_rodrigo"]
+[editable path="AnimationPlayer/raquelvermelho"]
+[editable path="AnimationPlayer/donamartavermelho"]
 [editable path="intervencao_jurandir/jurandirDois"]
