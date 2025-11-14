@@ -1678,6 +1678,7 @@ visible = false
 
 [node name="lilaUm" parent="." instance=ExtResource("7_g2xtx")]
 z_index = 1
+texture_filter = 1
 position = Vector2(572, 319)
 scale = Vector2(1.3, 1.3)
 
@@ -1689,6 +1690,7 @@ shape = SubResource("CapsuleShape2D_86x7s")
 
 [node name="roroamarela" parent="." instance=ExtResource("5_gx8kv")]
 z_index = 1
+texture_filter = 1
 position = Vector2(576, 448)
 scale = Vector2(1.3, 1.3)
 
@@ -1706,6 +1708,7 @@ scale = Vector2(1.3, 1.3)
 
 [node name="lilaUm" parent="GrupoInvasao" instance=ExtResource("7_g2xtx")]
 z_index = 4
+texture_filter = 1
 position = Vector2(780, 180)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/lilaUm" index="0"]
@@ -1714,6 +1717,7 @@ animation = &"walk_up"
 
 [node name="galUm" parent="GrupoInvasao" instance=ExtResource("11_jepde")]
 z_index = 4
+texture_filter = 1
 position = Vector2(750, 180)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/galUm" index="0"]
@@ -1721,6 +1725,7 @@ animation = &"walk_up"
 
 [node name="karinaUm" parent="GrupoInvasao" instance=ExtResource("11_hjip0")]
 z_index = 3
+texture_filter = 1
 position = Vector2(490, 30)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/karinaUm" index="0"]
