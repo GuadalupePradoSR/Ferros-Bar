@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d0m1bk7ncqgdb"
+path="res://.godot/imported/jornal.dialogue-2cb77c49e8ae913e7803a43334e63f09.tres"
+
+[deps]
+
+source_file="res://dialogos/dialogo_apartamento/jornal.dialogue"
+dest_files=["res://.godot/imported/jornal.dialogue-2cb77c49e8ae913e7803a43334e63f09.tres"]
+
+[params]
+
+defaults=true
