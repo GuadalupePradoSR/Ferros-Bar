@@ -1,0 +1,141 @@
+[gd_scene load_steps=12 format=3 uid="uid://bjsql0iw484ft"]
+
+[ext_resource type="Script" uid="uid://b8h2vh2x565ma" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="Texture2D" uid="uid://7mdasgn583pq" path="res://assets/icons/Basic Pixel Health bar and Scroll bar/All.png" id="2_8sq4i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_640wx"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(912, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2258"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(960, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xsix"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(1008, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rftc2"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(1056, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61f8s"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(1104, 64, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g10ll"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_640wx")
+}],
+"loop": false,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2258")
+}],
+"loop": true,
+"name": &"half1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xsix")
+}],
+"loop": true,
+"name": &"half2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rftc2")
+}],
+"loop": true,
+"name": &"half3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61f8s")
+}],
+"loop": false,
+"name": &"low",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amv7k"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(0, 132, 32, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpiub"]
+atlas = ExtResource("2_8sq4i")
+region = Rect2(128, 132, 32, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1fv7p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amv7k")
+}],
+"loop": false,
+"name": &"of",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpiub")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_64ctp")
+
+[node name="LifeBar" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(82, 39)
+sprite_frames = SubResource("SpriteFrames_g10ll")
+animation = &"full"
+
+[node name="StarsContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+
+[node name="Star1" type="AnimatedSprite2D" parent="StarsContainer"]
+texture_filter = 1
+position = Vector2(131, 37)
+sprite_frames = SubResource("SpriteFrames_1fv7p")
+animation = &"of"
+
+[node name="Star2" type="AnimatedSprite2D" parent="StarsContainer"]
+texture_filter = 1
+position = Vector2(152, 37)
+sprite_frames = SubResource("SpriteFrames_1fv7p")
+animation = &"of"
+
+[node name="Star3" type="AnimatedSprite2D" parent="StarsContainer"]
+texture_filter = 1
+position = Vector2(173, 37)
+sprite_frames = SubResource("SpriteFrames_1fv7p")
+animation = &"of"
+
+[node name="Star4" type="AnimatedSprite2D" parent="StarsContainer"]
+texture_filter = 1
+position = Vector2(194, 37)
+sprite_frames = SubResource("SpriteFrames_1fv7p")
+animation = &"of"
+
+[node name="Star5" type="AnimatedSprite2D" parent="StarsContainer"]
+texture_filter = 1
+position = Vector2(215, 37)
+sprite_frames = SubResource("SpriteFrames_1fv7p")
+animation = &"of"

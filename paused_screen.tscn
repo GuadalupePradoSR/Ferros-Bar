@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://gvlcgdt6pply"]
+
+[ext_resource type="Script" uid="uid://b6ev1bpt2c47y" path="res://scripts/paused_screen.gd" id="1_vk63x"]
+[ext_resource type="Texture2D" uid="uid://b8duojqag0utg" path="res://assets/Logo Ferro'S Bar.png" id="2_b3otf"]
+[ext_resource type="FontFile" uid="uid://dprau0shlvk3e" path="res://assets/font/Stacked pixel.ttf" id="3_ti8b7"]
+[ext_resource type="StyleBox" uid="uid://uai1dljk566g" path="res://assets/font/focus_style.tres" id="4_7tqfv"]
+[ext_resource type="StyleBox" uid="uid://duayam7rww7lp" path="res://assets/font/hover_style.tres" id="5_y8gx7"]
+[ext_resource type="StyleBox" uid="uid://c8fpn5g5weqs7" path="res://assets/font/normal_style.tres" id="6_ajkn0"]
+
+[sub_resource type="Theme" id="Theme_b3otf"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 27
+Button/fonts/font = ExtResource("3_ti8b7")
+Button/styles/focus = ExtResource("4_7tqfv")
+Button/styles/hover = ExtResource("5_y8gx7")
+Button/styles/normal = ExtResource("6_ajkn0")
+Button/styles/pressed = ExtResource("4_7tqfv")
+
+[node name="paused_screen" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_vk63x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.592157)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="logo" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_b3otf")
+
+[node name="menu_buttons" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 27
+
+[node name="bntContinue" type="Button" parent="MarginContainer/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "CONTINUE"
+
+[node name="bntOptions" type="Button" parent="MarginContainer/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "OPTIONS
+"
+
+[node name="bntQuit" type="Button" parent="MarginContainer/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "QUIT"
+
+[connection signal="pressed" from="MarginContainer/menu_buttons/bntContinue" to="." method="_on_bnt_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/menu_buttons/bntOptions" to="." method="_on_bnt_options_pressed"]
+[connection signal="pressed" from="MarginContainer/menu_buttons/bntQuit" to="." method="_on_bnt_quit_pressed"]

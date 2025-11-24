@@ -1,16 +1,14 @@
-[gd_scene load_steps=45 format=3 uid="uid://cqf4m6dsjucav"]
+[gd_scene load_steps=43 format=3 uid="uid://cqf4m6dsjucav"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_502ar"]
-[ext_resource type="Script" uid="uid://cjie6nqaeau0u" path="res://cenas/cenarios/bar_interior.gd" id="1_nhnrq"]
 [ext_resource type="Texture2D" uid="uid://dgfxgf31me21e" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="3_dgysb"]
 [ext_resource type="Texture2D" uid="uid://b0p87os5p3cy" path="res://assets/Top-Down_Retro_Interior/image-removebg-preview.png" id="4_qdw0b"]
 [ext_resource type="Texture2D" uid="uid://c03c8gqgpvixf" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_eeabm"]
 [ext_resource type="Texture2D" uid="uid://bd2c3xicxhqi6" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="6_pumfm"]
 [ext_resource type="Texture2D" uid="uid://i360b02ifved" path="res://assets/Top-Down_Retro_Interior/Imagem_do_WhatsApp_de_2025-10-21_à_s__08.27.37_a47bfc9f-removebg-preview.png" id="7_eeabm"]
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="7_pumfm"]
-[ext_resource type="PackedScene" uid="uid://bewkxmcaamwtq" path="res://cenas/cenarios/porta.tscn" id="9_nhnrq"]
-[ext_resource type="Script" uid="uid://k87mt4tk5v6x" path="res://cenas/cenarios/porta.gd" id="10_346fm"]
-[ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="11_pfs6a"]
+[ext_resource type="PackedScene" uid="uid://e161u1nd4148" path="res://scripts/Porta.tscn" id="8_pumfm"]
+[ext_resource type="Script" uid="uid://cqopkvtxijqto" path="res://scripts/porta.gd" id="9_nhnrq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgysb"]
 texture = ExtResource("1_502ar")
@@ -2486,7 +2484,6 @@ size = Vector2(1153, 20)
 size = Vector2(29, 650)
 
 [node name="bar_interior" type="Node2D"]
-script = ExtResource("1_nhnrq")
 
 [node name="chao" type="TileMap" parent="."]
 position = Vector2(82, -1)
@@ -2512,7 +2509,7 @@ layer_0/tile_data = PackedInt32Array(1048589, 196608, 5, 1048588, 196608, 4, 458
 [node name="porta" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_l8hci")
 format = 2
-layer_0/tile_data = PackedInt32Array(262180, 786433, 3, 327716, 786433, 4, 262181, 851969, 3, 327717, 851969, 4, 262202, 786433, 3, 327738, 786433, 4, 262203, 851969, 3, 327739, 851969, 4, 262149, 786433, 3, 327685, 786433, 4, 262150, 851969, 3, 327686, 851969, 4, 327743, 327681, 268435462, 262208, 262145, 268435461, 262207, 327681, 268435461, 327711, 917505, 5, 393247, 917505, 6, 458783, 917505, 7, 327712, 983041, 5, 393248, 983041, 6, 458784, 983041, 7, 393286, 1, 1, 327751, 65537, 0, 393287, 65537, 1, 458822, 1, 2, 524358, 1, 3, 524359, 65537, 3, 458823, 65537, 2, 589895, 65537, 4, 589894, 1, 4, 327748, 65537, 268435461, 393284, 65537, 268435462, 393285, 1, 268435462, 458821, 1, 268435463, 524357, 1, 268435464, 524356, 65537, 268435464, 589892, 65537, 268435465, 458820, 65537, 268435463, 589893, 1, 268435465, 196677, 917505, 0, 262213, 917505, 1, 327749, 917505, 2, 196678, 983041, 0, 262214, 983041, 1, 327750, 983041, 2)
+layer_0/tile_data = PackedInt32Array(262180, 786433, 3, 327716, 786433, 4, 262181, 851969, 3, 327717, 851969, 4, 262202, 786433, 3, 327738, 786433, 4, 262203, 851969, 3, 327739, 851969, 4, 262149, 786433, 3, 327685, 786433, 4, 262150, 851969, 3, 327686, 851969, 4, 327743, 327681, 268435462, 262208, 262145, 268435461, 262207, 327681, 268435461, 327711, 917505, 5, 393247, 917505, 6, 458783, 917505, 7, 327712, 983041, 5, 393248, 983041, 6, 458784, 983041, 7, 393286, 1, 1, 327751, 65537, 0, 393287, 65537, 1, 458822, 1, 2, 524358, 1, 3, 524359, 65537, 3, 458823, 65537, 2, 589895, 65537, 4, 589894, 1, 4, 327748, 65537, 268435461, 393284, 65537, 268435462, 393285, 1, 268435462, 458821, 1, 268435463, 524357, 1, 268435464, 524356, 65537, 268435464, 589892, 65537, 268435465, 458820, 65537, 268435463, 589893, 1, 268435465)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nhnrq")
@@ -2675,6 +2672,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="Left" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-16, 328)
@@ -2692,10 +2690,9 @@ shape = SubResource("RectangleShape2D_j36qi")
 position = Vector2(1160, 328)
 shape = SubResource("RectangleShape2D_23631")
 
-[node name="Porta" parent="." instance=ExtResource("9_nhnrq")]
-position = Vector2(1122, 75)
-script = ExtResource("10_346fm")
+[node name="Porta" parent="." instance=ExtResource("8_pumfm")]
+position = Vector2(1121, 71)
 
-[node name="paused_screen" parent="." instance=ExtResource("11_pfs6a")]
-
-[connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]
+[node name="bar_interior2" type="Marker2D" parent="."]
+position = Vector2(1120, 124)
+script = ExtResource("9_nhnrq")

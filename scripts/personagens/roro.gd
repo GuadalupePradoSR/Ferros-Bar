@@ -1,6 +1,6 @@
 # mulher_um.gd
 extends CharacterBody2D
-
+class_name Player
 const SPEED = 130
 @onready var anim = $AnimatedSprite2D   # nó de animação do personagem
 
