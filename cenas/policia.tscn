@@ -1,0 +1,164 @@
+[gd_scene load_steps=23 format=3 uid="uid://c1uiob83qvrkd"]
+
+[ext_resource type="Script" uid="uid://bnk2i6v6tv2sy" path="res://scripts/policia.gd" id="1_2gl45"]
+[ext_resource type="Texture2D" uid="uid://d4gpoiqv2ce0j" path="res://assets/personagens/policia/police1/police_anim/standard/slash.png" id="2_no6xa"]
+[ext_resource type="Texture2D" uid="uid://4pgjflmup6yq" path="res://assets/personagens/policia/police1/police_anim/standard/hurt.png" id="3_sgpwn"]
+[ext_resource type="Texture2D" uid="uid://bb6gs6iwuhj0a" path="res://assets/personagens/policia/police1/police_anim/standard/idle.png" id="4_pvi6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8j7s4"]
+atlas = ExtResource("2_no6xa")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjrc1"]
+atlas = ExtResource("2_no6xa")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lq8x"]
+atlas = ExtResource("2_no6xa")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbf66"]
+atlas = ExtResource("2_no6xa")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al8o7"]
+atlas = ExtResource("2_no6xa")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woiuv"]
+atlas = ExtResource("2_no6xa")
+region = Rect2(320, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjm41"]
+atlas = ExtResource("3_sgpwn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwa7k"]
+atlas = ExtResource("3_sgpwn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64gix"]
+atlas = ExtResource("3_sgpwn")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2lrq"]
+atlas = ExtResource("3_sgpwn")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xc5y"]
+atlas = ExtResource("3_sgpwn")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpgmc"]
+atlas = ExtResource("3_sgpwn")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmex3"]
+atlas = ExtResource("4_pvi6a")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_namtv"]
+atlas = ExtResource("4_pvi6a")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f5v0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8j7s4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjrc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lq8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbf66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al8o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woiuv")
+}],
+"loop": true,
+"name": &"combat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjm41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwa7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64gix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2lrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xc5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpgmc")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmex3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_namtv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dbvdy"]
+radius = 59.6825
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lntnr"]
+radius = 13.0
+height = 52.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2gl45"]
+radius = 21.0
+height = 72.0
+
+[node name="Policia" type="CharacterBody2D"]
+script = ExtResource("1_2gl45")
+metadata/_custom_type_script = "uid://dxfksulver2va"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_f5v0l")
+animation = &"idle"
+frame = 1
+frame_progress = 0.876183
+
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+shape = SubResource("CircleShape2D_dbvdy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_lntnr")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+shape = SubResource("CapsuleShape2D_2gl45")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]

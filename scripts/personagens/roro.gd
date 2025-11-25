@@ -4,8 +4,24 @@ class_name Player
 const SPEED = 130
 @onready var anim = $AnimatedSprite2D   # nó de animação do personagem
 
+var policia_inattack_range = false
+var policia_attack_cooldown = true
+var health = 100
+var player_alive = true
+
+var attack_ip = false
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
+	
+	policia_attack()
+	attack()
+	
+	if health <= 0:
+		player_alive = false
+		health = 0
+		print("palyer morreu")
+		self.queue_free()
 	
 	# Captura direções
 	if Input.is_action_pressed("ui_right"):
@@ -38,3 +54,34 @@ func _physics_process(delta):
 				anim.play("walk_up")
 	else:
 		anim.stop()
+
+func Player():
+	pass
+
+func _on_player_hitbox_body_entered(body: Node2D) -> void:
+	if body.has_method("policia"):
+		policia_inattack_range = true
+
+
+func _on_player_hitbox_body_exited(body: Node2D) -> void:
+	if body.has_method("policia"):
+		policia_inattack_range = false
+
+func policia_attack():
+	if policia_inattack_range and policia_attack_cooldown == true:
+		health = health - 20
+		policia_attack_cooldown = false
+		$attack_cooldown.start()
+		print(health)
+
+
+func _on_attack_cooldown_timeout() -> void:
+	policia_attack_cooldown = true
+
+func attack():
+	
+	if Input.is_action_just_pressed("attack"):
+		global.player_current_attack = true
+		attack_ip = true
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play("combate")

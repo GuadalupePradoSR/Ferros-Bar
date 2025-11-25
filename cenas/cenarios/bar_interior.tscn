@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cqf4m6dsjucav"]
+[gd_scene load_steps=46 format=3 uid="uid://cqf4m6dsjucav"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_502ar"]
 [ext_resource type="Script" uid="uid://cjie6nqaeau0u" path="res://cenas/cenarios/bar_interior.gd" id="1_nhnrq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bewkxmcaamwtq" path="res://cenas/cenarios/porta.tscn" id="9_nhnrq"]
 [ext_resource type="Script" uid="uid://k87mt4tk5v6x" path="res://cenas/cenarios/porta.gd" id="10_346fm"]
 [ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="11_pfs6a"]
+[ext_resource type="PackedScene" uid="uid://c1uiob83qvrkd" path="res://cenas/policia.tscn" id="12_ewgbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgysb"]
 texture = ExtResource("1_502ar")
@@ -2697,5 +2698,9 @@ position = Vector2(1122, 75)
 script = ExtResource("10_346fm")
 
 [node name="paused_screen" parent="." instance=ExtResource("11_pfs6a")]
+visible = false
+
+[node name="Policia" parent="." instance=ExtResource("12_ewgbm")]
+position = Vector2(426, 317)
 
 [connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]
