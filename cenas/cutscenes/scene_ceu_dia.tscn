@@ -901,3 +901,5 @@ texture = ExtResource("6_lfg2r")
 position = Vector2(832, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_lfg2r")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

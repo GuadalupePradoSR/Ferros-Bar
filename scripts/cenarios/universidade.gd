@@ -75,17 +75,20 @@ func _on_raquel_area_body_entered(body: Node2D) -> void:
 		dialogue_instance.start(dialogue_resource, dialogue_title, [{"scene_portraits": scene_portraits}])
 		
 		# A execução para aqui. Só continua quando o sinal dialogue_finished for emitido.
-		await dialogue_instance.dialogue_finished 
+		await dialogue_instance.dialogue_finished
+		
+		# Assim que o diálogo acabar, trocamos de cena
+		get_tree().change_scene_to_file("res://cenas/cutscenes/rua_do_bar.tscn") 
 		
 		# 5. Reativa a movimentação da Roro
-		body.set_physics_process(true)
-		body.set_process_input(true)
+		#body.set_physics_process(true)
+		#body.set_process_input(true)
 		
 		# 6. Reativa a área de colisão da Dona Marta após um pequeno delay 
 		# para evitar que o diálogo seja acionado imediatamente de novo
-		$raquelvermelho/Area2D.set_deferred("monitoring", false)
-		await get_tree().create_timer(4.0).timeout
-		$raquelvermelho/Area2D.set_deferred("monitoring", true)
+		#$raquelvermelho/Area2D.set_deferred("monitoring", false)
+		#await get_tree().create_timer(4.0).timeout
+		#$raquelvermelho/Area2D.set_deferred("monitoring", true)
 
 
 func _on_porta_entrada_fora_body_entered(body: Node2D) -> void:
