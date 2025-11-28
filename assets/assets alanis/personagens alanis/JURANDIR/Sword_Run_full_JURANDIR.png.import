@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqxxfu0qkhcci"
-path="res://.godot/imported/Ranger Open.png-d45a2b297a446345830be16737ac5ca4.ctex"
+uid="uid://dakbruws8rpr2"
+path="res://.godot/imported/Sword_Run_full_JURANDIR.png-12b7615dbb726091f8896983f97ef567.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/veiculos/Pixel Cars/Pixel Cars/Ranger Open.png"
-dest_files=["res://.godot/imported/Ranger Open.png-d45a2b297a446345830be16737ac5ca4.ctex"]
+source_file="res://assets/assets alanis/personagens alanis/JURANDIR/Sword_Run_full_JURANDIR.png"
+dest_files=["res://.godot/imported/Sword_Run_full_JURANDIR.png-12b7615dbb726091f8896983f97ef567.ctex"]
 
 [params]
 

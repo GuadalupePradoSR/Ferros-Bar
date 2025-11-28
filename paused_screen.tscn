@@ -1,0 +1,274 @@
+[gd_scene load_steps=8 format=3 uid="uid://gvlcgdt6pply"]
+
+[ext_resource type="Script" uid="uid://b6ev1bpt2c47y" path="res://scripts/paused_screen.gd" id="1_vk63x"]
+[ext_resource type="Texture2D" uid="uid://b8duojqag0utg" path="res://assets/Logo Ferro'S Bar.png" id="2_b3otf"]
+[ext_resource type="FontFile" uid="uid://dprau0shlvk3e" path="res://assets/font/Stacked pixel.ttf" id="3_ti8b7"]
+[ext_resource type="StyleBox" uid="uid://uai1dljk566g" path="res://assets/font/focus_style.tres" id="4_7tqfv"]
+[ext_resource type="StyleBox" uid="uid://duayam7rww7lp" path="res://assets/font/hover_style.tres" id="5_y8gx7"]
+[ext_resource type="StyleBox" uid="uid://c8fpn5g5weqs7" path="res://assets/font/normal_style.tres" id="6_ajkn0"]
+
+[sub_resource type="Theme" id="Theme_b3otf"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 27
+Button/fonts/font = ExtResource("3_ti8b7")
+Button/styles/focus = ExtResource("4_7tqfv")
+Button/styles/hover = ExtResource("5_y8gx7")
+Button/styles/normal = ExtResource("6_ajkn0")
+Button/styles/pressed = ExtResource("4_7tqfv")
+
+[node name="paused_screen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_vk63x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.321)
+
+[node name="Menu" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="logo" type="TextureRect" parent="Menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_b3otf")
+
+[node name="menu_buttons" type="VBoxContainer" parent="Menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 27
+
+[node name="bntContinue" type="Button" parent="Menu/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "CONTINUE"
+
+[node name="bntOptions" type="Button" parent="Menu/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "OPTIONS
+"
+
+[node name="bntQuit" type="Button" parent="Menu/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "QUIT"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="menu_buttons" type="VBoxContainer" parent="Options/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 27
+
+[node name="bntVideo" type="Button" parent="Options/MarginContainer/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "VIDEO"
+
+[node name="bntAudio" type="Button" parent="Options/MarginContainer/menu_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_b3otf")
+text = "AUDIO
+"
+
+[node name="bntBackOptions" type="Button" parent="Options/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_b3otf")
+text = "BACK"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Video"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Video/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Labels" type="VBoxContainer" parent="Video/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="Label" parent="Video/MarginContainer/HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "FullScreen"
+
+[node name="BorderLess" type="Label" parent="Video/MarginContainer/HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "BorderLess"
+
+[node name="VSync" type="Label" parent="Video/MarginContainer/HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "VSync"
+
+[node name="Checks" type="VBoxContainer" parent="Video/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="CheckBox" parent="Video/MarginContainer/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="BorderLess" type="CheckBox" parent="Video/MarginContainer/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="VSync" type="CheckBox" parent="Video/MarginContainer/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="bntBackVideo" type="Button" parent="Video/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_b3otf")
+text = "BACK"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -38.5
+offset_right = 154.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "Master"
+
+[node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "Music"
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "Sound FX"
+
+[node name="Sliders" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Master" type="HSlider" parent="Audio/HBoxContainer/Sliders"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Music" type="HSlider" parent="Audio/HBoxContainer/Sliders"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sound FX" type="HSlider" parent="Audio/HBoxContainer/Sliders"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="bntBackAudio" type="Button" parent="Audio"]
+layout_mode = 2
+offset_left = 549.0
+offset_top = 605.0
+offset_right = 603.0
+offset_bottom = 628.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_b3otf")
+text = "BACK"
+
+[connection signal="pressed" from="Menu/menu_buttons/bntContinue" to="." method="_on_bnt_continue_pressed"]
+[connection signal="pressed" from="Menu/menu_buttons/bntOptions" to="." method="_on_bnt_options_pressed"]
+[connection signal="pressed" from="Menu/menu_buttons/bntQuit" to="." method="_on_bnt_quit_pressed"]
+[connection signal="pressed" from="Options/MarginContainer/menu_buttons/bntVideo" to="." method="_on_bnt_video_pressed"]
+[connection signal="pressed" from="Options/MarginContainer/menu_buttons/bntAudio" to="." method="_on_bnt_audio_pressed"]
+[connection signal="pressed" from="Options/MarginContainer/bntBackOptions" to="." method="_on_bnt_back_options_pressed"]
+[connection signal="toggled" from="Video/MarginContainer/HBoxContainer/Checks/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="toggled" from="Video/MarginContainer/HBoxContainer/Checks/BorderLess" to="." method="_on_border_less_toggled"]
+[connection signal="toggled" from="Video/MarginContainer/HBoxContainer/Checks/VSync" to="." method="_on_v_sync_toggled"]
+[connection signal="pressed" from="Video/MarginContainer/bntBackVideo" to="." method="_on_bnt_back_video_pressed"]
+[connection signal="pressed" from="Audio/bntBackAudio" to="." method="_on_bnt_back_audio_pressed"]

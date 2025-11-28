@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cdjkt2psu47ag"
+path="res://.godot/imported/venda_jornal.dialogue-8da2137d04e0002b74f7e873c3dbbf7f.tres"
+
+[deps]
+
+source_file="res://dialogos/dialogo_bar/venda_jornal.dialogue"
+dest_files=["res://.godot/imported/venda_jornal.dialogue-8da2137d04e0002b74f7e873c3dbbf7f.tres"]
+
+[params]
+
+defaults=true

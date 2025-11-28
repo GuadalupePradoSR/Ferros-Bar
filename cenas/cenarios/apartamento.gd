@@ -210,3 +210,4 @@ func _animate_group_exit() -> void: # 'async' removido
 	
 	# Espera o sinal de que a animação terminou
 	await anim_player.animation_finished
+#
