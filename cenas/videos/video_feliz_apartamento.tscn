@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ouis6rnoks58"]
+
+[ext_resource type="VideoStream" uid="uid://lmxxaxhb43xp" path="res://feliz_apart.ogv" id="1_n1frq"]
+[ext_resource type="Script" uid="uid://caxpb7jegcm8x" path="res://cenas/videos/video_feliz_apartamento.gd" id="2_lko5t"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 1182.0
+offset_bottom = 662.0
+stream = ExtResource("1_n1frq")
+autoplay = true
+expand = true
+script = ExtResource("2_lko5t")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

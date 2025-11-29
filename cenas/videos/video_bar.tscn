@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3edmk0hl0hy2"]
+
+[ext_resource type="VideoStream" uid="uid://lmxxaxhb43xp" path="res://feliz_apart.ogv" id="1_gdt1x"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 1183.0
+offset_bottom = 671.0
+stream = ExtResource("1_gdt1x")
+autoplay = true
+expand = true
