@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready():
 	if animation_player:
+<<<<<<< HEAD
 		# 1. Conecta o sinal 'animation_finished' à função que criamos abaixo
 		animation_player.animation_finished.connect(_on_animation_finished)
 		
@@ -16,3 +17,6 @@ func _on_animation_finished(anim_name: String):
 	if anim_name == "rosa":
 		# 4. Troca para a nova cena (substitua pelo caminho do seu arquivo)
 		get_tree().change_scene_to_file("res://cenas/cenarios/universidade.tscn")
+=======
+		animation_player.play("roxo")
+>>>>>>> livia

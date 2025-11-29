@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bfvgvoyg26qk5"
+path="res://.godot/imported/briga_bar.dialogue-be382d1e4316fe984ebb9a476a03db28.tres"
+
+[deps]
+
+source_file="res://dialogos/dialogo_bar/briga_bar.dialogue"
+dest_files=["res://.godot/imported/briga_bar.dialogue-be382d1e4316fe984ebb9a476a03db28.tres"]
+
+[params]
+
+defaults=true

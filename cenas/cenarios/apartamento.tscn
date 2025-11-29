@@ -1,12 +1,17 @@
-[gd_scene load_steps=75 format=3 uid="uid://dxa2wpoykjktq"]
+[gd_scene load_steps=76 format=3 uid="uid://dxa2wpoykjktq"]
 
 [ext_resource type="Texture2D" uid="uid://dk8e158lemgai" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="1_gbb62"]
+<<<<<<< HEAD
+[ext_resource type="Script" uid="uid://dn48lvov846tp" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
+=======
+[ext_resource type="Script" uid="uid://dj0el41kpsf1b" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
+>>>>>>> 8a15ac37ed19e6c1f80f6020b7d0b67138572c1c
 [ext_resource type="Texture2D" uid="uid://bd2c3xicxhqi6" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="2_72kie"]
 [ext_resource type="Texture2D" uid="uid://c03c8gqgpvixf" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="3_gx8kv"]
 [ext_resource type="Texture2D" uid="uid://dgfxgf31me21e" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_o6amd"]
 [ext_resource type="Texture2D" uid="uid://ctp0ij62h3vl8" path="res://assets/Top-Down_Retro_Interior/HouseInteriorA.png" id="5_4xqf5"]
 [ext_resource type="PackedScene" uid="uid://b5ndxkwxs6vqk" path="res://cenas/personagens/roro/roroamarela.tscn" id="5_gx8kv"]
-[ext_resource type="PackedScene" uid="uid://cftlor0frxa8r" path="res://dialogos/dialogo_rua/balloon.tscn" id="6_4xqf5"]
+[ext_resource type="PackedScene" uid="uid://dyr7pw6vbathf" path="res://dialogos/dialogo_apartamento/balloon.tscn" id="6_4xqf5"]
 [ext_resource type="PackedScene" uid="uid://duoxoaqwmm275" path="res://cenas/personagens/lila/lilaUm.tscn" id="7_g2xtx"]
 [ext_resource type="PackedScene" uid="uid://061hkshbeb0k" path="res://cenas/personagens/karina/karinaUm.tscn" id="11_hjip0"]
 [ext_resource type="PackedScene" uid="uid://dkuhtvk75cpti" path="res://cenas/personagens/gal/galUm.tscn" id="11_jepde"]
@@ -1231,6 +1236,30 @@ height = 89.2307
 
 [sub_resource type="Animation" id="Animation_jepde"]
 length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../roroamarela:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 448)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../roroamarela/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk_up"]
+}
 
 [sub_resource type="Animation" id="Animation_hjip0"]
 resource_name = "SaidaDoGrupo"
@@ -1250,123 +1279,134 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("lilaUm:motion_mode")
+tracks/1/path = NodePath("lilaUm/AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("lilaUm/AnimatedSprite2D:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.1, 2.5, 4.9),
+"times": PackedFloat32Array(0, 2.5, 4.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"walk_up", &"walk_right", &"walk_up"]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("lilaUm/AnimatedSprite2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("lilaUm/AnimatedSprite2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [&"walk_up", 1.0, false],
+"method": &"play"
+}, {
 "args": [],
 "method": &"stop"
 }]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("galUm:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("galUm:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 2.5, 5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(431.538, 430), Vector2(430, 220), Vector2(750, 180)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("galUm:motion_mode")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("galUm/AnimatedSprite2D:animation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.1, 2.5, 4.9),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("galUm/AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"walk_up", &"walk_right", &"walk_up"]
 }
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("galUm/AnimatedSprite2D")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("galUm/AnimatedSprite2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [&"walk_up", 1.0, false],
+"method": &"play"
+}, {
 "args": [],
 "method": &"stop"
 }]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("karinaUm:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("karinaUm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 2.5, 5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(148.462, 243.846), Vector2(170, 50), Vector2(490, 30)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("karinaUm/AnimatedSprite2D:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"walk_up", &"walk_right", &"walk_up"]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("karinaUm/AnimatedSprite2D")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"walk_up", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("karinaUm:motion_mode")
+tracks/9/path = NodePath("../roroamarela:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.1, 5),
+"times": PackedFloat32Array(0, 2.5, 5),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 0]
+"update": 0,
+"values": [Vector2(576, 448), Vector2(610, 255), Vector2(1012, 210)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("karinaUm/AnimatedSprite2D:animation")
+tracks/10/path = NodePath("../roroamarela/AnimatedSprite2D:animation")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0.1, 2.5, 4.9),
+"times": PackedFloat32Array(0, 2.5, 5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"walk_up", &"walk_right", &"walk_up"]
@@ -1374,13 +1414,16 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("karinaUm/AnimatedSprite2D")
+tracks/11/path = NodePath("../roroamarela/AnimatedSprite2D")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(5),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
 "args": [],
 "method": &"stop"
 }]
@@ -1393,6 +1436,7 @@ _data = {
 }
 
 [node name="apartamento" type="Node2D"]
+script = ExtResource("1_o01wi")
 
 [node name="chao" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_72kie")
@@ -1638,6 +1682,7 @@ visible = false
 
 [node name="lilaUm" parent="." instance=ExtResource("7_g2xtx")]
 z_index = 1
+texture_filter = 1
 position = Vector2(572, 319)
 scale = Vector2(1.3, 1.3)
 
@@ -1649,7 +1694,8 @@ shape = SubResource("CapsuleShape2D_86x7s")
 
 [node name="roroamarela" parent="." instance=ExtResource("5_gx8kv")]
 z_index = 1
-position = Vector2(773, 263)
+texture_filter = 1
+position = Vector2(576, 448)
 scale = Vector2(1.3, 1.3)
 
 [node name="Camera2D" type="Camera2D" parent="roroamarela"]
@@ -1666,27 +1712,28 @@ scale = Vector2(1.3, 1.3)
 
 [node name="lilaUm" parent="GrupoInvasao" instance=ExtResource("7_g2xtx")]
 z_index = 4
-position = Vector2(456.923, 400)
+texture_filter = 1
+position = Vector2(780, 180)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/lilaUm" index="0"]
 position = Vector2(4.57764e-05, -23.4615)
 animation = &"walk_up"
-autoplay = "walk_up"
 
 [node name="galUm" parent="GrupoInvasao" instance=ExtResource("11_jepde")]
 z_index = 4
-position = Vector2(431.538, 430)
+texture_filter = 1
+position = Vector2(750, 180)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/galUm" index="0"]
-autoplay = "walk_up"
+animation = &"walk_up"
 
 [node name="karinaUm" parent="GrupoInvasao" instance=ExtResource("11_hjip0")]
 z_index = 3
-position = Vector2(148.462, 243.846)
+texture_filter = 1
+position = Vector2(490, 30)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/karinaUm" index="0"]
 animation = &"walk_up"
-autoplay = "walk_up"
 
 [node name="Area2D" type="Area2D" parent="GrupoInvasao"]
 
@@ -1704,6 +1751,7 @@ libraries = {
 [connection signal="body_entered" from="lilaUm/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="GrupoInvasao/Area2D" to="." method="_on_invasao_area_body_entered"]
 
+[editable path="roroamarela"]
 [editable path="GrupoInvasao/lilaUm"]
 [editable path="GrupoInvasao/galUm"]
 [editable path="GrupoInvasao/karinaUm"]

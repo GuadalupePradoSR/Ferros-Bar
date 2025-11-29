@@ -142,7 +142,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iyp2i")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_left",
 "speed": 5.0
 }, {
@@ -203,7 +203,7 @@ height = 44.0
 position = Vector2(0, -30)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_hqth5")
-animation = &"walk_up"
+animation = &"walk_left"
 autoplay = "walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

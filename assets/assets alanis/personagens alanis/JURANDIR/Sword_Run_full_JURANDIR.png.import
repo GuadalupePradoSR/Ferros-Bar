@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://ch4cfyilsg26v"
+=======
+uid="uid://dakbruws8rpr2"
+>>>>>>> livia
 path="res://.godot/imported/Sword_Run_full_JURANDIR.png-12b7615dbb726091f8896983f97ef567.ctex"
 metadata={
 "vram_texture": false

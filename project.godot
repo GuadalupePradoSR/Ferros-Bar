@@ -13,6 +13,7 @@ config_version=5
 config/name="ferros-bar"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+config/size/resizable=true
 
 [autoload]
 
@@ -44,4 +45,4 @@ move_right={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogos/dialogo_universidade/tcc.dialogue", "res://dialogos/dialogo_rua/rua.dialogue", "res://dialogos/dialogo_apartamento/jornal.dialogue", "res://dialogos/dialogo_apartamento/invasao_bar.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogos/dialogo_universidade/tcc.dialogue", "res://dialogos/dialogo_rua/rua.dialogue", "res://dialogos/dialogo_apartamento/jornal.dialogue", "res://dialogos/dialogo_apartamento/invasao_bar.dialogue", "res://dialogos/dialogo_bar/venda_jornal.dialogue", "res://dialogos/dialogo_bar/briga_bar.dialogue")

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bikg8cph4oe5a"
+=======
+uid="uid://bp05tktagpyfn"
+>>>>>>> livia
 path="res://.godot/imported/Sword_attack_full_KARINA.png-8335a1bd3898eecd68ff160c8007644e.ctex"
 metadata={
 "vram_texture": false

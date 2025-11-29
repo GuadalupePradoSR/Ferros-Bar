@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://hnvq6faqfoo2"
+=======
+uid="uid://d0xe27ehgh2ge"
+>>>>>>> livia
 path="res://.godot/imported/Sword_Death_full_LILA.png-3a8dea15c9da60fe3c7372742a34448b.ctex"
 metadata={
 "vram_texture": false

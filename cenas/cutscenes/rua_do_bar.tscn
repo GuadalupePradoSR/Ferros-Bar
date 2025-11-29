@@ -9,7 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://clgheoll11t0" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Beetle.png" id="6_bl6wr"]
 [ext_resource type="Texture2D" uid="uid://hrucvj2oknix" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Classic.png" id="7_glnpj"]
 [ext_resource type="Script" uid="uid://bt0ctet2jvbe5" path="res://scripts/cutscenes/rua/mulher_andando_dois.gd" id="7_o27rt"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="10_0tdrk"]
+=======
+>>>>>>> livia
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuf8s"]
 atlas = ExtResource("4_fpkkj")
