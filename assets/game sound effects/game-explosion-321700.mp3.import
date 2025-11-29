@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk0p7uyog5nae"
+path="res://.godot/imported/game-explosion-321700.mp3-f31c54ace15e72d4230986a4839089f4.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/game-explosion-321700.mp3"
+dest_files=["res://.godot/imported/game-explosion-321700.mp3-f31c54ace15e72d4230986a4839089f4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

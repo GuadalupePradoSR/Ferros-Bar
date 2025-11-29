@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm6y6f0lgoidl"
+path="res://.godot/imported/music-for-game-fun-kid-game-163649.mp3-822014b0a25fb14dda2c3bdcdf639f01.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/music-for-game-fun-kid-game-163649.mp3"
+dest_files=["res://.godot/imported/music-for-game-fun-kid-game-163649.mp3-822014b0a25fb14dda2c3bdcdf639f01.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

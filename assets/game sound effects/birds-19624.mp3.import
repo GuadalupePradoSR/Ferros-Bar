@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mqoe00t55us1"
+path="res://.godot/imported/birds-19624.mp3-e6865ec99ef1b15b7c58234812b814fe.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/birds-19624.mp3"
+dest_files=["res://.godot/imported/birds-19624.mp3-e6865ec99ef1b15b7c58234812b814fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -982,12 +982,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("5_ug7pk")
 
 [node name="5" type="Sprite2D" parent="."]
-position = Vector2(-192, 324)
+position = Vector2(576, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_gf85r")
 
 [node name="11" type="Sprite2D" parent="."]
-position = Vector2(960, 324)
+position = Vector2(1728, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_gf85r")
 
@@ -997,6 +997,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_pvcgt")
 
 [node name="12" type="Sprite2D" parent="."]
-position = Vector2(832, 324)
+position = Vector2(1728, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_pvcgt")

@@ -78,7 +78,7 @@ func _on_raquel_area_body_entered(body: Node2D) -> void:
 		await dialogue_instance.dialogue_finished
 		
 		# Assim que o diálogo acabar, trocamos de cena
-		get_tree().change_scene_to_file("res://cenas/cutscenes/rua_do_bar.tscn") 
+		get_tree().change_scene_to_file("res://cenas/cenarios/apartamento.tscn") 
 		
 		# 5. Reativa a movimentação da Roro
 		#body.set_physics_process(true)

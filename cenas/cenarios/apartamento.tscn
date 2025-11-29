@@ -1,15 +1,13 @@
 [gd_scene load_steps=76 format=3 uid="uid://dxa2wpoykjktq"]
 
 [ext_resource type="Texture2D" uid="uid://dk8e158lemgai" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="1_gbb62"]
-
-[ext_resource type="Script" uid="uid://dj0el41kpsf1b" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
-
+[ext_resource type="Script" uid="uid://dn48lvov846tp" path="res://cenas/cenarios/apartamento.gd" id="1_o01wi"]
 [ext_resource type="Texture2D" uid="uid://bd2c3xicxhqi6" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="2_72kie"]
 [ext_resource type="Texture2D" uid="uid://c03c8gqgpvixf" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="3_gx8kv"]
 [ext_resource type="Texture2D" uid="uid://dgfxgf31me21e" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_o6amd"]
 [ext_resource type="Texture2D" uid="uid://ctp0ij62h3vl8" path="res://assets/Top-Down_Retro_Interior/HouseInteriorA.png" id="5_4xqf5"]
 [ext_resource type="PackedScene" uid="uid://b5ndxkwxs6vqk" path="res://cenas/personagens/roro/roroamarela.tscn" id="5_gx8kv"]
-[ext_resource type="PackedScene" uid="uid://dyr7pw6vbathf" path="res://dialogos/dialogo_apartamento/balloon.tscn" id="6_4xqf5"]
+[ext_resource type="PackedScene" uid="uid://dnu28bxaplobe" path="res://dialogos/dialogo_bar/balloon.tscn" id="6_4xqf5"]
 [ext_resource type="PackedScene" uid="uid://duoxoaqwmm275" path="res://cenas/personagens/lila/lilaUm.tscn" id="7_g2xtx"]
 [ext_resource type="PackedScene" uid="uid://061hkshbeb0k" path="res://cenas/personagens/karina/karinaUm.tscn" id="11_hjip0"]
 [ext_resource type="PackedScene" uid="uid://dkuhtvk75cpti" path="res://cenas/personagens/gal/galUm.tscn" id="11_jepde"]
@@ -1711,7 +1709,7 @@ scale = Vector2(1.3, 1.3)
 [node name="lilaUm" parent="GrupoInvasao" instance=ExtResource("7_g2xtx")]
 z_index = 4
 texture_filter = 1
-position = Vector2(780, 180)
+position = Vector2(456.923, 400)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/lilaUm" index="0"]
 position = Vector2(4.57764e-05, -23.4615)
@@ -1720,7 +1718,7 @@ animation = &"walk_up"
 [node name="galUm" parent="GrupoInvasao" instance=ExtResource("11_jepde")]
 z_index = 4
 texture_filter = 1
-position = Vector2(750, 180)
+position = Vector2(431.538, 430)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/galUm" index="0"]
 animation = &"walk_up"
@@ -1728,7 +1726,7 @@ animation = &"walk_up"
 [node name="karinaUm" parent="GrupoInvasao" instance=ExtResource("11_hjip0")]
 z_index = 3
 texture_filter = 1
-position = Vector2(490, 30)
+position = Vector2(148.462, 243.846)
 
 [node name="AnimatedSprite2D" parent="GrupoInvasao/karinaUm" index="0"]
 animation = &"walk_up"
@@ -1745,8 +1743,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_jepde")
 }
 
-[connection signal="body_entered" from="lilaUm/Area2D" to="." method="_on_lila_area_body_entered"]
 [connection signal="body_entered" from="lilaUm/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="lilaUm/Area2D" to="." method="_on_lila_area_body_entered"]
 [connection signal="body_entered" from="GrupoInvasao/Area2D" to="." method="_on_invasao_area_body_entered"]
 
 [editable path="roroamarela"]

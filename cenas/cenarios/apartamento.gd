@@ -120,6 +120,12 @@ func _on_lila_area_body_entered(body: Node2D) -> void:
 		
 		GlobalState.jornal_dialogue_complete = true
 		
+		# Aqui o código devolve o controle para o jogador andar até a porta.
+		# Se você quiser que vá AUTOMATICAMENTE para a cena dos carros
+		# assim que o diálogo acabar, descomente a linha abaixo:
+		
+		get_tree().change_scene_to_file("res://cenas/cutscenes/scene_ceu_tarde.tscn")
+		
 		body.set_physics_process(true) 
 		body.set_process_input(true) 
 		
@@ -185,10 +191,12 @@ func _on_invasao_area_body_entered(body: Node2D) -> void:
 		# Inicia e espera a animação de saída
 		await _animate_group_exit()
 		
-		body.set_physics_process(true)
-		body.set_process_input(true)
+		get_tree().change_scene_to_file("res://cenas/cutscenes/bar_fora_chegada.tscn")
 		
-		update_scene_state()
+		#body.set_physics_process(true)
+		#body.set_process_input(true)
+		#
+		#update_scene_state()
 
 # ===================================================================
 # --- FUNÇÃO DE ANIMAÇÃO (USANDO ANIMATIONPLAYER) ---

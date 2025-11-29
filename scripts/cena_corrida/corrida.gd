@@ -44,25 +44,28 @@ func _process(delta: float):
 
 # Esta função é chamada para criar um novo carro
 func spawn_new_police_car():
-	# 1. Verifica se ainda temos carros para spawnar
+	# 1. Verifica se acabaram os carros
 	if police_cars_remaining <= 0:
-		print("Todos os carros de polícia foram destruídos!")
-		return # Não faz nada
+		print("Todos os carros foram destruídos! Mudando de cena...")
+		
+		# (Opcional) Pequena pausa de 1 segundo para o jogador respirar antes de mudar
+		await get_tree().create_timer(1.0).timeout
+		
+		# Mude "res://cenas/shopping.tscn" para o caminho da sua próxima cena
+		get_tree().change_scene_to_file("res://cenas/videos/video_feliz_apartamento.tscn")
+		return 
 
 	# 2. Subtrai um da contagem
 	police_cars_remaining -= 1
-	print("Spawnando carro de polícia! Restam: ", police_cars_remaining)
+	print("Spawnando carro de polícia! Restam na reserva: ", police_cars_remaining)
 
 	# 3. Cria a instância do carro
 	var new_car = PoliceScene.instantiate()
 
 	# 4. Configura as variáveis do carro
-	new_car.player_to_follow = player_node # Diz ao carro quem é o jogador
-	# (Opcional: você pode mudar a 'follow_y_position' aqui se quiser)
+	new_car.player_to_follow = player_node 
 
 	# 5. Conecta o sinal de "morte" do carro
-	# Quando o carro chamar queue_free(), ele vai emitir "tree_exited"
-	# Nós conectamos isso à nossa função de spawnar o próximo.
 	new_car.tree_exited.connect(_on_police_car_destroyed)
 
 	# 6. Adiciona o carro na cena

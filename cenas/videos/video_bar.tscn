@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3edmk0hl0hy2"]
+[gd_scene load_steps=3 format=3 uid="uid://d3edmk0hl0hy2"]
 
-[ext_resource type="VideoStream" uid="uid://lmxxaxhb43xp" path="res://feliz_apart.ogv" id="1_gdt1x"]
+[ext_resource type="VideoStream" uid="uid://ldk5jup1yieu" path="res://feliz_bar.ogv" id="1_gdt1x"]
+[ext_resource type="Script" uid="uid://4a1jdvs8m06x" path="res://cenas/videos/video_bar.gd" id="2_x1mtl"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
-offset_right = 1183.0
-offset_bottom = 671.0
+offset_left = 35.0
+offset_top = -446.0
+offset_right = 1132.0
+offset_bottom = 648.0
+scale = Vector2(1, 1.36)
 stream = ExtResource("1_gdt1x")
 autoplay = true
 expand = true
+script = ExtResource("2_x1mtl")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

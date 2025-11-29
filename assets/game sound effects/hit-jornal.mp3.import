@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://11qcj53qqyd3"
+path="res://.godot/imported/hit-jornal.mp3-2ac3d734f9ae8eaff7982b2a24321315.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/hit-jornal.mp3"
+dest_files=["res://.godot/imported/hit-jornal.mp3-2ac3d734f9ae8eaff7982b2a24321315.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
