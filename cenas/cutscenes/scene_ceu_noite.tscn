@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8dvnl5tnb53e"]
+[gd_scene load_steps=13 format=3 uid="uid://b8dvnl5tnb53e"]
 
 [ext_resource type="Script" uid="uid://n3oc7wwpfuhf" path="res://cenas/cutscenes/scene_ceu_noite.gd" id="1_xcuwk"]
+[ext_resource type="AudioStream" uid="uid://c6soboc8we78d" path="res://assets/game sound effects/REBECA_2.mp3" id="2_m4wya"]
 [ext_resource type="Texture2D" uid="uid://b5eeqf1i1vg5v" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/1.png" id="2_xcuwk"]
 [ext_resource type="Texture2D" uid="uid://bax8t88srxpdk" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/2.png" id="3_m4wya"]
 [ext_resource type="Texture2D" uid="uid://dro1cn5kwpf4g" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 1/3.png" id="4_33r1e"]
@@ -387,6 +388,21 @@ tracks/19/keys = {
 "points": PackedFloat32Array(324, -0.25, 0, 0.25, 0, 324, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 7)
 }
+tracks/20/type = "audio"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AudioStreamPlayer2D")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 27.9041,
+"stream": ExtResource("2_m4wya")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/20/use_blend = true
 
 [sub_resource type="Animation" id="Animation_shwn2"]
 resource_name = "rosa"
@@ -883,12 +899,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_33r1e")
 
 [node name="4" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(42.6949, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("5_nmmmt")
 
 [node name="9" type="Sprite2D" parent="."]
-position = Vector2(1728, 324)
+position = Vector2(1194.69, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("5_nmmmt")
 
@@ -898,6 +914,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_6wjwu")
 
 [node name="10" type="Sprite2D" parent="."]
-position = Vector2(1728, 324)
+position = Vector2(1105.81, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_6wjwu")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -4,7 +4,7 @@ extends Node2D
 # --- Carrega a cena do carro de polícia ---
 const PoliceScene = preload("res://cenas/componentes/carropolicia.tscn")
 # Esta é a velocidade que o cenário vai mover (a "velocidade do carro")
-@export var velocidade_cenario: float = 100.0
+@export var velocidade_cenario: float = 80.0
 
 # Esta é a altura exata do seu cenário (pista/grama) em pixels.
 # É a distância que o cenário precisa andar antes de repetir.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://c0rs1k2e0r8l6"]
+[gd_scene load_steps=67 format=3 uid="uid://c0rs1k2e0r8l6"]
 
 [ext_resource type="Script" uid="uid://dk0o10etbekbr" path="res://cenas/cutscenes/bar_fora_chegada.gd" id="1_662kn"]
 [ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="1_dduup"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://coee5ohjifyaj" path="res://cenas/cutscenes/lila_chegada.gd" id="6_uwq37"]
 [ext_resource type="Script" uid="uid://keo2w0l3xdxc" path="res://cenas/cutscenes/karina_chegada.gd" id="7_jdt1p"]
 [ext_resource type="Script" uid="uid://o6bge76g0rjc" path="res://cenas/cutscenes/gal_chegada.gd" id="7_kj582"]
+[ext_resource type="AudioStream" uid="uid://c6soboc8we78d" path="res://assets/game sound effects/REBECA_2.mp3" id="13_bkoym"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yp5p8"]
 atlas = ExtResource("4_4t0u2")
@@ -826,6 +827,21 @@ tracks/17/keys = {
 "update": 1,
 "values": [&"andar_jornal", &"andar_costas"]
 }
+tracks/18/type = "audio"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AudioStreamPlayer2D")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 38.0999,
+"stream": ExtResource("13_bkoym")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/18/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3j7k3"]
 _data = {
@@ -894,3 +910,5 @@ animation = &"explosion"
 libraries = {
 &"": SubResource("AnimationLibrary_3j7k3")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cqf4m6dsjucav"]
+[gd_scene load_steps=45 format=3 uid="uid://cqf4m6dsjucav"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_502ar"]
 [ext_resource type="Script" uid="uid://cxmnrryb55qsm" path="res://cenas/cenarios/bar_dialogo.gd" id="1_eeabm"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://061hkshbeb0k" path="res://cenas/personagens/karina/karinaUm.tscn" id="9_b54a4"]
 [ext_resource type="PackedScene" uid="uid://dgikii0paqnku" path="res://cenas/personagens/lila/lilaDois.tscn" id="10_ewgbm"]
 [ext_resource type="PackedScene" uid="uid://ck5mwxycuhe6l" path="res://cenas/personagens/gal/galTres.tscn" id="10_srtaf"]
+[ext_resource type="AudioStream" uid="uid://c6soboc8we78d" path="res://assets/game sound effects/REBECA_2.mp3" id="11_0t4hk"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/raquel/raquelvermelho.tscn" id="11_s7tsh"]
 [ext_resource type="PackedScene" uid="uid://cg26x1j2x1o4h" path="res://cenas/personagens/donamarta/donamartavermelho.tscn" id="12_l8hci"]
 [ext_resource type="PackedScene" uid="uid://bflnhheqiifsq" path="res://cenas/personagens/jurandir/jurandirDois.tscn" id="16_j36qi"]
@@ -1853,6 +1854,21 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(708, 173), Vector2(600, 400)]
 }
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer2D")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_0t4hk")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/11/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b54a4"]
 _data = {
@@ -2150,6 +2166,21 @@ tracks/12/keys = {
 "update": 0,
 "values": [Vector2(500, 241), Vector2(621, 430)]
 }
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AudioStreamPlayer2D")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 5.0,
+"stream": ExtResource("11_0t4hk")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/13/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_23631"]
 _data = {
@@ -2413,6 +2444,21 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(300, 260), Vector2(300, 457), Vector2(600, 452)]
 }
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer2D")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 11.0,
+"stream": ExtResource("11_0t4hk")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/11/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ga1e0"]
 _data = {
@@ -2710,6 +2756,21 @@ tracks/12/keys = {
 "update": 0,
 "values": [Vector2(600, 452), Vector2(534, 223)]
 }
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AudioStreamPlayer2D")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 20.0,
+"stream": ExtResource("11_0t4hk")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/13/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5rw35"]
 _data = {
@@ -2837,6 +2898,8 @@ limit_left = -176
 limit_top = 0
 limit_right = 1071
 limit_bottom = 720
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [editable path="rororoxa"]
 [editable path="karinaUm"]

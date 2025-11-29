@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://b2n5qjrgfwhhs"]
+[gd_scene load_steps=53 format=3 uid="uid://b2n5qjrgfwhhs"]
 
 [ext_resource type="Script" uid="uid://ddu82d1odeee6" path="res://cenas/cutscenes/bar_fora_fuga.gd" id="1_adlpd"]
 [ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="1_x32ma"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://be0xqcw4r0gtd" path="res://scripts/cutscenes/bar_fuga/karina_andar_telhado.gd" id="8_6v48n"]
 [ext_resource type="Texture2D" uid="uid://blxh4j8vlq6vi" path="res://assets/assets alanis/personagens alanis/GAL/gal_sprite_walking3.png" id="9_dmb4u"]
 [ext_resource type="Script" uid="uid://b35i1san4fq1x" path="res://scripts/cutscenes/bar_fuga/gal_andar_caminhao.gd" id="10_os7m0"]
+[ext_resource type="AudioStream" uid="uid://dtg4g0dwjykld" path="res://assets/game sound effects/truck-diesel-10dodge-start-43785.mp3" id="12_77jux"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bsfur"]
 atlas = ExtResource("9_dmb4u")
@@ -608,6 +609,21 @@ tracks/12/keys = {
 "update": 0,
 "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../carroligado")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_77jux")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/13/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6pk58"]
 _data = {
@@ -663,4 +679,5 @@ root_node = NodePath("../caminhao")
 libraries = {
 &"": SubResource("AnimationLibrary_6pk58")
 }
-autoplay = "andar"
+
+[node name="carroligado" type="AudioStreamPlayer2D" parent="."]

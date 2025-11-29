@@ -1,13 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6pabrdaa4bp2"]
+[gd_scene load_steps=16 format=3 uid="uid://b6pabrdaa4bp2"]
 
 [ext_resource type="Script" uid="uid://1n8602dknasf" path="res://cenas/cutscenes/scene_ceu_tarde_fim.gd" id="1_1htmo"]
 [ext_resource type="Texture2D" uid="uid://ydxuq6me4f1h" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/1.png" id="2_fdh80"]
+[ext_resource type="AudioStream" uid="uid://ca7wweuy5k6yq" path="res://assets/game sound effects/REBECA.mp3" id="2_g2s4w"]
 [ext_resource type="Texture2D" uid="uid://ibeasq57mtg8" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/2.png" id="3_g2s4w"]
 [ext_resource type="Texture2D" uid="uid://dpln5bij3m8cb" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/3.png" id="4_g30dt"]
 [ext_resource type="Texture2D" uid="uid://dg16a65w0xk1g" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/4.png" id="5_t8tv6"]
 [ext_resource type="Texture2D" uid="uid://commbxet1kn05" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/5.png" id="6_3olhe"]
 [ext_resource type="Texture2D" uid="uid://c0qj7mo6283h8" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/6.png" id="7_1umxr"]
 [ext_resource type="FontFile" uid="uid://jioakce0ow1d" path="res://assets/font/Pixel-Regular.ttf" id="8_fdh80"]
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_g2s4w"]
 
 [sub_resource type="Animation" id="Animation_43su5"]
 length = 0.001
@@ -209,6 +212,21 @@ tracks/17/keys = {
 "points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/18/type = "audio"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AudioStreamPlayer2D")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_g2s4w")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/18/use_blend = true
 
 [sub_resource type="Animation" id="Animation_xcuwk"]
 resource_name = "azul"
@@ -925,6 +943,21 @@ tracks/23/keys = {
 "points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/24/type = "audio"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AudioStreamPlayer2D")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_g2s4w")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/24/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_43su5"]
 _data = {
@@ -936,6 +969,9 @@ _data = {
 
 [node name="scene_ceu_tarde_fim" type="Node2D"]
 script = ExtResource("1_1htmo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamPolyphonic_g2s4w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
