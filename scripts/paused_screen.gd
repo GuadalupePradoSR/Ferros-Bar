@@ -1,9 +1,5 @@
 extends CanvasLayer
 
-<<<<<<< HEAD
-func _ready() -> void:
-	visible = false
-=======
 @onready var menu = $Menu
 @onready var options = $Options
 @onready var video = $Video
@@ -20,7 +16,6 @@ func _ready() -> void:
 	full_screen_check.button_pressed = window.mode == Window.MODE_FULLSCREEN
 	borderless_check.button_pressed = window.borderless
 	vsync_check.button_pressed = DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED
->>>>>>> livia
 
 func _unhandled_input(event) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -34,22 +29,17 @@ func _on_bnt_continue_pressed() -> void:
 
 
 func _on_bnt_options_pressed() -> void:
-<<<<<<< HEAD
 	#Criar as opções
 	pass # Replace with function body.
 
 
 func _on_bnt_quit_pressed() -> void:
 	get_tree().quit()
-=======
 	show_and_hide(options, menu)
 
 func show_and_hide(frist, second) -> void:
 	frist.show()
 	second.hide()
-
-func _on_bnt_quit_pressed() -> void:
-	get_tree().quit()
 
 
 func _on_bnt_video_pressed() -> void:
@@ -89,4 +79,3 @@ func _on_v_sync_toggled(toggled_on):
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
->>>>>>> livia

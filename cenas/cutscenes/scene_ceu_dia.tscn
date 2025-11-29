@@ -883,20 +883,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_sew4m")
 
 [node name="4" type="Sprite2D" parent="."]
-<<<<<<< HEAD
 position = Vector2(-192, 324)
-=======
-position = Vector2(576, 324)
->>>>>>> livia
 scale = Vector2(2, 2)
 texture = ExtResource("5_o4ktk")
 
 [node name="9" type="Sprite2D" parent="."]
-<<<<<<< HEAD
 position = Vector2(960, 324)
-=======
-position = Vector2(1728, 324)
->>>>>>> livia
 scale = Vector2(2, 2)
 texture = ExtResource("5_o4ktk")
 
@@ -906,14 +898,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_lfg2r")
 
 [node name="10" type="Sprite2D" parent="."]
-<<<<<<< HEAD
 position = Vector2(832, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_lfg2r")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
-=======
-position = Vector2(1728, 324)
-scale = Vector2(2, 2)
-texture = ExtResource("6_lfg2r")
->>>>>>> livia

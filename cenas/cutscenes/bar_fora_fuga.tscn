@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-[gd_scene load_steps=52 format=3 uid="uid://cdvge7i7jl75o"]
+[gd_scene load_steps=52 format=3 uid="uid://b2n5qjrgfwhhs"]
 
 [ext_resource type="Script" uid="uid://ddu82d1odeee6" path="res://cenas/cutscenes/bar_fora_fuga.gd" id="1_adlpd"]
-=======
-[gd_scene load_steps=51 format=3 uid="uid://cdvge7i7jl75o"]
-
->>>>>>> livia
 [ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="1_x32ma"]
 [ext_resource type="PackedScene" uid="uid://df4v5u3l8n37g" path="res://cenas/componentes/caminhao.tscn" id="2_adlpd"]
 [ext_resource type="Texture2D" uid="uid://hkcuqwbkb2n8" path="res://assets/assets alanis/personagens alanis/RÔ/ro_sprite_walking3.png" id="3_77jux"]
@@ -456,11 +451,7 @@ tracks/12/keys = {
 
 [sub_resource type="Animation" id="Animation_4bj5b"]
 resource_name = "andar"
-<<<<<<< HEAD
 length = 5.0
-=======
-length = 4.5
->>>>>>> livia
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -625,10 +616,7 @@ _data = {
 }
 
 [node name="bar" type="Node2D"]
-<<<<<<< HEAD
 script = ExtResource("1_adlpd")
-=======
->>>>>>> livia
 
 [node name="bar_fora" type="Sprite2D" parent="."]
 position = Vector2(575.063, 288.75)
