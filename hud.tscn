@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bjsql0iw484ft"]
 
-[ext_resource type="Script" uid="uid://b8h2vh2x565ma" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="Script" uid="uid://b8h2vh2x565ma" path="res://Hud.gd" id="1_64ctp"]
 [ext_resource type="Texture2D" uid="uid://7mdasgn583pq" path="res://assets/icons/Basic Pixel Health bar and Scroll bar/All.png" id="2_8sq4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_640wx"]
@@ -98,7 +98,8 @@ script = ExtResource("1_64ctp")
 
 [node name="LifeBar" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(82, 39)
+position = Vector2(118, 50)
+scale = Vector2(2.16667, 2.5)
 sprite_frames = SubResource("SpriteFrames_g10ll")
 animation = &"full"
 
@@ -106,36 +107,46 @@ animation = &"full"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 38.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 0
 size_flags_vertical = 8
 
 [node name="Star1" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(131, 37)
+position = Vector2(202, 43)
+scale = Vector2(1.918, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star2" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(152, 37)
+position = Vector2(245, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star3" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(173, 37)
+position = Vector2(287, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star4" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(194, 37)
+position = Vector2(330, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star5" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(215, 37)
+position = Vector2(371, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"

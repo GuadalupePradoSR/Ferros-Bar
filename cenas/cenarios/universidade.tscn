@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="3_8urfi"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/raquel/raquelvermelho.tscn" id="3_60ecn"]
 [ext_resource type="PackedScene" uid="uid://vu6glp5hgnhu" path="res://dialogos/dialogo_universidade/balloon.tscn" id="5_3c7xm"]
-[ext_resource type="PackedScene" uid="uid://bjsql0iw484ft" path="res://hud.tscn" id="5_b7k6q"]
+[ext_resource type="PackedScene" uid="uid://bjsql0iw484ft" path="res://Hud.tscn" id="5_b7k6q"]
 [ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="6_kek8q"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_3c7xm"]

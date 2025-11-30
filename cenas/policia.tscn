@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c1uiob83qvrkd"]
+[gd_scene load_steps=22 format=3 uid="uid://c1uiob83qvrkd"]
 
 [ext_resource type="Script" uid="uid://bnk2i6v6tv2sy" path="res://scripts/policia.gd" id="1_2gl45"]
 [ext_resource type="Texture2D" uid="uid://d4gpoiqv2ce0j" path="res://assets/personagens/policia/police1/police_anim/standard/slash.png" id="2_no6xa"]
@@ -105,7 +105,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mpgmc")
 }],
-"loop": true,
+"loop": false,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -121,44 +121,29 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dbvdy"]
-radius = 59.6825
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lntnr"]
 radius = 13.0
 height = 52.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2gl45"]
 radius = 21.0
-height = 72.0
+height = 74.0
 
-[node name="Policia" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_2gl45")
 metadata/_custom_type_script = "uid://dxfksulver2va"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_f5v0l")
-animation = &"idle"
-frame = 1
-frame_progress = 0.876183
+animation = &"dead"
 
-[node name="detection_area" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-shape = SubResource("CircleShape2D_dbvdy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_lntnr")
 
-[node name="enemy_hitbox" type="Area2D" parent="."]
+[node name="HurtArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
 shape = SubResource("CapsuleShape2D_2gl45")
 
-[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
-[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="area_entered" from="HurtArea" to="." method="_on_hurt_area_area_entered"]

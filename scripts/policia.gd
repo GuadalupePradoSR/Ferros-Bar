@@ -1,49 +1,48 @@
 extends CharacterBody2D
 
-var speed = 55
-var player_chase = false
-var Player = null
+var life = 50
 
-var health = 100
-var player_inattack_zone =  false
+@export var star_scene: PackedScene
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta):
-	deal_with_damage()
-	if player_chase:
-		position += (Player.position - position)/speed
-		
-		$AnimatedSprite2D.play("combat")
-		if(Player.position.x - position.x) < 0:
-			$AnimatedSprite2D.flip_h = true
-		else:
-			$AnimatedSprite2D.flip_h = false
+func take_damage(amount):
+	life -= amount
+	print("Policial tomou dano! Vida:", life)
+
+	if life <= 0:
+		dead()
+
+
+func dead():
+	velocity = Vector2.ZERO
+	$CollisionShape2D.disabled = true
+	anim.play("dead")
+
+	# DAR +1 ESTRELA PARA O PLAYER
+	give_star_to_player()
+
+	# se quiser soltar estrela física, deixe esta função ativada
+	# drop_star()
+
+	await anim.animation_finished
+	queue_free()
+
+
+# ============================================
+# DAR ESTRELA DIRETAMENTE PARA HUD
+# ============================================
+func give_star_to_player():
+	var player = get_tree().current_scene.get_node("Player")
+	if player:
+		player.add_star_to_hud()
 	else:
-		$AnimatedSprite2D.play("idle")
+		push_error("Player não encontrado!")
 
 
-func _on_detection_area_body_entered(body: Node2D) -> void:
-	Player = body
-	player_chase = true
-
-
-func _on_detection_area_body_exited(body: Node2D) -> void:
-	Player = null
-	player_chase = false
-
-
-func _on_enemy_hitbox_body_entered(body: Node2D) -> void:
-	if body.has_method("palyer"):
-		player_inattack_zone = true
-
-
-func _on_enemy_hitbox_body_exited(body: Node2D) -> void:
-	if body.has_method("palyer"):
-		player_inattack_zone = false
-
-
-func deal_with_damage():
-	if player_inattack_zone and global.player_current_attack == true:
-		health = health - 20
-		print("policia vida", health)
-		if health <= 0:
-			self.queue_free()
+# ============================================
+# TOMAR DANO AO ENTRAR NO HITBOX
+# ============================================
+func _on_hurt_area_area_entered(area: Area2D) -> void:
+	if area.name == "AttackArea":
+		var damage = area.get_parent().attack_damage
+		take_damage(damage)
