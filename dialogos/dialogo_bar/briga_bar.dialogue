@@ -1,24 +1,11 @@
-# ARQUIVO: res://dialogos/dialogo_bar/briga_bar.dialogue
-
 ~ retomada_posicao
-Jurandir: [do set_mood("raiva")] Vocês ficaram malucas?! Entrar com o caminhão de entrega pelos fundos?!
+Jurandir: [do set_mood("raiva")] Vocês ficaram malucas?! Entrar com o caminhão de entrega?!
 Gal: [do set_mood("neutro")] Ué, Jurandir? Você não queria a cerveja? A entrega chegou. E as clientes também.
 Fabio: [do set_mood("raiva")] Isso é invasão de propriedade! Saiam daqui agora ou a gente tira vocês na marra!
 Ro: [do set_mood("raiva")] Tenta! Nós estamos aqui para lutar pelos nossos direitos. Temos liberdade de ir e vir!
 Lila: [do set_mood("neutro")] Não estamos quebrando nada. Só estamos ocupando um espaço que também é nosso.
-Rodrigo: [do set_mood("raiva")] Lugar de sapatão não é aqui. Jurandir, chama a polícia. Acaba com essa festa.
-Jurandir: [do set_mood("raiva")] Já chamei. Eles estão vindo. Quero ver vocês cantarem de galo quando o camburão chegar.
+Rodrigo: [do set_mood("raiva")] Lugar de sapatão não é aqui. Jurandir, chama a polícia.
+Jurandir: [do set_mood("raiva")] Já chamei. Eles já devem estar vindo. Melhor vocês saírem por bem.
 Karina: [do set_mood("raiva")] Pode chamar! Chama o exército se quiser. A gente não arreda o pé!
-=> END
-
-~ chegada_policia
-Policial: [do set_mood("neutro")] Que baderna é essa aqui? Recebemos denúncia de invasão e distúrbio.
-Jurandir: [do set_mood("feliz")] Seu guarda, ainda bem! São essas arruaceiras. Invadiram meu bar.
-Policial: [do set_mood("raiva")] Muito bem. Senhoritas, a brincadeira acabou. Saiam agora ou vão todas para a delegacia.
-Ro: [do set_mood("raiva")] Nós somos trabalhadoras e estudantes! Estamos exercendo nosso direito civil!
-Policial: [do set_mood("raiva")] Não quero saber de discurso. Se continuarem com essa baderna, vou ter que prender vocês.
-Lila: [do set_mood("raiva")] Pois prendam!
-Gal: [do set_mood("raiva")] É isso mesmo. Se existir é crime, pode levar todo mundo!
-Ro: [do set_mood("raiva")] Nós queremos nosso direito de existir em qualquer lugar! Levem a gente, mas a gente não sai calada!
-Policial: [do set_mood("raiva")] Desacato, é? Vocês pediram.
+Fabio: [do set_mood("raiva")] Ah é? Não vão sair? Então a gente tira vocês na força. AGORA!
 => END

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bovfyto3qymvf"]
+[gd_scene load_steps=33 format=3 uid="uid://bovfyto3qymvf"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_7f5yr"]
 [ext_resource type="Script" uid="uid://7bh8kw3u8xwe" path="res://cenas/cenarios/bar_briga.gd" id="1_gqugd"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bu0k6g78wnvjv" path="res://cenas/personagens/roro/roroLuta.tscn" id="6_xdtkj"]
 [ext_resource type="PackedScene" uid="uid://ctv601fqshgaj" path="res://cenas/personagens/karina/KarinaLuta.tscn" id="7_gqugd"]
 [ext_resource type="PackedScene" uid="uid://cl4uuk0nb2x2a" path="res://cenas/personagens/gal/galLuta.tscn" id="8_7f5yr"]
-[ext_resource type="PackedScene" uid="uid://p78k61rmv3v2" path="res://cenas/personagens/jurandir/jurandirUm.tscn" id="11_7f5yr"]
 [ext_resource type="PackedScene" uid="uid://cgx0y0wyedtrs" path="res://cenas/personagens/lila/lilaLuta.tscn" id="12_7jb4l"]
 [ext_resource type="PackedScene" uid="uid://cllafgy570nh7" path="res://cenas/personagens/fabio/npc_fabio.tscn" id="12_dxekr"]
 [ext_resource type="PackedScene" uid="uid://du8rb75j6vcx4" path="res://cenas/personagens/rodrigo/npc_rodrigo.tscn" id="13_q6bdn"]
@@ -1898,9 +1897,6 @@ scale = Vector2(0.9, 0.9)
 [node name="lilaLuta" parent="." instance=ExtResource("12_7jb4l")]
 position = Vector2(952, 530)
 scale = Vector2(0.9, 0.9)
-
-[node name="jurandirUm" parent="." instance=ExtResource("11_7f5yr")]
-position = Vector2(512, 132)
 
 [node name="npc_rodrigo" parent="." instance=ExtResource("13_q6bdn")]
 position = Vector2(306, 184)
