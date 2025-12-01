@@ -1,7 +1,8 @@
-[gd_scene load_steps=47 format=3 uid="uid://dl7l1sj1uipna"]
+[gd_scene load_steps=56 format=3 uid="uid://dl7l1sj1uipna"]
 
 [ext_resource type="Script" uid="uid://btoxifisghf3f" path="res://player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://c5q0iqsxb0bpr" path="res://assets/assets alanis/personagens alanis/RÔ/Sword_attack_full_RO.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://db38iah8oex0w" path="res://assets/assets alanis/personagens alanis/RÔ/Sword_Death_full_RO.png" id="3_hqtel"]
 [ext_resource type="Texture2D" uid="uid://cl7sd21bwfrxh" path="res://assets/assets alanis/personagens alanis/RÔ/Sword_Run_full_RO.png" id="3_sweqy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
@@ -131,6 +132,38 @@ region = Rect2(2172, 1092, 362, 364)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibah8"]
 atlas = ExtResource("2_hqtel")
 region = Rect2(2534, 1092, 362, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iwfv"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(0, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwsg1"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(200, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqrm"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(400, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfour"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(600, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gr2b"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(800, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl8ci"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(1000, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieltc"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(1200, 0, 200, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fddr8"]
+atlas = ExtResource("2_hqtel")
+region = Rect2(0, 0, 289, 364)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
 atlas = ExtResource("3_sweqy")
@@ -284,6 +317,40 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_3iwfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwsg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfour")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gr2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl8ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieltc")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fddr8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_urp6f")
 }, {
 "duration": 1.0,
@@ -330,18 +397,18 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ahtn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7lmhl"]
-radius = 14.0
-height = 36.0
+radius = 29.0
+height = 64.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_i3pqv")
 
-[node name="AnimationPlayer" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(15, -1)
 scale = Vector2(0.243975, 0.226921)
 sprite_frames = SubResource("SpriteFrames_5tmop")
-animation = &"attack_right"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
