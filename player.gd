@@ -3,7 +3,7 @@ extends CharacterBody2D
 var last_hit_time: float = 0.0
 var speed = 150
 var is_attacking = false
-var attack_damage = 20
+var attack_damage = 30
 var out_of_combat_time = 10.0
 var life_max = 100
 var dead := false
@@ -48,7 +48,17 @@ func attack() -> void:
 	attack_area.monitoring = true
 
 	anim.play(get_attack_animation())
+	
+	# O código pausa aqui esperando a animação
 	await anim.animation_finished
+
+	# === NOVA VERIFICAÇÃO DE SEGURANÇA ===
+	# Se o player morreu ou saiu da cena durante a animação, aborta o ataque.
+	if dead or not is_inside_tree():
+		is_attacking = false
+		attack_area.monitoring = false
+		return
+	# =====================================
 
 	var bodies = attack_area.get_overlapping_bodies()
 
@@ -132,6 +142,10 @@ func recover_health(amount: int) -> void:
 # ADD STAR
 # ======================
 func add_star_to_hud() -> void:
+	# Verificação de segurança: Se o player não estiver na árvore, para tudo.
+	if not is_inside_tree():
+		return
+		
 	var hud = get_tree().get_current_scene().find_child("Hud", true)
 	if hud:
 		hud.add_star()

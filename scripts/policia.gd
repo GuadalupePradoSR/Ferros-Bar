@@ -1,6 +1,11 @@
+# policia.gd
+
 extends CharacterBody2D
 
-var life = 60
+signal on_death
+var is_dying = false
+
+var life = 10
 var speed = 300
 var chase_speed = 100
 var attack_damage = 25
@@ -22,11 +27,15 @@ func _ready():
 	add_to_group("enemy")
 
 	player = get_tree().current_scene.find_child("Player", true)
+	
+
 
 	detection_area.body_entered.connect(_on_detection_area_body_entered)
 	detection_area.body_exited.connect(_on_detection_area_body_exited)
 
 func _physics_process(delta):
+	if is_dying:
+		return
 	if not player or player.is_dead():
 		velocity = Vector2.ZERO
 		play_idle_animation()
@@ -91,14 +100,24 @@ func take_damage(amount):
 		dead()
 
 func dead():
+	if is_dying:
+		return
+	is_dying = true
 	velocity = Vector2.ZERO
-	collision.disabled = true
+	#collision.disabled = true
+	$CollisionShape2D.set_deferred("disabled", true)
 	detection_area.monitoring = false
 	detection_area.monitorable = false
 
 	anim.play("dead")
+	
+	on_death.emit()
 
 	if player:
-		player.add_star_to_hud()
+		# Verifica se a função existe para evitar erro
+		if player.has_method("add_star_to_hud"):
+			player.add_star_to_hud()
 
+	# 3. Esperamos a animação terminar antes de sumir
+	await anim.animation_finished 
 	queue_free()

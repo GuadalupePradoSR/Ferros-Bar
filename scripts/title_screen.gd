@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_bnt_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/cutscenes/rua_do_bar.tscn")
+	get_tree().change_scene_to_file("res://cenas/cutscenes/scene_ceu_dia.tscn")
 
 
 func _on_bnt_credits_pressed() -> void:

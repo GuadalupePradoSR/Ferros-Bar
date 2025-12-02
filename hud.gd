@@ -35,7 +35,7 @@ func _ready() -> void:
 	morte_painel.visible = false
 
 	# conectar botão
-	retry_button.pressed.connect(_on_retry_button_pressed)
+	#retry_button.pressed.connect(_on_retry_button_pressed)
 
 
 # ======================

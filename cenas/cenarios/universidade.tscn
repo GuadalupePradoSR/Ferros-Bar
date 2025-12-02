@@ -1,11 +1,11 @@
-[gd_scene load_steps=66 format=4 uid="uid://da3wqnqw37xsu"]
+[gd_scene load_steps=67 format=4 uid="uid://da3wqnqw37xsu"]
 
 [ext_resource type="Script" uid="uid://ccsi32l0q5qk5" path="res://scripts/cenarios/universidade.gd" id="1_8urfi"]
 [ext_resource type="Texture2D" uid="uid://mf7tj1uslv8d" path="res://assets/universidade/japanese-school_8x8-final.tileset (1).png" id="1_n3sjo"]
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="3_8urfi"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/raquel/raquelvermelho.tscn" id="3_60ecn"]
 [ext_resource type="PackedScene" uid="uid://vu6glp5hgnhu" path="res://dialogos/dialogo_universidade/balloon.tscn" id="5_3c7xm"]
-[ext_resource type="PackedScene" uid="uid://bjsql0iw484ft" path="res://Hud.tscn" id="5_b7k6q"]
+[ext_resource type="PackedScene" uid="uid://bjsql0iw484ft" path="res://hud.tscn" id="5_b7k6q"]
 [ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="6_kek8q"]
 [ext_resource type="PackedScene" uid="uid://b8ie3oyqgefc7" path="res://cenas/personagens/karina/npc_karina.tscn" id="9_8j2a7"]
 [ext_resource type="PackedScene" uid="uid://i1bip1m4d2pq" path="res://cenas/personagens/lila/npc_lila.tscn" id="9_kafyd"]

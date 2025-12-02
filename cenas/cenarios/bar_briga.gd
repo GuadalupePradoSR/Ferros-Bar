@@ -80,7 +80,7 @@ func _on_dialogue_finished() -> void:
 			current_state = InvasaoState.BRIGA_FINAL
 			
 			# COLOQUE O NOME DA SUA CENA DE LUTA AQUI EMBAIXO:
-			# get_tree().change_scene_to_file("res://cenas/luta_no_bar.tscn")
+			get_tree().change_scene_to_file("res://cenas/cenarios/bar_interior1.tscn")
 			
 			# Se a luta for na mesma cena (ativar mecânica), use:
 			# GlobalState.iniciar_briga = true
