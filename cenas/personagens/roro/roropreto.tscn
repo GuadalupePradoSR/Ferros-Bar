@@ -199,10 +199,13 @@ radius = 8.0
 height = 44.0
 
 [node name="roropreto" type="CharacterBody2D"]
+
 texture_filter = 1
+collision_layer = 3
 script = ExtResource("1_s34hj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -30)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_hqth5")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://jwe514ck431e"]
+
+[ext_resource type="Texture2D" uid="uid://7mdasgn583pq" path="res://assets/icons/Basic Pixel Health bar and Scroll bar/All.png" id="1_46ao5"]
+[ext_resource type="Script" uid="uid://ce1bbyj7jqb3w" path="res://star.gd" id="1_e2x7v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2x7v"]
+radius = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2gop"]
+atlas = ExtResource("1_46ao5")
+region = Rect2(132, 132, 33, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7oe7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2gop")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Star" type="Area2D"]
+script = ExtResource("1_e2x7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e2x7v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4, 2)
+scale = Vector2(0.94697, 0.856061)
+sprite_frames = SubResource("SpriteFrames_d7oe7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

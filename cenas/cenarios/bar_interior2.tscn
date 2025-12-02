@@ -2580,3 +2580,4 @@ shape = SubResource("SegmentShape2D_t2j26")
 position = Vector2(546, 88)
 
 [node name="paused_screen" parent="." instance=ExtResource("8_gaom5")]
+visible = false

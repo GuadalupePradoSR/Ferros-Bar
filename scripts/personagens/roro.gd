@@ -4,6 +4,7 @@ class_name Player
 const SPEED = 130
 @onready var anim = $AnimatedSprite2D   # nó de animação do personagem
 
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	
@@ -38,3 +39,6 @@ func _physics_process(delta):
 				anim.play("walk_up")
 	else:
 		anim.stop()
+
+func Player():
+	pass

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="3_8urfi"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/raquel/raquelvermelho.tscn" id="3_60ecn"]
 [ext_resource type="PackedScene" uid="uid://vu6glp5hgnhu" path="res://dialogos/dialogo_universidade/balloon.tscn" id="5_3c7xm"]
+[ext_resource type="PackedScene" uid="uid://bjsql0iw484ft" path="res://Hud.tscn" id="5_b7k6q"]
 [ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="6_kek8q"]
 [ext_resource type="PackedScene" uid="uid://b8ie3oyqgefc7" path="res://cenas/personagens/karina/npc_karina.tscn" id="9_8j2a7"]
 [ext_resource type="PackedScene" uid="uid://i1bip1m4d2pq" path="res://cenas/personagens/lila/npc_lila.tscn" id="9_kafyd"]
@@ -2847,6 +2848,8 @@ limit_bottom = 804
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="Hud" parent="roropreto/Camera2D" instance=ExtResource("5_b7k6q")]
+
 [node name="dialogo_uni" parent="." instance=ExtResource("5_3c7xm")]
 visible = false
 
@@ -2866,6 +2869,7 @@ position = Vector2(741, 584)
 scale = Vector2(1.5, 1.5)
 
 [node name="paused_screen" parent="." instance=ExtResource("6_kek8q")]
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_8j2a7")

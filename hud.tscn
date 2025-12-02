@@ -1,7 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjsql0iw484ft"]
+[gd_scene load_steps=17 format=3 uid="uid://bjsql0iw484ft"]
 
-[ext_resource type="Script" uid="uid://b8h2vh2x565ma" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="Script" uid="uid://b8h2vh2x565ma" path="res://Hud.gd" id="1_64ctp"]
 [ext_resource type="Texture2D" uid="uid://7mdasgn583pq" path="res://assets/icons/Basic Pixel Health bar and Scroll bar/All.png" id="2_8sq4i"]
+[ext_resource type="FontFile" uid="uid://dprau0shlvk3e" path="res://assets/font/Stacked pixel.ttf" id="3_8hvrr"]
+[ext_resource type="StyleBox" uid="uid://uai1dljk566g" path="res://assets/font/focus_style.tres" id="4_jjwht"]
+[ext_resource type="StyleBox" uid="uid://duayam7rww7lp" path="res://assets/font/hover_style.tres" id="5_takbf"]
+[ext_resource type="StyleBox" uid="uid://c8fpn5g5weqs7" path="res://assets/font/normal_style.tres" id="6_v0hdl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_640wx"]
 atlas = ExtResource("2_8sq4i")
@@ -93,12 +97,25 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Theme" id="Theme_3pieb"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 27
+Button/fonts/font = ExtResource("3_8hvrr")
+Button/styles/focus = ExtResource("4_jjwht")
+Button/styles/hover = ExtResource("5_takbf")
+Button/styles/normal = ExtResource("6_v0hdl")
+Button/styles/pressed = ExtResource("4_jjwht")
+
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_64ctp")
 
 [node name="LifeBar" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(82, 39)
+position = Vector2(118, 50)
+scale = Vector2(2.16667, 2.5)
 sprite_frames = SubResource("SpriteFrames_g10ll")
 animation = &"full"
 
@@ -106,36 +123,84 @@ animation = &"full"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 38.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 0
 size_flags_vertical = 8
 
 [node name="Star1" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(131, 37)
+position = Vector2(202, 43)
+scale = Vector2(1.918, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star2" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(152, 37)
+position = Vector2(245, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star3" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(173, 37)
+position = Vector2(287, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star4" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(194, 37)
+position = Vector2(330, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
 
 [node name="Star5" type="AnimatedSprite2D" parent="StarsContainer"]
 texture_filter = 1
-position = Vector2(215, 37)
+position = Vector2(371, 43)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_1fv7p")
 animation = &"of"
+
+[node name="TenteNovamente" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="TenteNovamente"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.321)
+
+[node name="RetryButton" type="Button" parent="TenteNovamente"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -11.5
+offset_right = 27.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_3pieb")
+text = "Tente novamente"
+
+[connection signal="pressed" from="TenteNovamente/RetryButton" to="." method="_on_retry_button_pressed"]
