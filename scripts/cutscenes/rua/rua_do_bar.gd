@@ -125,7 +125,7 @@ func iniciar_dialogo():
 		animation_player.play("scene_saindo")
 		# Opcional: espera que a animação termine antes de mudar de cena
 		await animation_player.animation_finished 
-		# Exemplo: get_tree().change_scene_to_file("res://proxima_cena.tscn")
+		get_tree().change_scene_to_file("res://cenas/cenarios/bar_interior.tscn")
 	
 	# Opcional: Iniciar o próximo segmento de animação da cutscene, se houver
 	# animation_player.play("continua_depois_dialogo")

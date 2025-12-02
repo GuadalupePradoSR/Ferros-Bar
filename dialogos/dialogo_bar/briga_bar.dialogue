@@ -1,0 +1,11 @@
+~ retomada_posicao
+Jurandir: [do set_mood("raiva")] Vocês ficaram malucas?! Entrar com o caminhão de entrega?!
+Gal: [do set_mood("neutro")] Ué, Jurandir? Você não queria a cerveja? A entrega chegou. E as clientes também.
+Fabio: [do set_mood("raiva")] Isso é invasão de propriedade! Saiam daqui agora ou a gente tira vocês na marra!
+Ro: [do set_mood("raiva")] Tenta! Nós estamos aqui para lutar pelos nossos direitos. Temos liberdade de ir e vir!
+Lila: [do set_mood("neutro")] Não estamos quebrando nada. Só estamos ocupando um espaço que também é nosso.
+Rodrigo: [do set_mood("raiva")] Lugar de sapatão não é aqui. Jurandir, chama a polícia.
+Jurandir: [do set_mood("raiva")] Já chamei. Eles já devem estar vindo. Melhor vocês saírem por bem.
+Karina: [do set_mood("raiva")] Pode chamar! Chama o exército se quiser. A gente não arreda o pé!
+Fabio: [do set_mood("raiva")] Ah é? Não vão sair? Então a gente tira vocês na força. AGORA!
+=> END

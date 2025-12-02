@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://biwcas1lq0qfr"]
+[gd_scene load_steps=14 format=3 uid="uid://biwcas1lq0qfr"]
 
 [ext_resource type="Script" uid="uid://bkn31x68tsggl" path="res://cenas/cutscenes/scene_ceu_tarde.gd" id="1_pvcgt"]
+[ext_resource type="AudioStream" uid="uid://mqoe00t55us1" path="res://assets/game sound effects/birds-19624.mp3" id="2_cogpn"]
 [ext_resource type="Texture2D" uid="uid://ydxuq6me4f1h" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/1.png" id="2_pvcgt"]
 [ext_resource type="Texture2D" uid="uid://ibeasq57mtg8" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/2.png" id="3_pigjj"]
 [ext_resource type="Texture2D" uid="uid://dpln5bij3m8cb" path="res://assets/cenarios/free-city-backgrounds-pixel-art/city 2/3.png" id="4_pigjj"]
@@ -924,6 +925,21 @@ tracks/23/keys = {
 "points": PackedFloat32Array(324, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/24/type = "audio"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("birds")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_cogpn")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/24/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_43su5"]
 _data = {
@@ -982,12 +998,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("5_ug7pk")
 
 [node name="5" type="Sprite2D" parent="."]
-position = Vector2(-192, 324)
+position = Vector2(576, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_gf85r")
 
 [node name="11" type="Sprite2D" parent="."]
-position = Vector2(960, 324)
+position = Vector2(1728, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_gf85r")
 
@@ -997,6 +1013,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_pvcgt")
 
 [node name="12" type="Sprite2D" parent="."]
-position = Vector2(832, 324)
+position = Vector2(1728, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("6_pvcgt")
+
+[node name="birds" type="AudioStreamPlayer2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://lmjfophaeqsw"]
+[gd_scene load_steps=39 format=3 uid="uid://lmjfophaeqsw"]
 
 [ext_resource type="Script" uid="uid://bk3fqdysxuimx" path="res://scripts/cutscenes/rua/rua_do_bar.gd" id="1_gigd7"]
 [ext_resource type="Texture2D" uid="uid://dccgih6lq5vb3" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_highway.png" id="2_e8d1u"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://clgheoll11t0" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Beetle.png" id="6_bl6wr"]
 [ext_resource type="Texture2D" uid="uid://hrucvj2oknix" path="res://assets/veiculos/Pixel Cars/Pixel Cars/Classic.png" id="7_glnpj"]
 [ext_resource type="Script" uid="uid://bt0ctet2jvbe5" path="res://scripts/cutscenes/rua/mulher_andando_dois.gd" id="7_o27rt"]
+[ext_resource type="AudioStream" uid="uid://cufpostqp6c80" path="res://assets/game sound effects/car-horn-6408.mp3" id="8_mmrhd"]
+[ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="10_0tdrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuf8s"]
 atlas = ExtResource("4_fpkkj")
@@ -315,6 +317,21 @@ tracks/5/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("som_carro")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.803,
+"start_offset": 0.9584,
+"stream": ExtResource("8_mmrhd")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/6/use_blend = true
 
 [sub_resource type="Animation" id="Animation_o27rt"]
 resource_name = "scene_saindo"
@@ -428,7 +445,7 @@ texture = ExtResource("3_bl6wr")
 
 [node name="ro" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(506, 565)
+position = Vector2(25, 565)
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_2glgv")
 animation = &"andando"
@@ -444,7 +461,7 @@ shape = SubResource("CapsuleShape2D_o27rt")
 
 [node name="lila" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(628, 562)
+position = Vector2(1029, 562)
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_jr40f")
 animation = &"lila"
@@ -463,14 +480,14 @@ libraries = {
 
 [node name="carroazul" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1038, 500)
+position = Vector2(1038, 516)
 scale = Vector2(5, 5)
 texture = ExtResource("6_bl6wr")
 flip_h = true
 
 [node name="carrovermelho" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(59, 520)
+position = Vector2(59.0001, 521)
 scale = Vector2(5, 5)
 texture = ExtResource("7_glnpj")
 
@@ -479,5 +496,9 @@ texture = ExtResource("7_glnpj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="encontro"]
 position = Vector2(567, 560)
 shape = SubResource("RectangleShape2D_o27rt")
+
+[node name="paused_screen" parent="." instance=ExtResource("10_0tdrk")]
+
+[node name="som_carro" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="area_entered" from="encontro" to="." method="_on_encontro_area_entered"]

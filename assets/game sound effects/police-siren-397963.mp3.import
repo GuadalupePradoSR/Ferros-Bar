@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd0ci73x65veu"
+path="res://.godot/imported/police-siren-397963.mp3-e1e3447f75a8308f838a02679e41c26a.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/police-siren-397963.mp3"
+dest_files=["res://.godot/imported/police-siren-397963.mp3-e1e3447f75a8308f838a02679e41c26a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

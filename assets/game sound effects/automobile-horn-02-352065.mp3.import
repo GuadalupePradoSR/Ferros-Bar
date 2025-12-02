@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmfopfg2vluqg"
+path="res://.godot/imported/automobile-horn-02-352065.mp3-6969c2dde3bdb82acfb95df9998aebb5.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/automobile-horn-02-352065.mp3"
+dest_files=["res://.godot/imported/automobile-horn-02-352065.mp3-6969c2dde3bdb82acfb95df9998aebb5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

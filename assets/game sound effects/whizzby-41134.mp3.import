@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvrmu56pe8an5"
+path="res://.godot/imported/whizzby-41134.mp3-29b8cf1d239c21e2c3b89de50fdd46f1.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/whizzby-41134.mp3"
+dest_files=["res://.godot/imported/whizzby-41134.mp3-29b8cf1d239c21e2c3b89de50fdd46f1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

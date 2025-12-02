@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr787f8yaum5w"
+path="res://.godot/imported/game-music-loop-6-144641.mp3-c0949e854b0fe90d24b6335810912083.mp3str"
+
+[deps]
+
+source_file="res://assets/game sound effects/game-music-loop-6-144641.mp3"
+dest_files=["res://.godot/imported/game-music-loop-6-144641.mp3-c0949e854b0fe90d24b6335810912083.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

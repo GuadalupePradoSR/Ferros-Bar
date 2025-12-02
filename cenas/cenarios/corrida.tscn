@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://ccltgrlbc1cqr"]
+[gd_scene load_steps=45 format=4 uid="uid://ccltgrlbc1cqr"]
 
 [ext_resource type="Texture2D" uid="uid://bk7gqjnoswfdb" path="res://assets/Mini Pixel Pack 2/Mini Pixel Pack 2/Levels/Summer_gas_station (128 x 304).png" id="1_gf3jj"]
 [ext_resource type="Script" uid="uid://bpwmvtxa3h7ej" path="res://scripts/cena_corrida/corrida.gd" id="1_iv2af"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://grjhogps5axf" path="res://assets/Mini Pixel Pack 2/Props/Misc_props (16 x 16).png" id="4_kljfn"]
 [ext_resource type="Script" uid="uid://bkd1b684lmtk4" path="res://scripts/cena_corrida/carrofuga.gd" id="5_pmpgn"]
 [ext_resource type="Texture2D" uid="uid://bgvpypi1n5ye2" path="res://assets/efeitos/explosion/explosion (1).png" id="8_sc6xx"]
+[ext_resource type="FontFile" uid="uid://bt5x0j56utp81" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="9_dqufb"]
+[ext_resource type="AudioStream" uid="uid://cwlet7s1rdq0u" path="res://assets/game sound effects/police-siren-sound-effect-240674.mp3" id="10_qlqwy"]
+[ext_resource type="AudioStream" uid="uid://cuqn553akf34x" path="res://assets/game sound effects/short-game-music-loop-38898.mp3" id="10_sc6xx"]
 [ext_resource type="PackedScene" uid="uid://b2qj4mqcqa5cd" path="res://cenas/componentes/vidaUI.tscn" id="12_dqufb"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_qlqwy"]
@@ -397,9 +400,12 @@ offset_right = 49.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_dqufb")
+theme_override_font_sizes/font_size = 50
 text = "FIM DE JOGO"
 
 [node name="Button" type="Button" parent="GameOverUI"]
+process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -411,11 +417,21 @@ offset_right = 98.0
 offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_dqufb")
+theme_override_font_sizes/font_size = 30
 text = "JOGAR DE NOVO"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource("12_dqufb")]
+
+[node name="somagitado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_sc6xx")
+autoplay = true
+
+[node name="sompolicia" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_qlqwy")
+autoplay = true
 
 [connection signal="body_entered" from="carrofuga" to="carrofuga" method="_on_body_entered"]
 [connection signal="health_changed" from="carrofuga" to="CanvasLayer/HealthUI" method="update_health"]

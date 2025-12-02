@@ -1,13 +1,30 @@
-[gd_scene load_steps=81 format=3 uid="uid://c0rs1k2e0r8l6"]
+[gd_scene load_steps=67 format=3 uid="uid://c0rs1k2e0r8l6"]
 
+[ext_resource type="Script" uid="uid://dk0o10etbekbr" path="res://cenas/cutscenes/bar_fora_chegada.gd" id="1_662kn"]
 [ext_resource type="Texture2D" uid="uid://brila1bntd8pa" path="res://assets/cenarios/NightCity_PNG/NightCity_PNG/NightCity_club.png" id="1_dduup"]
 [ext_resource type="PackedScene" uid="uid://df4v5u3l8n37g" path="res://cenas/componentes/caminhao.tscn" id="2_xkqge"]
 [ext_resource type="Texture2D" uid="uid://bi3g6x815fy55" path="res://assets/efeitos/explosion/Blast (1).png" id="3_yv8v1"]
-[ext_resource type="Texture2D" uid="uid://b428jac6t28s8" path="res://assets/assets alanis/personagens alanis/RÔ/Sword_Run_full_RO.png" id="4_4t0u2"]
-[ext_resource type="Texture2D" uid="uid://ir410uauqjke" path="res://assets/assets alanis/personagens alanis/LILA/Sword_Run_full_LILA.png" id="5_ni87p"]
-[ext_resource type="Texture2D" uid="uid://by0b6s1ym18iu" path="res://assets/assets alanis/personagens alanis/KARINA/Sword_Run_full_KARINA.png" id="5_prmxg"]
-[ext_resource type="Texture2D" uid="uid://dp8efgupefdpc" path="res://assets/assets alanis/personagens alanis/GAL/Sword_Run_full_GAL.png" id="6_3j7k3"]
-[ext_resource type="Texture2D" uid="uid://ckiqbwsvn32t1" path="res://assets/assets alanis/personagens alanis/JURANDIR/sprite_walking_jurandir.png" id="8_3j7k3"]
+[ext_resource type="Texture2D" uid="uid://iidgj38anmi6" path="res://assets/assets alanis/personagens alanis/RÔ/Sword_Run_full_RO.png" id="4_4t0u2"]
+[ext_resource type="Script" uid="uid://b4y4usvbklf1n" path="res://cenas/cutscenes/ro_chegada.gd" id="5_bkoym"]
+[ext_resource type="Texture2D" uid="uid://x0uqgkrecflv" path="res://assets/assets alanis/personagens alanis/LILA/Sword_Run_full_LILA.png" id="5_ni87p"]
+[ext_resource type="Texture2D" uid="uid://4qy3ao0tpblf" path="res://assets/assets alanis/personagens alanis/KARINA/Sword_Run_full_KARINA.png" id="5_prmxg"]
+[ext_resource type="Texture2D" uid="uid://dekv0ep1masyv" path="res://assets/assets alanis/personagens alanis/GAL/Sword_Run_full_GAL.png" id="6_3j7k3"]
+[ext_resource type="Script" uid="uid://coee5ohjifyaj" path="res://cenas/cutscenes/lila_chegada.gd" id="6_uwq37"]
+[ext_resource type="Script" uid="uid://keo2w0l3xdxc" path="res://cenas/cutscenes/karina_chegada.gd" id="7_jdt1p"]
+[ext_resource type="Script" uid="uid://o6bge76g0rjc" path="res://cenas/cutscenes/gal_chegada.gd" id="7_kj582"]
+[ext_resource type="AudioStream" uid="uid://c6soboc8we78d" path="res://assets/game sound effects/REBECA_2.mp3" id="13_bkoym"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp5p8"]
+atlas = ExtResource("4_4t0u2")
+region = Rect2(0, 1074, 365, 358)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nodn"]
+atlas = ExtResource("4_4t0u2")
+region = Rect2(365, 1074, 365, 358)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkvet"]
+atlas = ExtResource("4_4t0u2")
+region = Rect2(730, 1074, 365, 358)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkoym"]
 atlas = ExtResource("4_4t0u2")
@@ -37,6 +54,20 @@ region = Rect2(1825, 716, 365, 358)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yp5p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nodn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkvet")
+}],
+"loop": true,
+"name": &"andar_costas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_bkoym")
 }, {
 "duration": 1.0,
@@ -58,6 +89,18 @@ animations = [{
 "name": &"andar_jornal",
 "speed": 5.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pogpr"]
+atlas = ExtResource("5_ni87p")
+region = Rect2(0, 1074, 365, 358)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mroe"]
+atlas = ExtResource("5_ni87p")
+region = Rect2(365, 1074, 365, 358)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axd61"]
+atlas = ExtResource("5_ni87p")
+region = Rect2(730, 1074, 365, 358)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8y1ay"]
 atlas = ExtResource("5_ni87p")
@@ -87,6 +130,20 @@ region = Rect2(1825, 716, 365, 358)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_pogpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mroe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axd61")
+}],
+"loop": true,
+"name": &"andar_costas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8y1ay")
 }, {
 "duration": 1.0,
@@ -108,6 +165,18 @@ animations = [{
 "name": &"andar_jornal",
 "speed": 5.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am7c7"]
+atlas = ExtResource("5_prmxg")
+region = Rect2(0, 1074, 365, 358)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omwdl"]
+atlas = ExtResource("5_prmxg")
+region = Rect2(365, 1074, 365, 358)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrfeu"]
+atlas = ExtResource("5_prmxg")
+region = Rect2(730, 1074, 365, 358)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbfd6"]
 atlas = ExtResource("5_prmxg")
@@ -135,6 +204,20 @@ region = Rect2(1825, 716, 365, 358)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yrxfu"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am7c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omwdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrfeu")
+}],
+"loop": true,
+"name": &"andar_costas",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dbfd6")
@@ -195,18 +278,6 @@ region = Rect2(365, 716, 365, 358)
 atlas = ExtResource("6_3j7k3")
 region = Rect2(730, 716, 365, 358)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pogpr"]
-atlas = ExtResource("6_3j7k3")
-region = Rect2(1095, 716, 365, 358)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0mroe"]
-atlas = ExtResource("6_3j7k3")
-region = Rect2(1460, 716, 365, 358)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_axd61"]
-atlas = ExtResource("6_3j7k3")
-region = Rect2(1825, 716, 365, 358)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_flmf6"]
 animations = [{
 "frames": [{
@@ -241,15 +312,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xfrl6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pogpr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0mroe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_axd61")
 }],
 "loop": true,
 "name": &"andar_jornal",
@@ -324,197 +386,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"explosion",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yrxfu"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(0, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_flmf6"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(64, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hp2go"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(128, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1x7vh"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(192, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_frkla"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(256, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wtd1a"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(320, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oww5k"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(0, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x1ux7"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(64, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u26mm"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(128, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1jxhi"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(192, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uxm6b"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(256, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nuuk6"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(320, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e4og8"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(320, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r41b3"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(256, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4677d"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(192, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efv2h"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1cbpi"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cl128"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hoi3a"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cidp5"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4xm7v"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7nuj"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_upmkt"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdauy"]
-atlas = ExtResource("8_3j7k3")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_t0llj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yrxfu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_flmf6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp2go")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1x7vh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_frkla")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wtd1a")
-}],
-"loop": true,
-"name": &"jurandir_costas",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oww5k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x1ux7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u26mm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1jxhi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uxm6b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nuuk6")
-}],
-"loop": true,
-"name": &"jurandir_direito",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e4og8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r41b3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4677d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_efv2h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1cbpi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cl128")
-}],
-"loop": true,
-"name": &"jurandir_esquerdo",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hoi3a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cidp5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4xm7v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7nuj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_upmkt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdauy")
-}],
-"loop": true,
-"name": &"jurandir_frente",
 "speed": 5.0
 }]
 
@@ -643,7 +514,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("explosion_caminhao:visible")
+tracks/10/path = NodePath("gal:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -655,19 +526,19 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("explosion_caminhao:frame")
+tracks/11/path = NodePath("gal:animation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [&"andar_costas"]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("jurandir:visible")
+tracks/12/path = NodePath("ro:visible")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -679,98 +550,62 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("jurandir:animation")
+tracks/13/path = NodePath("lila:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"jurandir_frente"]
+"values": [false]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("jurandir:position")
+tracks/14/path = NodePath("karina:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(856, 516)]
+"update": 1,
+"values": [false]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("jurandir:rotation")
+tracks/15/path = NodePath("ro:animation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"update": 1,
+"values": [&"andar_jornal"]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("gal:visible")
+tracks/16/path = NodePath("lila:animation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [&"andar_jornal"]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("gal:animation")
+tracks/17/path = NodePath("karina:animation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"andar_costas"]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("ro:visible")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("lila:visible")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("karina:visible")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"values": [&"andar_jornal"]
 }
 
 [sub_resource type="Animation" id="Animation_prmxg"]
@@ -807,10 +642,10 @@ tracks/2/path = NodePath("gal:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.01, 2.03, 2.99, 3.32),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.13333, 2.26667, 3.33333, 3.66667, 4.46, 4.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1397, 530), Vector2(630.75, 530.3), Vector2(631, 585), Vector2(821, 585), Vector2(821, 548)]
+"values": [Vector2(1397, 530), Vector2(630.75, 530.3), Vector2(631, 585), Vector2(821, 585), Vector2(821, 548), Vector2(1043, 548), Vector2(1043, 519)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -831,10 +666,10 @@ tracks/4/path = NodePath("ro:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.01),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2.01, 2.3, 3.9, 4.1, 5.08333, 5.18333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1393, 532), Vector2(630.75, 532.3)]
+"values": [Vector2(1393, 532), Vector2(630.75, 532.3), Vector2(630.75, 532.3), Vector2(782.75, 532.3), Vector2(782.75, 550.3), Vector2(1053.75, 550.3), Vector2(1053.75, 523.3)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -855,10 +690,10 @@ tracks/6/path = NodePath("lila:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 2.01),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2.01, 2.3, 4.43333, 4.63333, 5.41667, 5.51667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1397, 530), Vector2(630.75, 530.3)]
+"values": [Vector2(1397, 530), Vector2(630.75, 530.3), Vector2(630.75, 530.3), Vector2(782.75, 530.3), Vector2(782.75, 548.3), Vector2(1053.75, 548.3), Vector2(1053.75, 521.3)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -879,10 +714,10 @@ tracks/8/path = NodePath("karina:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 2.01),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2.01, 2.3, 4.86667, 5.06667, 5.75, 5.85),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1397, 530), Vector2(630.75, 530.3)]
+"values": [Vector2(1397, 530), Vector2(630.75, 530.3), Vector2(630.75, 530.3), Vector2(782.75, 530.3), Vector2(782.75, 548.3), Vector2(1053.75, 548.3), Vector2(1053.75, 521.3)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -899,11 +734,11 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("explosion_caminhao:visible")
+tracks/10/path = NodePath("gal:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 2.5, 4.61),
+"times": PackedFloat32Array(0, 2.16667, 4.83333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -911,123 +746,102 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("explosion_caminhao:frame")
+tracks/11/path = NodePath("gal:animation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(3.73334, 3.86667, 4.10001, 4.36667, 4.63334, 4.83334, 5.03334, 5.30001, 5.46667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.13, 2.27, 3.37333, 3.65333, 3.73333, 4.52),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+"values": [&"andar_jornal", &"andar_costas", &"andar_jornal", &"andar_costas", &"andar_costas", &"andar_jornal", &"andar_costas"]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("jurandir:visible")
+tracks/12/path = NodePath("ro:visible")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 2.08),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 3.9, 5.23333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, true, false]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("jurandir:animation")
+tracks/13/path = NodePath("lila:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(2.08, 2.34, 2.39, 2.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 4.43333, 5.56667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"jurandir_frente", &"jurandir_frente", &"jurandir_esquerdo", &"jurandir_esquerdo"]
+"values": [false, true, false]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("jurandir:position")
+tracks/14/path = NodePath("karina:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(2.06, 2.34),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(856, 516), Vector2(856, 559)]
+"times": PackedFloat32Array(0, 4.86667, 5.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("jurandir:rotation")
+tracks/15/path = NodePath("ro:animation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(2.06, 2.34),
+"times": PackedFloat32Array(5.08, 5.11),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.0]
+"update": 1,
+"values": [&"andar_jornal", &"andar_costas"]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("gal:visible")
+tracks/16/path = NodePath("lila:animation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"times": PackedFloat32Array(0, 2.03333),
+"times": PackedFloat32Array(5.08, 5.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true]
+"values": [&"andar_jornal", &"andar_costas"]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("gal:animation")
+tracks/17/path = NodePath("karina:animation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0, 3, 3.28, 3.36),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(5.08, 5.76667),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"andar_jornal", &"andar_costas", &"andar_costas", &"andar_jornal"]
+"values": [&"andar_jornal", &"andar_costas"]
 }
-tracks/18/type = "value"
+tracks/18/type = "audio"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("ro:visible")
+tracks/18/path = NodePath("AudioStreamPlayer2D")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
-"times": PackedFloat32Array(0, 4.69),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 38.0999,
+"stream": ExtResource("13_bkoym")
+}],
+"times": PackedFloat32Array(0)
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("lila:visible")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(0, 4.69),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("karina:visible")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(0, 4.69),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
+tracks/18/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3j7k3"]
 _data = {
@@ -1036,6 +850,7 @@ _data = {
 }
 
 [node name="bar_fora_chegada" type="Node2D"]
+script = ExtResource("1_662kn")
 
 [node name="bar_fora" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -1054,6 +869,7 @@ position = Vector2(1393, 532)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_yv8v1")
 animation = &"andar_jornal"
+script = ExtResource("5_bkoym")
 
 [node name="lila" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -1062,6 +878,7 @@ position = Vector2(1397, 530)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_dbfd6")
 animation = &"andar_jornal"
+script = ExtResource("6_uwq37")
 
 [node name="karina" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -1070,6 +887,7 @@ position = Vector2(1397, 530)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_yrxfu")
 animation = &"andar_jornal"
+script = ExtResource("7_jdt1p")
 
 [node name="gal" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -1078,6 +896,7 @@ position = Vector2(1397, 530)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_flmf6")
 animation = &"andar_costas"
+script = ExtResource("7_kj582")
 
 [node name="explosion_caminhao" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -1087,15 +906,9 @@ scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_bkoym")
 animation = &"explosion"
 
-[node name="jurandir" type="AnimatedSprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(856, 516)
-scale = Vector2(4.2, 4.2)
-sprite_frames = SubResource("SpriteFrames_t0llj")
-animation = &"jurandir_frente"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_3j7k3")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
