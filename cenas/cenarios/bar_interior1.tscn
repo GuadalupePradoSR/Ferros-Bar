@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://cqf4m6dsjucav"]
 
-[ext_resource type="Script" uid="uid://cjie6nqaeau0u" path="res://cenas/cenarios/bar_interior1.gd" id="1_t25kn"]
+[ext_resource type="Script" uid="uid://cjie6nqaeau0u" path="res://cenas/cenarios/bar_interior.gd" id="1_t25kn"]
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="2_x63em"]
 [ext_resource type="Texture2D" uid="uid://dgfxgf31me21e" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="3_2tu1q"]
 [ext_resource type="Texture2D" uid="uid://b0p87os5p3cy" path="res://assets/Top-Down_Retro_Interior/image-removebg-preview.png" id="4_fygch"]
