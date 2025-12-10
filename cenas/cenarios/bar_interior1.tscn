@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cqf4m6dsjucav"]
+[gd_scene load_steps=48 format=3 uid="uid://cqf4m6dsjucav"]
 
 [ext_resource type="Script" uid="uid://cjie6nqaeau0u" path="res://cenas/cenarios/bar_interior.gd" id="1_t25kn"]
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="2_x63em"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="11_7xraw"]
 [ext_resource type="PackedScene" uid="uid://c1uiob83qvrkd" path="res://cenas/policia.tscn" id="12_fv64y"]
 [ext_resource type="PackedScene" uid="uid://dl7l1sj1uipna" path="res://player.tscn" id="12_t25kn"]
+[ext_resource type="AudioStream" uid="uid://c6soboc8we78d" path="res://assets/game sound effects/REBECA_2.mp3" id="14_2tu1q"]
 [ext_resource type="PackedScene" uid="uid://bjsql0iw484ft" path="res://hud.tscn" id="14_fygch"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgysb"]
@@ -2713,5 +2714,9 @@ position = Vector2(655, 402)
 
 [node name="paused_screen" parent="." instance=ExtResource("11_7xraw")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_2tu1q")
+autoplay = true
 
 [connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]

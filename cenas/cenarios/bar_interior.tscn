@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ck8k806g45gh5"]
+[gd_scene load_steps=45 format=3 uid="uid://ck8k806g45gh5"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_502ar"]
 [ext_resource type="Script" uid="uid://cxmnrryb55qsm" path="res://cenas/cenarios/bar_dialogo.gd" id="1_eeabm"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ck5mwxycuhe6l" path="res://cenas/personagens/gal/galTres.tscn" id="10_srtaf"]
 [ext_resource type="PackedScene" uid="uid://by53c1qa16mha" path="res://cenas/personagens/raquel/raquelvermelho.tscn" id="11_s7tsh"]
 [ext_resource type="PackedScene" uid="uid://cg26x1j2x1o4h" path="res://cenas/personagens/donamarta/donamartavermelho.tscn" id="12_l8hci"]
+[ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="16_0t4hk"]
 [ext_resource type="PackedScene" uid="uid://bflnhheqiifsq" path="res://cenas/personagens/jurandir/jurandirDois.tscn" id="16_j36qi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgysb"]
@@ -2837,6 +2838,9 @@ limit_left = -176
 limit_top = 0
 limit_right = 1071
 limit_bottom = 720
+
+[node name="paused_screen" parent="." instance=ExtResource("16_0t4hk")]
+visible = false
 
 [editable path="rororoxa"]
 [editable path="karinaUm"]

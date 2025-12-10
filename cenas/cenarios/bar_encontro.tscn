@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://c6nfbt2sftuvb"]
+[gd_scene load_steps=45 format=3 uid="uid://c6nfbt2sftuvb"]
 
 [ext_resource type="Script" uid="uid://37mbfkcjsfqi" path="res://cenas/cenarios/bar_interior_2.gd" id="1_346fm"]
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_502ar"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bhphs0eq3ca30" path="res://cenas/personagens/roro/roropreto.tscn" id="7_pumfm"]
 [ext_resource type="PackedScene" uid="uid://bewkxmcaamwtq" path="res://cenas/cenarios/porta.tscn" id="8_pumfm"]
 [ext_resource type="Script" uid="uid://k87mt4tk5v6x" path="res://cenas/cenarios/porta.gd" id="9_nhnrq"]
+[ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="11_jkebx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgysb"]
 texture = ExtResource("1_502ar")
@@ -2698,3 +2699,6 @@ position = Vector2(1121, 71)
 [node name="bar_interior2" type="Marker2D" parent="."]
 position = Vector2(1120, 124)
 script = ExtResource("9_nhnrq")
+
+[node name="paused_screen" parent="." instance=ExtResource("11_jkebx")]
+visible = false

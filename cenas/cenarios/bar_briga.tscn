@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bovfyto3qymvf"]
+[gd_scene load_steps=34 format=3 uid="uid://bovfyto3qymvf"]
 
 [ext_resource type="Texture2D" uid="uid://coatu2v2gkemv" path="res://assets/SCAReStaff 2021 - Tea's Jams/Tea's Jams/Inside_A2_supplement.png" id="1_7f5yr"]
 [ext_resource type="Script" uid="uid://7bh8kw3u8xwe" path="res://cenas/cenarios/bar_briga.gd" id="1_gqugd"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cllafgy570nh7" path="res://cenas/personagens/fabio/npc_fabio.tscn" id="12_dxekr"]
 [ext_resource type="PackedScene" uid="uid://du8rb75j6vcx4" path="res://cenas/personagens/rodrigo/npc_rodrigo.tscn" id="13_q6bdn"]
 [ext_resource type="PackedScene" uid="uid://bflnhheqiifsq" path="res://cenas/personagens/jurandir/jurandirDois.tscn" id="14_0dcus"]
+[ext_resource type="PackedScene" uid="uid://gvlcgdt6pply" path="res://paused_screen.tscn" id="14_7f5yr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f80eg"]
 texture = ExtResource("1_7f5yr")
@@ -1932,6 +1933,9 @@ limit_bottom = 720
 libraries = {
 &"": SubResource("AnimationLibrary_7f5yr")
 }
+
+[node name="paused_screen" parent="." instance=ExtResource("14_7f5yr")]
+visible = false
 
 [editable path="npc_rodrigo"]
 [editable path="jurandirDois"]
